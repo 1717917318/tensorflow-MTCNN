@@ -30,7 +30,7 @@ graph里放置的是训练过程中生成的graph文件<br><br>
 output里放置识别图像或视频完成后存储放置的路径<br><br>
 picture里是要测试的图像放置路径<br><br>
 preprocess里是预处理数据程序，BBox_utils.py和utils.py，loader.py是一些辅助程序，gen_12net_data.py是生成PNet的pos，neg,part的程序，gen_landmark_aug.py是生成landmark数据的程序，gen_imglist_pnet.py是pnet的四种数据组合一起，gen_hard_example.py是生成rnet,onet的三种数据程序，gen_tfrecords.py是生成tfrecord文件的程序<br><br>
-train中的config是一些参数设定，大都文件夹我都直接写死了，所以里面参数能改的很少，model.py是模型,train.py是训练，train_model.py针对不同网络训练<br><br>
+train中的config是一些参数设定，大的文件夹我都直接写死了，所以里面参数能改的很少，model.py是模型,train.py是训练，train_model.py针对不同网络训练<br><br>
 test.py是测试代码<br>
 ### 下载数据
 将[WIDERFace](http://mmlab.ie.cuhk.edu.hk/projects/WIDERFace/)的训练数据下载解压，将里面的WIDER_train文件夹放置到data下，将[Deep Convolutional Network Cascade for Facial Point Detection的训练集](http://mmlab.ie.cuhk.edu.hk/archive/CNN_FacePoint.htm)解压，将里面的lfw_5590和net_7876文件夹放置到data下。model文件夹下已存储好我训练的权值文件了。<br>
