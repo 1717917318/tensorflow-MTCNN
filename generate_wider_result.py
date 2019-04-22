@@ -45,7 +45,7 @@ def get_image_info(anno_file):
 if __name__ == '__main__':
 
     data_dir = 'data/WIDER_val/images'
-    anno_file = 'wider_face_val_small.txt'
+    anno_file = 'wider_face_val.txt'
     name = anno_file.split('.')[0]
     output_file = 'output/'+name
     val_test_result_name=name+"_test_result.txt"
