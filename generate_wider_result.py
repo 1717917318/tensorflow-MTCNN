@@ -45,7 +45,7 @@ def get_image_info(anno_file):
 if __name__ == '__main__':
 
     data_dir = 'data/WIDER_val/images'
-    anno_file = 'wider_face_val.txt'
+    anno_file = 'wider_face_val_small.txt'
     name = anno_file.split('.')[0]
     output_file = 'output/'+name
     val_test_result_name=name+"_test_result.txt"
@@ -122,11 +122,11 @@ if __name__ == '__main__':
             continue
 
         fid.write(short_file_name + ' ')
-        fid.write(str(len(boxes_c)) + ' ')
+        fid.write(str(len(boxes_c)) )
 
         for box in boxes_c:
-            fid.write('%d %d %d %d %f ' % (
-            int(box[0]), int(box[1]), int(box[2]), int(box[3]), box[4])) # x,y,w,h,possibility
+            fid.write(' %d %d %d %d %f' % (
+            int(box[0]), int(box[1]), int(box[2]), int(box[3]), box[4])) # x,y,x+w,y+h,possibility
         fid.write("\n")
 
         #fid.close()
