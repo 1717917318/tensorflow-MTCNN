@@ -45,7 +45,7 @@ def get_image_info(anno_file):
 if __name__ == '__main__':
 
     data_dir = 'data/WIDER_val/images' #验证集（测试）路径
-    anno_file = 'wider_face_val_small.txt' #验证集标签文件（包含路径）
+    anno_file = 'wider_face_val.txt' #验证集标签文件（包含路径）
     name = anno_file.split('.')[0]
 
 
@@ -56,7 +56,7 @@ if __name__ == '__main__':
     out_path = output_file
     if detect_method == 'mtcnn':
 
-        test_mode = "PNet"
+        test_mode = "ONet"
         thresh = [0.3, 0.1, 0.7]
         min_face_size = 20
         stride = 2
@@ -68,7 +68,7 @@ if __name__ == '__main__':
         # prefix is the model path
         prefix = ['model/PNet', 'model/RNet',
                   'model/ONet']
-        epoch = [30, 22, 14]
+        epoch = [30, 22, 22]  # 原来onet训练14轮
         batch_size = [2048, 256, 16]
         #model_path = ['%s-%s' % (x, y) for x, y in zip(prefix, epoch)]
         model_path = prefix
@@ -156,7 +156,7 @@ if __name__ == '__main__':
             if (not os.path.exists(output_path)):
                 os.mkdir(output_path)
             cv2.imwrite(output_path + "/" + item[1] + '.jpg', img)
-            print(idx+" pictures has done.")
+            print(str(idx)+" pictures has done.")
             if idx % 10 == 0:
                 print(idx)
         fid.close()
