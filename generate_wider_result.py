@@ -1,4 +1,5 @@
 # coding:utf-8
+from __future__ import division
 import sys
 import numpy as np
 
@@ -11,6 +12,10 @@ from detection.fcn_detector import FcnDetector
 from detection.MtcnnDetector import MtcnnDetector
 import cv2
 import os
+import time
+import dlib
+#todo
+#
 
 
 
@@ -42,18 +47,97 @@ def get_image_info(anno_file):
     print('total number of images in validation set: ', len(image_info))
     return image_info
 
+def ok(x1,y1,x2,y2,w,h):
+    if x1>w or x1<0 or x2>w or x2<0 or y1>h or y1<0 or y2>h or y2<0:
+        return False
+    return True
+def detectFaceOpenCVDnn(net, img, flag=False): # not sure is ok or not.
+    # frameOpencvDnn = frame.copy()
+    # frameHeight = frameOpencvDnn.shape[0]
+    # frameWidth = frameOpencvDnn.shape[1]
+    w = img.shape[1]
+    h = img.shape[0]
+    # flag = False
+    # if w<h and w<1200 and h<1200: #or w/h>0.75:
+    #     flag = True
+    # if  flag == True:
+    #     blob = cv2.dnn.blobFromImage(img, 1.0, (300,300), [104, 117, 123], False, False)
+    # else :
+    if flag != True:
+        blob = cv2.dnn.blobFromImage(img, 1.0, (w, h), [104, 117, 123], False, False)
+    else:
+        blob = cv2.dnn.blobFromImage(img, 1.0, (300, 300), [104, 117, 123], False, False)
+
+    net.setInput(blob)
+    detections = net.forward()
+    bboxes = []
+    for i in range(detections.shape[2]):
+        confidence = detections[0, 0, i, 2]
+        if confidence > conf_threshold:
+            x1 = int(detections[0, 0, i, 3] * w)
+            y1 = int(detections[0, 0, i, 4] * h)
+            x2 = int(detections[0, 0, i, 5] * w)
+            y2 = int(detections[0, 0, i, 6] * h)
+            if ok(x1,y1,x2,y2,w,h)== False:
+                continue
+            bboxes.append([x1, y1, x2, y2])
+            #cv2.rectangle(frameOpencvDnn, (x1, y1), (x2, y2), (0, 255, 0), int(round(frameHeight/150)), 8)
+    return bboxes
+
+def dnn_model():
+    # OpenCV DNN supports 2 networks.
+    # 1. FP16 version of the original caffe implementation ( 5.4 MB )
+    # 2. 8 bit Quantized version using Tensorflow ( 2.7 MB )
+    DNN = "TF"
+    prefix = 'FaceDetectionComparision'
+    if DNN == "CAFFE":
+        modelFile = prefix+"models/res10_300x300_ssd_iter_140000_fp16.caffemodel"
+        configFile = prefix+"models/deploy.prototxt"
+        net = cv2.dnn.readNetFromCaffe(configFile, modelFile)
+    else:
+        modelFile = prefix+"models/opencv_face_detector_uint8.pb"
+        configFile = prefix+"models/opencv_face_detector.pbtxt"
+        net = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
+
+    conf_threshold = 0.7
+
+
+
+
+    tt_opencvDnn = 0
+    while (1):
+        hasFrame, frame = cap.read()
+        if not hasFrame:
+            break
+        frame_count += 1
+
+        t = time.time()
+        outOpencvDnn, bboxes = detectFaceOpenCVDnn(net, frame)
+        tt_opencvDnn += time.time() - t
+        fpsOpencvDnn = frame_count / tt_opencvDnn
+        label = "OpenCV DNN ; FPS : {:.2f}".format(fpsOpencvDnn)
+        cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
+
+        cv2.imshow("Face Detection Comparison", outOpencvDnn)
+
+
+    pass
+
+
+
 if __name__ == '__main__':
 
     data_dir = 'data/WIDER_val/images' #验证集（测试）路径
-    anno_file = 'wider_face_val.txt' #验证集标签文件（包含路径）
+    anno_file = 'wider_face_val_small.txt' #验证集标签文件（包含路径）
     name = anno_file.split('.')[0]
 
 
-    detect_method = 'mtcnn'  # 'haar'或者 'mtcnn' 测试模型类型
-    haar_xml_file_pos = '/Users/zjt/Documents/Develop/OpenCV_haarcascade/frontalFace10/haarcascade_frontalface_default.xml'
+    detect_method = 'haar'  # 'dnn' / 'haar'或者 'mtcnn' 测试模型类型
+    haar_xml_file_pos = './FaceDetectionComparision/models/haarcascade_frontalface_default.xml'
     output_file = 'output/' + name +detect_method # 与标签文件对应的目录
     val_test_result_name = name + detect_method+"_test_result.txt"
     out_path = output_file
+    # 生成预测框文件，每个框的格式都为x1, y1, x1+w, y1+h, possibility
     if detect_method == 'mtcnn':
 
         test_mode = "ONet"
@@ -188,12 +272,6 @@ if __name__ == '__main__':
             faces = detector.detectMultiScale(gray, 1.3, 5)
 
 
-
-
-            # f_name = item[1].split('.jpg')[0]
-
-            # dets_file_name = os.path.join(save_path, f_name + '.txt')
-            # fid =open (dets_file_name,'w')
             short_file_name = os.path.join(item[0], item[1])
             if len(faces) == 0:
                 fid.write(short_file_name + ' ')
@@ -219,12 +297,101 @@ if __name__ == '__main__':
             cv2.imwrite(output_path+"/"+item[1]+'.jpg', img)
 
 
-            # fid.close()
             if idx % 10 == 0:
                 print(idx)
         fid.close()
         #cv2.destroyAllWindows()
+    elif detect_method == 'dnn':
+        image_info = get_image_info(anno_file)
 
+        current_event = ''
+        save_path = ''
+        idx = 0
+
+        if (not os.path.exists(output_file)):
+            os.mkdir(output_file)
+
+        output_file_name = os.path.join(output_file, val_test_result_name)
+        fid = open(output_file_name, "w")
+
+
+
+
+        for item in image_info:
+            #net import
+            # OpenCV DNN supports 2 networks.
+            # 1. FP16 version of the original caffe implementation ( 5.4 MB )
+            # 2. 8 bit Quantized version using Tensorflow ( 2.7 MB )
+            DNN = "TF"
+            prefix = 'FaceDetectionComparision/'
+            if DNN == "CAFFE":
+                modelFile = prefix + "models/res10_300x300_ssd_iter_140000_fp16.caffemodel"
+                configFile = prefix + "models/deploy.prototxt"
+                net = cv2.dnn.readNetFromCaffe(configFile, modelFile)
+            else:
+                modelFile = prefix + "models/opencv_face_detector_uint8.pb"
+                configFile = prefix + "models/opencv_face_detector.pbtxt"
+                net = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
+                net2 = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
+
+            conf_threshold = 0.7
+            #end
+
+            idx += 1
+            print("idx: "+str(idx))
+            image_file_name = os.path.join(data_dir, item[0], item[1])
+            if current_event != item[0]:
+                current_event = item[0]
+                print('current path:', current_event)
+
+            # generate detection
+            img = cv2.imread(image_file_name)
+            #gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+
+            bboxes = detectFaceOpenCVDnn(net, img)
+
+            bboxes2 = detectFaceOpenCVDnn(net2, img, True)
+            if (len(bboxes2) > len(bboxes)):
+                bboxes = bboxes2
+            #cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
+            #cv2.imshow("Face Detection Comparison", outOpencvDnn)
+
+            short_file_name = os.path.join(item[0], item[1])
+            if len(bboxes) == 0:
+                fid.write(short_file_name + ' ')
+                fid.write(str(0) + '\n')
+                # fid.write('%f %f %f %f %f\n' % (0, 0, 0, 0, 0.99))
+                continue
+
+            fid.write(short_file_name + ' ')
+            fid.write(str(len(bboxes) // 4))
+
+            for (x1, y1, x2, y2) in bboxes:
+                fid.write(' %d %d %d %d' % (
+                    int(x1), int(y1), int(x2), int(y2)))  # x,y,x+w,y+h,possibility
+                cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
+            fid.write("\n")
+
+            #cv2.imshow('im', img)
+            #k = cv2.waitKey(0) & 0xFF
+            #if k == 27:
+            output_path = os.path.join(output_file, item[0])
+            if (not os.path.exists(output_path)):
+               os.mkdir(output_path)
+            cv2.imwrite(output_path + "/" + item[1] + '.jpg', img)
+
+            if idx % 10 == 0:
+                print(idx)
+        fid.close()
+        #cv2.destroyAllWindows()
+        #pass
+    elif detect_method == 'hog':
+
+
+        pass
+    elif detect_method =='mmod':
+        pass
     else :
         print("Model Wrong!")
 
