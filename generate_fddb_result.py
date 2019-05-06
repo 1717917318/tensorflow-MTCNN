@@ -128,7 +128,7 @@ if __name__ == '__main__':
     anno_file = 'fddb_val.txt' #验证集标签文件（包含路径）
     name = anno_file.split('.')[0]
     anno_file = 'test/'+ anno_file
-    all_methods = ['mmod','hog','dnn','haar','mtcnn']
+    all_methods = ['hog','mmod','dnn','haar','mtcnn']
     write_img = False
 
     haar_xml_file_pos = './FaceDetectionComparision/models/haarcascade_frontalface_default.xml'
