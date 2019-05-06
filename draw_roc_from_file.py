@@ -58,7 +58,7 @@ def cal_temp(pre=[],hum=[]):
         #box[2] = box[0]+box[2]
         #box[3] = box[1]+box[3]
         iou = IOU(box,boxes)
-        if(np.max(iou) <= 0.65):
+        if(np.max(iou) <= 0.5): #一般认为 iou大于0.5就算检测出来了
             ret_fp = ret_fp + 1
         else :
             ret_tp = ret_tp + 1
@@ -112,8 +112,96 @@ def draw(tpr,fpr):
     plt.legend(loc="lower right")
     plt.show()
 
+def draw_acc_fp(acc_seq,fp_seq):
+
+    #from sklearn import svm, datasets
+    #from sklearn.metrics import roc_curve, auc  ###计算roc和auc
+    #from sklearn import cross_validation
+
+    # Import some data to play with
+    #iris = datasets.load_iris()
+    #X = iris.data
+    #y = iris.target
+
+    ##变为2分类
+    #X, y = X[y != 2], y[y != 2]
+
+    # Add noisy features to make the problem harder
+    # random_state = np.random.RandomState(0)
+    # n_samples, n_features = X.shape
+    # X = np.c_[X, random_state.randn(n_samples, 200 * n_features)]
+
+    # shuffle and split training and test sets
+    # X_train, X_test, y_train, y_test = cross_validation.train_test_split(X, y, test_size=.3, random_state=0)
+    #
+    # # Learn to predict each class against the other
+    # svm = svm.SVC(kernel='linear', probability=True, random_state=random_state)
+    #
+    # ###通过decision_function()计算得到的y_score的值，用在roc_curve()函数中
+    # y_score = svm.fit(X_train, y_train).decision_function(X_test)
+
+    # Compute ROC curve and ROC area for each class
+    #fpr, tpr, threshold = roc_curve(y_test, y_score)  ###计算真正率和假正率
+    #roc_auc = auc(fpr, tpr)  ###计算auc的值
+
+   pass
 
 
+def get_tp_fp(data_dir,predict_file,human_marked_file):
+
+    threshold = [0.5, 0.6, 0.65, 0.7, 0.8, 0.9]
+
+    with open(os.path.join(data_dir, predict_file), 'r') as f:
+        predict_res = f.readlines()# .split('\\n')
+    with open(os.path.join(data_dir, human_marked_file), 'r') as f:
+        hum_res = f.readlines() #.split('\\n')
+    tp_array = np.array([])
+    fp_array = np.array([])
+
+    acc_seq  = np.array([])
+    fp_seq = np.array([])
+
+
+    for thres in threshold:
+        tp,fn,fp,tn=[0,0,0,0]
+        all_faces_cnt = 0
+        pre_faces_cnt = 0
+
+        all_acc_seq = 0
+        all_fp_seq = 0
+
+        for i in range(len(predict_res) ):
+            temp_tp,temp_fn,temp_fp,temp_tn = cal_temp(predict_res[i],hum_res[i])
+            tp = tp + temp_tp
+            #fn = fn + temp_fn
+            fp = fp + temp_fp
+            #tn = tn + temp_tn
+            temp_pre_faces_cnt = (len(predict_res[i])-2) /5
+            temp_all_faces_cnt = int( (len(hum_res[i])-1)/4)
+
+            temp_acc_seq = temp_tp/temp_all_faces_cnt
+            temp_fp_seq =  temp_fp
+
+            all_acc_seq = (i*all_acc_seq+temp_acc_seq)/(i+1)
+            all_fp_seq = all_fp_seq + temp_fp_seq
+            acc_seq = np.append(acc_seq,all_acc_seq)
+            fp_seq = np.append(fp_seq,all_fp_seq)
+
+            all_faces_cnt = all_faces_cnt + temp_all_faces_cnt
+            pre_faces_cnt = pre_faces_cnt + int( temp_pre_faces_cnt)
+            if i%100 == 0:
+                print(str(i)+"has done.")
+
+
+        tp_ratio = float(tp) / float(all_faces_cnt)
+        fp_ratio = float(fp) / float(pre_faces_cnt) # fp+tn?  tn=?  no tn?
+        tp_array = np.append(tp_array,tp_ratio)
+        fp_array = np.append(fp_array,fp_ratio)
+
+
+        break
+
+    return fp_seq, acc_seq
 
 def show_in_rec(real=0,pic=0,res=0):
     img=cv2.imread(pic)
@@ -160,12 +248,11 @@ def show_in_rec(real=0,pic=0,res=0):
 
 if __name__ == "__main__":
     data_dir = "."
-    predict_file = "output/wider_face_val_small/wider_face_val_small_test_result.txt"
-    human_marked_file = "wider_face_val_small.txt"
-    threshold = [0.5, 0.6, 0.65, 0.7, 0.8, 0.9]
+    human_marked_file = "wider_face_val.txt"
+    # predict_file = "output/wider_face_val_small/wider_face_val_small_test_result.txt"
+    # human_marked_file = "wider_face_val_small.txt"
     test_draw = False
     test_show_rec = False
-
     if(test_draw == True):
         tpr=[0.6,0.73,0.82,0.85,0.89,0.91,0.93]
         fpr=[0.2,0.3 ,0.4 ,0.55,0.67,0.79,0.99]
@@ -176,31 +263,47 @@ if __name__ == "__main__":
         #show_in_rec(1,"picture/1_Handshaking_Handshaking_1_664.jpg","857 651 681 720 740 21 107 118 115 122 42 15 12 12 11 62 22 15 15 17")
         #show_in_rec(1,"picture/1_Handshaking_Handshaking_1_209.jpg","196 616 138 38 94 80 142 176")
 
-    with open(os.path.join(data_dir, predict_file), 'r') as f:
-        predict_res = f.readlines()# .split('\\n')
-    with open(os.path.join(data_dir, human_marked_file), 'r') as f:
-        hum_res = f.readlines() #.split('\\n')
-    tp_array = np.array([])
-    fp_array = np.array([])
+
+    predict_file = "output/wider_face_valmtcnn/wider_face_valmtcnn_test_result.txt"
+    fp_seq, acc_seq = get_tp_fp(data_dir,predict_file, human_marked_file)
+    #draw(tp_array,fp_array)
+    #draw_acc_fp(acc_seq,fp_seq)
+    plt.figure()
+    lw = 2
+    plt.figure(figsize=(10, 10))
+    plt.plot(fp_seq, acc_seq, color='darkorange',
+             lw=lw, label='mtcnn_acc_fp curve (area = %0.2f)' % -1)  # acc_fp)  ###fp为横坐标，acc为纵坐标做曲线
+    # plt.plot([0, 1], [0, 1], color='navy', lw=lw, linestyle='--')
+    # plt.plot(fp_seq, acc_seq, color='navy', lw=lw, linestyle='--')
+    # plt.xlim([0.0, 1.0])
+    # plt.ylim([0.0, 1.05])
+
+    predict_file = "output/wider_face_valhaar/wider_face_valhaar_test_result.txt"
+    fp_seq, acc_seq = get_tp_fp(data_dir, predict_file, human_marked_file)
+    plt.plot(fp_seq, acc_seq, color='blue',
+             lw=lw, label='haar_acc_fp curve (area = %0.2f)' % -1)  # acc_fp)  ###fp为横坐标，acc为纵坐标做曲线
+
+    predict_file = "output/wider_face_valdnn/wider_face_valdnn_test_result.txt"
+    fp_seq, acc_seq = get_tp_fp(data_dir, predict_file, human_marked_file)
+    plt.plot(fp_seq, acc_seq, color='red',
+             lw=lw, label='dnn_acc_fp curve (area = %0.2f)' % -1)  # acc_fp)  ###fp为横坐标，acc为纵坐标做曲线
+
+    predict_file = "output/wider_face_valhog/wider_face_valhog_test_result.txt"
+    fp_seq, acc_seq = get_tp_fp(data_dir, predict_file, human_marked_file)
+    plt.plot(fp_seq, acc_seq, color='black',
+             lw=lw, label='hog_acc_fp curve (area = %0.2f)' % -1)  # acc_fp)  ###fp为横坐标，acc为纵坐标做曲线
+
+    predict_file = "output/wider_face_valmmod/wider_face_valmmod_test_result.txt"
+    fp_seq, acc_seq = get_tp_fp(data_dir, predict_file, human_marked_file)
+    plt.plot(fp_seq, acc_seq, color='green',
+             lw=lw, label='mmod_acc_fp curve (area = %0.2f)' % -1)  # acc_fp)  ###fp为横坐标，acc为纵坐标做曲线
+
+    plt.xlabel('False Positive numbers')
+    plt.ylabel('True Positive Rate')
+    plt.title('Receiver operating characteristic example')
+    plt.legend(loc="lower right")
+    plt.show()
 
 
-    for thres in threshold:
-        tp,fn,fp,tn=[0,0,0,0]
-        all_faces_cnt = 0
-        pre_faces_cnt = 0
-        for i in range(len(predict_res) ):
-            temp_tp,temp_fn,temp_fp,temp_tn = cal_temp(predict_res[i],hum_res[i])
-            tp = tp + temp_tp
-            #fn = fn + temp_fn
-            fp = fp + temp_fp
-            #tn = tn + temp_tn
-            all_faces_cnt = all_faces_cnt + int( (len(hum_res[i])-1)/4)
-            pre_faces_cnt = pre_faces_cnt + int( (len(predict_res[i])-2) /5)
-        tp_ratio = float(tp) / float(all_faces_cnt)
-        fp_ratio = float(fp) / float(pre_faces_cnt) # fp+tn?  tn=?  no tn?
-        tp_array = np.append(tp_array,tp_ratio)
-        fp_array = np.append(fp_array,fp_ratio)
-    draw(tp_array,fp_array)
-
-    print("Draw roc curve done.")
+    print("Draw tp_fp curve done.")
 

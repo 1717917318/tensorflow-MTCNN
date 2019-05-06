@@ -501,17 +501,17 @@ if __name__ == '__main__':
             for (x1, y1, x2, y2) in bboxes:
                 fid.write(' %d %d %d %d %f' % (
                     int(x1), int(y1), int(x2), int(y2), conf_threshold))  # x,y,x+w,y+h,possibility
-                cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
+                # cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
             fid.write("\n")
 
             # cv2.imshow('im', img)
             # k = cv2.waitKey(0) & 0xFF
             # if k == 27:
 
-            output_path = os.path.join(output_file, item[0])
-            if (not os.path.exists(output_path)):
-               os.mkdir(output_path)
-            cv2.imwrite(output_path + "/" + item[1] + '.jpg', img)
+            # output_path = os.path.join(output_file, item[0])
+            # if (not os.path.exists(output_path)):
+            #    os.mkdir(output_path)
+            # cv2.imwrite(output_path + "/" + item[1] + '.jpg', img)
 
             if idx % 10 == 0:
                 print(idx)
