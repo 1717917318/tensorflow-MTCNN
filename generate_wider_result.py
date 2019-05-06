@@ -124,6 +124,31 @@ def dnn_model():
     pass
 
 
+def detectFaceDlibHog(detector, img, inHeight=300, inWidth=0):
+
+    #frameDlibHog = frame.copy()
+    h = img.shape[0]
+    w = img.shape[1]
+    if not inWidth:
+        inWidth = int((w / h)*inHeight)
+
+    # scaleHeight = frameHeight / inHeight
+    # scaleWidth = frameWidth / inWidth
+    #
+    # frameDlibHogSmall = cv2.resize(frameDlibHog, (inWidth, inHeight))
+
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+    faceRects = detector(img, 0)
+    #print(w, h, inWidth, inHeight)
+    bboxes = []
+    for faceRect in faceRects:
+
+        cvRect = [int(faceRect.left()), int(faceRect.top()),
+                  int(faceRect.right()), int(faceRect.bottom()) ]
+        bboxes.append(cvRect)
+        cv2.rectangle(img, (cvRect[0], cvRect[1]), (cvRect[2], cvRect[3]), (0, 255, 0),  2)
+    return img, bboxes
+
 
 if __name__ == '__main__':
 
@@ -132,7 +157,7 @@ if __name__ == '__main__':
     name = anno_file.split('.')[0]
 
 
-    detect_method = 'dnn'  # 'dnn' / 'haar'或者 'mtcnn' 测试模型类型
+    detect_method = 'hog'  # 'hog' / 'dnn' / 'haar'或者 'mtcnn' 测试模型类型
     haar_xml_file_pos = './FaceDetectionComparision/models/haarcascade_frontalface_default.xml'
     output_file = 'output/' + name +detect_method # 与标签文件对应的目录
     val_test_result_name = name + detect_method+"_test_result.txt"
@@ -388,7 +413,74 @@ if __name__ == '__main__':
         #cv2.destroyAllWindows()
         #pass
     elif detect_method == 'hog':
+        image_info = get_image_info(anno_file)
 
+        current_event = ''
+        save_path = ''
+        idx = 0
+
+        if (not os.path.exists(output_file)):
+            os.mkdir(output_file)
+
+        output_file_name = os.path.join(output_file, val_test_result_name)
+        fid = open(output_file_name, "w")
+
+        hogFaceDetector = dlib.get_frontal_face_detector()
+
+        for item in image_info:
+            # net import
+            # OpenCV DNN supports 2 networks.
+            # 1. FP16 version of the original caffe implementation ( 5.4 MB )
+            # 2. 8 bit Quantized version using Tensorflow ( 2.7 MB )
+
+
+            conf_threshold = 1
+            # end
+
+            idx += 1
+            print("idx: " + str(idx))
+            image_file_name = os.path.join(data_dir, item[0], item[1])
+            if current_event != item[0]:
+                current_event = item[0]
+                print('current path:', current_event)
+
+            # generate detection
+            img = cv2.imread(image_file_name)
+            # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+            img, bboxes = detectFaceDlibHog(hogFaceDetector, img)
+
+            # cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
+            # cv2.imshow("Face Detection Comparison", outOpencvDnn)
+
+            short_file_name = os.path.join(item[0], item[1])
+            if len(bboxes) == 0:
+                fid.write(short_file_name + ' ')
+                fid.write(str(0) + '\n')
+                # fid.write('%f %f %f %f %f\n' % (0, 0, 0, 0, 0.99))
+                continue
+
+            fid.write(short_file_name + ' ')
+            fid.write(str(len(bboxes)))
+
+            for (x1, y1, x2, y2) in bboxes:
+                fid.write(' %d %d %d %d %f' % (
+                    int(x1), int(y1), int(x2), int(y2), conf_threshold))  # x,y,x+w,y+h,possibility
+                # cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
+            fid.write("\n")
+
+            # cv2.imshow('im', img)
+            # k = cv2.waitKey(0) & 0xFF
+            # if k == 27:
+
+            # output_path = os.path.join(output_file, item[0])
+            # if (not os.path.exists(output_path)):
+            #    os.mkdir(output_path)
+            # cv2.imwrite(output_path + "/" + item[1] + '.jpg', img)
+
+            if idx % 10 == 0:
+                print(idx)
+        fid.close()
 
         pass
     elif detect_method =='mmod':
