@@ -227,8 +227,8 @@ class MtcnnDetector:
         landmark[:, 1::2] = (np.tile(h, (5, 1)) * landmark[:, 1::2].T + np.tile(boxes[:, 1], (5, 1)) - 1).T
         boxes_c = self.calibrate_box(boxes, reg)
 
-        boxes = boxes[py_nms(boxes, 0.6)]
-        keep = py_nms(boxes_c, 0.6)
+        boxes = boxes[py_nms(boxes, 0.1)]   # change 0.6 to 0.3  to 0.1
+        keep = py_nms(boxes_c, 0.1) #change 0.6 to 0.3    to 0.1
         boxes_c = boxes_c[keep]
         landmark = landmark[keep]
         return boxes, boxes_c, landmark

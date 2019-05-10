@@ -1,7 +1,7 @@
 import  os
 import numpy as np
 import math
-
+import cv2
 
 class BBox:
     # 人脸的box
@@ -52,9 +52,17 @@ class BBox:
             p[i] = self.project(landmark[i])
         return p
 
+def draw_ellipse(img,c_x,c_y,max_r,min_r,angle): # angle in  radian
+
+    pi = math.pi
+    angle = angle / pi * 180
+    if angle < 0:
+        angle += 360
+    cv2.ellipse(img, (int(c_x), int(c_y)), (int(max_r), int(min_r)), angle, 0, 360, (255, 0, 0),1)  # [240,240,240], thickness = 1
 
 
-def getDataFromTxt(txt, data_path, with_landmark=False):
+
+def getDataFromTxt(txt, data_path, with_landmark=False, test_draw =False):
     '''获取txt中的图像路径，人脸box
     参数：
       txt：数据txt文件
@@ -70,6 +78,15 @@ def getDataFromTxt(txt, data_path, with_landmark=False):
     while i< len(lines):
     #for line in lines:
         img_path = lines[i]
+        if(test_draw  and i > 300 ) :
+            print(str(i) + "th row")
+            break
+
+        if test_draw:
+            pics_path = '../../DATA/FDDB/originalPics'
+            path = img_path[0:-1]
+            img = cv2.imread(pics_path+'/'+path+'.jpg')
+
         i = i + 1
         cnt =  int (lines[i])
         #img_path = np.append(img_path, cnt)
@@ -84,18 +101,53 @@ def getDataFromTxt(txt, data_path, with_landmark=False):
             # del boxline[-1]
 
             [max_r,min_r,angle,center_x,center_y,conf] = [float(_) for _ in components]
-            x1 = center_x + min_r * math.cos(angle)
-            x2 = center_x - min_r * math.cos(angle)
-            y1 = center_y + min_r * math.sin(angle)
-            y2 = center_y - min_r * math.sin(angle)
+            # x1 = center_x + max_r * math.cos(angle)  #not ok
+            # x2 = center_x - max_r * math.cos(angle)
+            # y1 = center_y + max_r * math.sin(angle)
+            # y2 = center_y - max_r * math.sin(angle)
+
+            x1 = center_x + min_r #* math.sin(angle)  # not ok
+            x2 = center_x - min_r #* math.sin(angle)
+            y1 = center_y + min_r #* math.sin(angle)
+            y2 = center_y - min_r #* math.sin(angle)
+
+            # x1 = center_x + max_r * math.sin(angle)
+            # x2 = center_x - max_r * math.sin(angle)
+            # y1 = center_y + max_r * math.cos(angle)
+            # y2 = center_y - max_r * math.cos(angle)
+
+            # x1 = center_y + max_r * math.sin(angle) #not ok
+            # x2 = center_y - max_r * math.sin(angle)
+            # y1 = center_x + max_r * math.cos(angle)
+            # y2 = center_x - max_r * math.cos(angle)
+
+            # x1 = center_y + max_r * math.sin(angle)
+            # x2 = center_y - max_r * math.sin(angle)
+            # y1 = center_x + max_r * math.cos(angle)
+            # y2 = center_x - max_r * math.cos(angle)
+
+
+
+
             x = int(min(x1,x2))
             x_w = int (max(x1,x2))
             y = int (min(y1,y2))
             y_h = int (max(y1,y2))
+
+            if test_draw:
+                cv2.rectangle(img,(x,y),(x_w,y_h),(255,0,222) ,2 )
+                draw_ellipse(img, center_x, center_y, max_r, min_r, angle )
+
+
             box =np.array( [x,y,x_w,y_h]  )
             #box = list(map(int, box))
             boxes = np.append(boxes, box )
         i = i + 1
+
+        if test_draw:
+            path = img_path[0 :-1]
+            path =  path.split('/')
+            cv2.imwrite(path[-1]+'.jpg',img)
 
         if not with_landmark:
             single_pic = np.append(img_path,boxes)
@@ -109,8 +161,15 @@ def getDataFromTxt(txt, data_path, with_landmark=False):
 if __name__ == '__main__' :
 
     merged_fddb_file = '/Users/zjt/MEGAsync/毕设/基于深度学习的人脸检测算法设计与实现/1.CNN实现/参考实现/DATA/FDDB/FDDB-folds/FDDB-fold-all-ellipseList.txt'
-    output_fddb_val_file = 'fddb_val.txt'
-    result = getDataFromTxt(merged_fddb_file,'.')
+
+    output_fddb_val_file = 'fddb_val_min_r.txt'
+
+    test_draw = False
+    result = getDataFromTxt(merged_fddb_file,'.',False, test_draw)
+    if(test_draw) :
+        a = input("this is just test")
+
+
     output_file = open(output_fddb_val_file,'w')
     for i in range(len(result) ):
        element = result[i]
@@ -121,6 +180,8 @@ if __name__ == '__main__' :
        output_file.write(str(element) )
        if i<(len(result)-1) and ('/' not in result[i+1] ):
         output_file.write(' ')
+        # if i == 200 :
+        #     break
         
     output_file.close()
     print("done")

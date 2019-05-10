@@ -125,7 +125,7 @@ def detectFaceDlibHog(detector, img, inHeight=300, inWidth=0):
 if __name__ == '__main__':
 
     data_dir = '../DATA/FDDB/originalPics' #验证集（测试）路径
-    anno_file = 'fddb_val.txt' #验证集标签文件（包含路径）
+    anno_file = 'fddb_val_min_r.txt' #验证集标签文件（包含路径）
     name = anno_file.split('.')[0]
     anno_file = 'test/'+ anno_file
     all_methods = ['hog','mmod','dnn','haar','mtcnn']
@@ -145,12 +145,17 @@ if __name__ == '__main__':
         val_test_result_name = name + detect_method+"_test_result.txt"
         out_path = output_file
         # 生成预测框文件，每个框的格式都为x1, y1, x1+w, y1+h, possibility
+
+        if (detect_method != 'mtcnn'):
+            print("jump this method "+ detect_method)
+            continue
         start_time = time.time()
 
         if detect_method == 'mtcnn':
     
             test_mode = "ONet"
-            thresh = [0.3, 0.1, 0.7]
+            #thresh = [0.3, 0.1, 0.7]
+            thresh = [0.3, 0.1, 0.1] #网络的置信度阈值
             min_face_size = 20
             stride = 2
     
@@ -214,7 +219,7 @@ if __name__ == '__main__':
     
                 #dets_file_name = os.path.join(save_path, f_name + '.txt')
                 #fid =open (dets_file_name,'w')
-                short_file_name=os.path.join(item[0],item[1])
+                short_file_name = os.path.join(item[0],item[1],item[2],item[3],item[4])
                 if boxes_c.shape[0] == 0 :
                     fid.write(short_file_name+ ' ')
                     fid.write(str(0) + '\n')
@@ -283,7 +288,7 @@ if __name__ == '__main__':
                 faces = detector.detectMultiScale(gray, 1.3, 5)
     
     
-                short_file_name = os.path.join(item[0], item[1])
+                short_file_name = os.path.join(item[0], item[1],item[2],item[3],item[4])
                 if len(faces) == 0:
                     fid.write(short_file_name + ' ')
                     fid.write(str(0) + '\n')
@@ -370,7 +375,7 @@ if __name__ == '__main__':
                 #cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
                 #cv2.imshow("Face Detection Comparison", outOpencvDnn)
     
-                short_file_name = os.path.join(item[0], item[1])
+                short_file_name = os.path.join(item[0], item[1],item[2],item[3],item[4])
                 if len(bboxes) == 0:
                     fid.write(short_file_name + ' ')
                     fid.write(str(0) + '\n')
@@ -442,7 +447,7 @@ if __name__ == '__main__':
                 # cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
                 # cv2.imshow("Face Detection Comparison", outOpencvDnn)
     
-                short_file_name = os.path.join(item[0], item[1])
+                short_file_name = os.path.join(item[0], item[1],item[2],item[3],item[4])
                 if len(bboxes) == 0:
                     fid.write(short_file_name + ' ')
                     fid.write(str(0) + '\n')
@@ -507,7 +512,7 @@ if __name__ == '__main__':
                 # cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
                 # cv2.imshow("Face Detection Comparison", outOpencvDnn)
     
-                short_file_name = os.path.join(item[0], item[1])
+                short_file_name = os.path.join(item[0], item[1],item[2],item[3],item[4])
                 if len(bboxes) == 0:
                     fid.write(short_file_name + ' ')
                     fid.write(str(0) + '\n')
