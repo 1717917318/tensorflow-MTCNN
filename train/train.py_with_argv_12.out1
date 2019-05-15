@@ -1,0 +1,2241 @@
+WARNING:tensorflow:From /home/xdjf/mypj/tensorflow-MTCNN/train/model.py:44: get_regularization_losses (from tensorflow.contrib.losses.python.losses.loss_ops) is deprecated and will be removed after 2016-12-30.
+Instructions for updating:
+Use tf.losses.get_regularization_losses instead.
+2019-04-22 19:17:12.681733: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1212] Found device 0 with properties: 
+name: GeForce GTX 1060 6GB major: 6 minor: 1 memoryClockRate(GHz): 1.7085
+pciBusID: 0000:02:00.0
+totalMemory: 5.93GiB freeMemory: 5.75GiB
+2019-04-22 19:17:12.681791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1312] Adding visible gpu devices: 0
+2019-04-22 19:17:18.483856: I tensorflow/core/common_runtime/gpu/gpu_device.cc:993] Creating TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 5531 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1060 6GB, pci bus id: 0000:02:00.0, compute capability: 6.1)
+epoch:1/30
+Step: 100/111660, accuracy: 0.687732, cls loss: 0.699230, bbox loss: 0.094772,Landmark loss :0.166907,L2 loss: 0.016034, Total Loss: 0.846104 ,lr:0.001000 
+epoch:1/30
+Step: 200/111660, accuracy: 0.804511, cls loss: 0.585528, bbox loss: 0.099774,Landmark loss :0.132626,L2 loss: 0.015968, Total Loss: 0.717696 ,lr:0.001000 
+epoch:1/30
+Step: 300/111660, accuracy: 0.782007, cls loss: 0.589081, bbox loss: 0.089004,Landmark loss :0.127512,L2 loss: 0.015935, Total Loss: 0.713273 ,lr:0.001000 
+epoch:1/30
+Step: 400/111660, accuracy: 0.734848, cls loss: 0.636930, bbox loss: 0.102329,Landmark loss :0.125683,L2 loss: 0.015924, Total Loss: 0.766861 ,lr:0.001000 
+epoch:1/30
+Step: 500/111660, accuracy: 0.732510, cls loss: 0.614716, bbox loss: 0.098000,Landmark loss :0.122410,L2 loss: 0.015934, Total Loss: 0.740855 ,lr:0.001000 
+epoch:1/30
+Step: 600/111660, accuracy: 0.783784, cls loss: 0.576115, bbox loss: 0.088109,Landmark loss :0.112460,L2 loss: 0.015959, Total Loss: 0.692358 ,lr:0.001000 
+epoch:1/30
+Step: 700/111660, accuracy: 0.805054, cls loss: 0.561759, bbox loss: 0.076414,Landmark loss :0.109730,L2 loss: 0.015998, Total Loss: 0.670828 ,lr:0.001000 
+epoch:1/30
+Step: 800/111660, accuracy: 0.831541, cls loss: 0.526501, bbox loss: 0.075827,Landmark loss :0.109838,L2 loss: 0.016033, Total Loss: 0.635367 ,lr:0.001000 
+epoch:1/30
+Step: 900/111660, accuracy: 0.805243, cls loss: 0.581225, bbox loss: 0.090435,Landmark loss :0.111348,L2 loss: 0.016071, Total Loss: 0.698187 ,lr:0.001000 
+epoch:1/30
+Step: 1000/111660, accuracy: 0.839080, cls loss: 0.480091, bbox loss: 0.084941,Landmark loss :0.104331,L2 loss: 0.016110, Total Loss: 0.590837 ,lr:0.001000 
+epoch:1/30
+Step: 1100/111660, accuracy: 0.856631, cls loss: 0.481895, bbox loss: 0.075755,Landmark loss :0.115000,L2 loss: 0.016146, Total Loss: 0.593418 ,lr:0.001000 
+epoch:1/30
+Step: 1200/111660, accuracy: 0.837736, cls loss: 0.514534, bbox loss: 0.087622,Landmark loss :0.081846,L2 loss: 0.016178, Total Loss: 0.615446 ,lr:0.001000 
+epoch:1/30
+Step: 1300/111660, accuracy: 0.861940, cls loss: 0.448394, bbox loss: 0.089899,Landmark loss :0.079283,L2 loss: 0.016219, Total Loss: 0.549204 ,lr:0.001000 
+epoch:1/30
+Step: 1400/111660, accuracy: 0.894340, cls loss: 0.415242, bbox loss: 0.095702,Landmark loss :0.111778,L2 loss: 0.016253, Total Loss: 0.535235 ,lr:0.001000 
+epoch:1/30
+Step: 1500/111660, accuracy: 0.876812, cls loss: 0.412996, bbox loss: 0.082701,Landmark loss :0.095407,L2 loss: 0.016299, Total Loss: 0.518348 ,lr:0.001000 
+epoch:1/30
+Step: 1600/111660, accuracy: 0.869403, cls loss: 0.408013, bbox loss: 0.100401,Landmark loss :0.105976,L2 loss: 0.016351, Total Loss: 0.527553 ,lr:0.001000 
+epoch:1/30
+Step: 1700/111660, accuracy: 0.887273, cls loss: 0.401573, bbox loss: 0.075927,Landmark loss :0.083914,L2 loss: 0.016406, Total Loss: 0.497900 ,lr:0.001000 
+epoch:1/30
+Step: 1800/111660, accuracy: 0.848921, cls loss: 0.483179, bbox loss: 0.083964,Landmark loss :0.109553,L2 loss: 0.016456, Total Loss: 0.596393 ,lr:0.001000 
+epoch:1/30
+Step: 1900/111660, accuracy: 0.862319, cls loss: 0.448153, bbox loss: 0.085185,Landmark loss :0.081525,L2 loss: 0.016498, Total Loss: 0.548006 ,lr:0.001000 
+epoch:1/30
+Step: 2000/111660, accuracy: 0.879121, cls loss: 0.419652, bbox loss: 0.083401,Landmark loss :0.085907,L2 loss: 0.016542, Total Loss: 0.520847 ,lr:0.001000 
+epoch:1/30
+Step: 2100/111660, accuracy: 0.874046, cls loss: 0.373463, bbox loss: 0.078330,Landmark loss :0.104599,L2 loss: 0.016592, Total Loss: 0.481519 ,lr:0.001000 
+epoch:1/30
+Step: 2200/111660, accuracy: 0.913858, cls loss: 0.373048, bbox loss: 0.078601,Landmark loss :0.088771,L2 loss: 0.016628, Total Loss: 0.473362 ,lr:0.001000 
+epoch:1/30
+Step: 2300/111660, accuracy: 0.923345, cls loss: 0.332667, bbox loss: 0.074176,Landmark loss :0.077152,L2 loss: 0.016653, Total Loss: 0.424984 ,lr:0.001000 
+epoch:1/30
+Step: 2400/111660, accuracy: 0.903704, cls loss: 0.329732, bbox loss: 0.095738,Landmark loss :0.087470,L2 loss: 0.016682, Total Loss: 0.438019 ,lr:0.001000 
+epoch:1/30
+Step: 2500/111660, accuracy: 0.885609, cls loss: 0.358681, bbox loss: 0.080882,Landmark loss :0.070943,L2 loss: 0.016700, Total Loss: 0.451294 ,lr:0.001000 
+epoch:1/30
+Step: 2600/111660, accuracy: 0.938931, cls loss: 0.283306, bbox loss: 0.076629,Landmark loss :0.081565,L2 loss: 0.016728, Total Loss: 0.379131 ,lr:0.001000 
+epoch:1/30
+Step: 2700/111660, accuracy: 0.910394, cls loss: 0.391183, bbox loss: 0.080821,Landmark loss :0.089006,L2 loss: 0.016740, Total Loss: 0.492836 ,lr:0.001000 
+epoch:1/30
+Step: 2800/111660, accuracy: 0.890511, cls loss: 0.426503, bbox loss: 0.083216,Landmark loss :0.067124,L2 loss: 0.016752, Total Loss: 0.518425 ,lr:0.001000 
+epoch:1/30
+Step: 2900/111660, accuracy: 0.905303, cls loss: 0.366486, bbox loss: 0.065403,Landmark loss :0.080656,L2 loss: 0.016758, Total Loss: 0.456275 ,lr:0.001000 
+epoch:1/30
+Step: 3000/111660, accuracy: 0.945736, cls loss: 0.333471, bbox loss: 0.071084,Landmark loss :0.088158,L2 loss: 0.016769, Total Loss: 0.429861 ,lr:0.001000 
+epoch:1/30
+Step: 3100/111660, accuracy: 0.880000, cls loss: 0.437928, bbox loss: 0.073287,Landmark loss :0.067224,L2 loss: 0.016775, Total Loss: 0.524958 ,lr:0.001000 
+epoch:1/30
+Step: 3200/111660, accuracy: 0.876448, cls loss: 0.390405, bbox loss: 0.074641,Landmark loss :0.071411,L2 loss: 0.016781, Total Loss: 0.480211 ,lr:0.001000 
+epoch:1/30
+Step: 3300/111660, accuracy: 0.942238, cls loss: 0.284025, bbox loss: 0.072233,Landmark loss :0.092342,L2 loss: 0.016790, Total Loss: 0.383102 ,lr:0.001000 
+epoch:1/30
+Step: 3400/111660, accuracy: 0.881481, cls loss: 0.404465, bbox loss: 0.072647,Landmark loss :0.059127,L2 loss: 0.016803, Total Loss: 0.487155 ,lr:0.001000 
+epoch:1/30
+Step: 3500/111660, accuracy: 0.905138, cls loss: 0.329066, bbox loss: 0.079722,Landmark loss :0.063848,L2 loss: 0.016813, Total Loss: 0.417663 ,lr:0.001000 
+epoch:1/30
+Step: 3600/111660, accuracy: 0.896947, cls loss: 0.406282, bbox loss: 0.079328,Landmark loss :0.082400,L2 loss: 0.016817, Total Loss: 0.503962 ,lr:0.001000 
+epoch:1/30
+Step: 3700/111660, accuracy: 0.902256, cls loss: 0.317233, bbox loss: 0.071362,Landmark loss :0.061357,L2 loss: 0.016819, Total Loss: 0.400411 ,lr:0.001000 
+epoch:2/30
+Step: 3800/111660, accuracy: 0.877323, cls loss: 0.423007, bbox loss: 0.077312,Landmark loss :0.060204,L2 loss: 0.016828, Total Loss: 0.508593 ,lr:0.001000 
+epoch:2/30
+Step: 3900/111660, accuracy: 0.902622, cls loss: 0.347938, bbox loss: 0.077340,Landmark loss :0.065697,L2 loss: 0.016850, Total Loss: 0.436305 ,lr:0.001000 
+epoch:2/30
+Step: 4000/111660, accuracy: 0.929688, cls loss: 0.319812, bbox loss: 0.082242,Landmark loss :0.086244,L2 loss: 0.016860, Total Loss: 0.420914 ,lr:0.001000 
+epoch:2/30
+Step: 4100/111660, accuracy: 0.892989, cls loss: 0.380419, bbox loss: 0.065139,Landmark loss :0.066149,L2 loss: 0.016865, Total Loss: 0.462928 ,lr:0.001000 
+epoch:2/30
+Step: 4200/111660, accuracy: 0.912409, cls loss: 0.306617, bbox loss: 0.084077,Landmark loss :0.067483,L2 loss: 0.016879, Total Loss: 0.399276 ,lr:0.001000 
+epoch:2/30
+Step: 4300/111660, accuracy: 0.900000, cls loss: 0.326160, bbox loss: 0.074126,Landmark loss :0.081359,L2 loss: 0.016894, Total Loss: 0.420797 ,lr:0.001000 
+epoch:2/30
+Step: 4400/111660, accuracy: 0.879562, cls loss: 0.420964, bbox loss: 0.074152,Landmark loss :0.076754,L2 loss: 0.016898, Total Loss: 0.513314 ,lr:0.001000 
+epoch:2/30
+Step: 4500/111660, accuracy: 0.874539, cls loss: 0.435965, bbox loss: 0.065242,Landmark loss :0.066374,L2 loss: 0.016906, Total Loss: 0.518679 ,lr:0.001000 
+epoch:2/30
+Step: 4600/111660, accuracy: 0.916350, cls loss: 0.375479, bbox loss: 0.065369,Landmark loss :0.078591,L2 loss: 0.016924, Total Loss: 0.464383 ,lr:0.001000 
+epoch:2/30
+Step: 4700/111660, accuracy: 0.920152, cls loss: 0.304232, bbox loss: 0.076385,Landmark loss :0.074814,L2 loss: 0.016941, Total Loss: 0.396772 ,lr:0.001000 
+epoch:2/30
+Step: 4800/111660, accuracy: 0.920290, cls loss: 0.288019, bbox loss: 0.070484,Landmark loss :0.050042,L2 loss: 0.016952, Total Loss: 0.365235 ,lr:0.001000 
+epoch:2/30
+Step: 4900/111660, accuracy: 0.936330, cls loss: 0.288195, bbox loss: 0.075382,Landmark loss :0.065358,L2 loss: 0.016961, Total Loss: 0.375526 ,lr:0.001000 
+epoch:2/30
+Step: 5000/111660, accuracy: 0.904762, cls loss: 0.324218, bbox loss: 0.069464,Landmark loss :0.071125,L2 loss: 0.016972, Total Loss: 0.411484 ,lr:0.001000 
+epoch:2/30
+Step: 5100/111660, accuracy: 0.914286, cls loss: 0.293067, bbox loss: 0.068557,Landmark loss :0.062810,L2 loss: 0.016976, Total Loss: 0.375726 ,lr:0.001000 
+epoch:2/30
+Step: 5200/111660, accuracy: 0.903226, cls loss: 0.353462, bbox loss: 0.083861,Landmark loss :0.064223,L2 loss: 0.016985, Total Loss: 0.444489 ,lr:0.001000 
+epoch:2/30
+Step: 5300/111660, accuracy: 0.901099, cls loss: 0.391438, bbox loss: 0.077933,Landmark loss :0.060885,L2 loss: 0.016997, Total Loss: 0.477844 ,lr:0.001000 
+epoch:2/30
+Step: 5400/111660, accuracy: 0.938224, cls loss: 0.256681, bbox loss: 0.075036,Landmark loss :0.065078,L2 loss: 0.017011, Total Loss: 0.343749 ,lr:0.001000 
+epoch:2/30
+Step: 5500/111660, accuracy: 0.921053, cls loss: 0.289408, bbox loss: 0.075522,Landmark loss :0.069809,L2 loss: 0.017017, Total Loss: 0.379091 ,lr:0.001000 
+epoch:2/30
+Step: 5600/111660, accuracy: 0.901575, cls loss: 0.309432, bbox loss: 0.082620,Landmark loss :0.061859,L2 loss: 0.017017, Total Loss: 0.398688 ,lr:0.001000 
+epoch:2/30
+Step: 5700/111660, accuracy: 0.926923, cls loss: 0.284399, bbox loss: 0.074036,Landmark loss :0.051259,L2 loss: 0.017028, Total Loss: 0.364074 ,lr:0.001000 
+epoch:2/30
+Step: 5800/111660, accuracy: 0.926923, cls loss: 0.268144, bbox loss: 0.076978,Landmark loss :0.065400,L2 loss: 0.017045, Total Loss: 0.356378 ,lr:0.001000 
+epoch:2/30
+Step: 5900/111660, accuracy: 0.907473, cls loss: 0.316291, bbox loss: 0.087847,Landmark loss :0.064198,L2 loss: 0.017055, Total Loss: 0.409369 ,lr:0.001000 
+epoch:2/30
+Step: 6000/111660, accuracy: 0.935943, cls loss: 0.320561, bbox loss: 0.068712,Landmark loss :0.053954,L2 loss: 0.017069, Total Loss: 0.398963 ,lr:0.001000 
+epoch:2/30
+Step: 6100/111660, accuracy: 0.916084, cls loss: 0.300123, bbox loss: 0.069961,Landmark loss :0.052282,L2 loss: 0.017070, Total Loss: 0.378315 ,lr:0.001000 
+epoch:2/30
+Step: 6200/111660, accuracy: 0.918288, cls loss: 0.242727, bbox loss: 0.084503,Landmark loss :0.056535,L2 loss: 0.017077, Total Loss: 0.330323 ,lr:0.001000 
+epoch:2/30
+Step: 6300/111660, accuracy: 0.943262, cls loss: 0.286699, bbox loss: 0.065403,Landmark loss :0.063696,L2 loss: 0.017094, Total Loss: 0.368342 ,lr:0.001000 
+epoch:2/30
+Step: 6400/111660, accuracy: 0.910781, cls loss: 0.325492, bbox loss: 0.080175,Landmark loss :0.052464,L2 loss: 0.017103, Total Loss: 0.408915 ,lr:0.001000 
+epoch:2/30
+Step: 6500/111660, accuracy: 0.937743, cls loss: 0.279047, bbox loss: 0.074543,Landmark loss :0.072509,L2 loss: 0.017113, Total Loss: 0.369686 ,lr:0.001000 
+epoch:2/30
+Step: 6600/111660, accuracy: 0.913858, cls loss: 0.327927, bbox loss: 0.077200,Landmark loss :0.057856,L2 loss: 0.017117, Total Loss: 0.412573 ,lr:0.001000 
+epoch:2/30
+Step: 6700/111660, accuracy: 0.928571, cls loss: 0.265106, bbox loss: 0.077114,Landmark loss :0.063540,L2 loss: 0.017120, Total Loss: 0.352553 ,lr:0.001000 
+epoch:2/30
+Step: 6800/111660, accuracy: 0.900763, cls loss: 0.303352, bbox loss: 0.087077,Landmark loss :0.059550,L2 loss: 0.017124, Total Loss: 0.393789 ,lr:0.001000 
+epoch:2/30
+Step: 6900/111660, accuracy: 0.917647, cls loss: 0.308266, bbox loss: 0.071650,Landmark loss :0.066128,L2 loss: 0.017133, Total Loss: 0.394288 ,lr:0.001000 
+epoch:2/30
+Step: 7000/111660, accuracy: 0.946768, cls loss: 0.232735, bbox loss: 0.075617,Landmark loss :0.067967,L2 loss: 0.017130, Total Loss: 0.321657 ,lr:0.001000 
+epoch:2/30
+Step: 7100/111660, accuracy: 0.921642, cls loss: 0.259975, bbox loss: 0.062443,Landmark loss :0.061027,L2 loss: 0.017146, Total Loss: 0.338855 ,lr:0.001000 
+epoch:2/30
+Step: 7200/111660, accuracy: 0.916084, cls loss: 0.262573, bbox loss: 0.071167,Landmark loss :0.063525,L2 loss: 0.017156, Total Loss: 0.347075 ,lr:0.001000 
+epoch:2/30
+Step: 7300/111660, accuracy: 0.887273, cls loss: 0.355588, bbox loss: 0.070916,Landmark loss :0.065445,L2 loss: 0.017163, Total Loss: 0.440931 ,lr:0.001000 
+epoch:2/30
+Step: 7400/111660, accuracy: 0.896825, cls loss: 0.371744, bbox loss: 0.065898,Landmark loss :0.070729,L2 loss: 0.017162, Total Loss: 0.457220 ,lr:0.001000 
+epoch:3/30
+Step: 7500/111660, accuracy: 0.870722, cls loss: 0.379043, bbox loss: 0.074947,Landmark loss :0.047795,L2 loss: 0.017171, Total Loss: 0.457584 ,lr:0.001000 
+epoch:3/30
+Step: 7600/111660, accuracy: 0.930403, cls loss: 0.290745, bbox loss: 0.068341,Landmark loss :0.060778,L2 loss: 0.017186, Total Loss: 0.372490 ,lr:0.001000 
+epoch:3/30
+Step: 7700/111660, accuracy: 0.922780, cls loss: 0.306068, bbox loss: 0.070681,Landmark loss :0.049661,L2 loss: 0.017201, Total Loss: 0.383441 ,lr:0.001000 
+epoch:3/30
+Step: 7800/111660, accuracy: 0.873518, cls loss: 0.455810, bbox loss: 0.074165,Landmark loss :0.068577,L2 loss: 0.017204, Total Loss: 0.544385 ,lr:0.001000 
+epoch:3/30
+Step: 7900/111660, accuracy: 0.931559, cls loss: 0.262053, bbox loss: 0.073955,Landmark loss :0.063880,L2 loss: 0.017208, Total Loss: 0.348178 ,lr:0.001000 
+epoch:3/30
+Step: 8000/111660, accuracy: 0.957692, cls loss: 0.202133, bbox loss: 0.069127,Landmark loss :0.064024,L2 loss: 0.017216, Total Loss: 0.285925 ,lr:0.001000 
+epoch:3/30
+Step: 8100/111660, accuracy: 0.902256, cls loss: 0.358612, bbox loss: 0.064701,Landmark loss :0.053805,L2 loss: 0.017219, Total Loss: 0.435085 ,lr:0.001000 
+epoch:3/30
+Step: 8200/111660, accuracy: 0.916031, cls loss: 0.283947, bbox loss: 0.079562,Landmark loss :0.079811,L2 loss: 0.017225, Total Loss: 0.380859 ,lr:0.001000 
+epoch:3/30
+Step: 8300/111660, accuracy: 0.950000, cls loss: 0.213630, bbox loss: 0.073603,Landmark loss :0.063941,L2 loss: 0.017238, Total Loss: 0.299640 ,lr:0.001000 
+epoch:3/30
+Step: 8400/111660, accuracy: 0.936620, cls loss: 0.266642, bbox loss: 0.066072,Landmark loss :0.057413,L2 loss: 0.017244, Total Loss: 0.345629 ,lr:0.001000 
+epoch:3/30
+Step: 8500/111660, accuracy: 0.865900, cls loss: 0.440286, bbox loss: 0.072379,Landmark loss :0.046160,L2 loss: 0.017247, Total Loss: 0.516803 ,lr:0.001000 
+epoch:3/30
+Step: 8600/111660, accuracy: 0.925926, cls loss: 0.275395, bbox loss: 0.074252,Landmark loss :0.059337,L2 loss: 0.017252, Total Loss: 0.359442 ,lr:0.001000 
+epoch:3/30
+Step: 8700/111660, accuracy: 0.931159, cls loss: 0.273668, bbox loss: 0.072229,Landmark loss :0.039192,L2 loss: 0.017257, Total Loss: 0.346636 ,lr:0.001000 
+epoch:3/30
+Step: 8800/111660, accuracy: 0.910035, cls loss: 0.296769, bbox loss: 0.067674,Landmark loss :0.062685,L2 loss: 0.017253, Total Loss: 0.379202 ,lr:0.001000 
+epoch:3/30
+Step: 8900/111660, accuracy: 0.938182, cls loss: 0.241673, bbox loss: 0.063732,Landmark loss :0.048046,L2 loss: 0.017257, Total Loss: 0.314819 ,lr:0.001000 
+epoch:3/30
+Step: 9000/111660, accuracy: 0.934545, cls loss: 0.238184, bbox loss: 0.074019,Landmark loss :0.055263,L2 loss: 0.017262, Total Loss: 0.320087 ,lr:0.001000 
+epoch:3/30
+Step: 9100/111660, accuracy: 0.910072, cls loss: 0.294336, bbox loss: 0.075969,Landmark loss :0.044954,L2 loss: 0.017270, Total Loss: 0.372067 ,lr:0.001000 
+epoch:3/30
+Step: 9200/111660, accuracy: 0.913194, cls loss: 0.349874, bbox loss: 0.078077,Landmark loss :0.058298,L2 loss: 0.017273, Total Loss: 0.435335 ,lr:0.001000 
+epoch:3/30
+Step: 9300/111660, accuracy: 0.940476, cls loss: 0.245494, bbox loss: 0.085922,Landmark loss :0.054729,L2 loss: 0.017270, Total Loss: 0.333091 ,lr:0.001000 
+epoch:3/30
+Step: 9400/111660, accuracy: 0.927757, cls loss: 0.258108, bbox loss: 0.070944,Landmark loss :0.041889,L2 loss: 0.017276, Total Loss: 0.331802 ,lr:0.001000 
+epoch:3/30
+Step: 9500/111660, accuracy: 0.933824, cls loss: 0.330801, bbox loss: 0.068301,Landmark loss :0.046733,L2 loss: 0.017282, Total Loss: 0.405599 ,lr:0.001000 
+epoch:3/30
+Step: 9600/111660, accuracy: 0.917603, cls loss: 0.318730, bbox loss: 0.071822,Landmark loss :0.058388,L2 loss: 0.017286, Total Loss: 0.401121 ,lr:0.001000 
+epoch:3/30
+Step: 9700/111660, accuracy: 0.902622, cls loss: 0.315200, bbox loss: 0.073066,Landmark loss :0.057277,L2 loss: 0.017292, Total Loss: 0.397663 ,lr:0.001000 
+epoch:3/30
+Step: 9800/111660, accuracy: 0.919231, cls loss: 0.270308, bbox loss: 0.064217,Landmark loss :0.048394,L2 loss: 0.017286, Total Loss: 0.343899 ,lr:0.001000 
+epoch:3/30
+Step: 9900/111660, accuracy: 0.939164, cls loss: 0.258742, bbox loss: 0.080478,Landmark loss :0.071767,L2 loss: 0.017289, Total Loss: 0.352153 ,lr:0.001000 
+epoch:3/30
+Step: 10000/111660, accuracy: 0.936090, cls loss: 0.259995, bbox loss: 0.062439,Landmark loss :0.054203,L2 loss: 0.017298, Total Loss: 0.335614 ,lr:0.001000 
+epoch:3/30
+Step: 10100/111660, accuracy: 0.916058, cls loss: 0.277597, bbox loss: 0.070453,Landmark loss :0.061386,L2 loss: 0.017306, Total Loss: 0.360822 ,lr:0.001000 
+epoch:3/30
+Step: 10200/111660, accuracy: 0.886792, cls loss: 0.310601, bbox loss: 0.072482,Landmark loss :0.040136,L2 loss: 0.017315, Total Loss: 0.384225 ,lr:0.001000 
+epoch:3/30
+Step: 10300/111660, accuracy: 0.920578, cls loss: 0.292951, bbox loss: 0.060474,Landmark loss :0.056523,L2 loss: 0.017310, Total Loss: 0.368759 ,lr:0.001000 
+epoch:3/30
+Step: 10400/111660, accuracy: 0.919414, cls loss: 0.278470, bbox loss: 0.065027,Landmark loss :0.047781,L2 loss: 0.017308, Total Loss: 0.352182 ,lr:0.001000 
+epoch:3/30
+Step: 10500/111660, accuracy: 0.901515, cls loss: 0.279964, bbox loss: 0.069148,Landmark loss :0.056425,L2 loss: 0.017307, Total Loss: 0.360058 ,lr:0.001000 
+epoch:3/30
+Step: 10600/111660, accuracy: 0.875969, cls loss: 0.401689, bbox loss: 0.071199,Landmark loss :0.064637,L2 loss: 0.017309, Total Loss: 0.486916 ,lr:0.001000 
+epoch:3/30
+Step: 10700/111660, accuracy: 0.932584, cls loss: 0.240089, bbox loss: 0.065645,Landmark loss :0.049333,L2 loss: 0.017309, Total Loss: 0.314887 ,lr:0.001000 
+epoch:3/30
+Step: 10800/111660, accuracy: 0.951852, cls loss: 0.229873, bbox loss: 0.066949,Landmark loss :0.051430,L2 loss: 0.017317, Total Loss: 0.306379 ,lr:0.001000 
+epoch:3/30
+Step: 10900/111660, accuracy: 0.934066, cls loss: 0.244082, bbox loss: 0.074263,Landmark loss :0.053590,L2 loss: 0.017322, Total Loss: 0.325330 ,lr:0.001000 
+epoch:3/30
+Step: 11000/111660, accuracy: 0.933594, cls loss: 0.225628, bbox loss: 0.076418,Landmark loss :0.057029,L2 loss: 0.017316, Total Loss: 0.309667 ,lr:0.001000 
+epoch:3/30
+Step: 11100/111660, accuracy: 0.891791, cls loss: 0.365771, bbox loss: 0.056320,Landmark loss :0.042661,L2 loss: 0.017311, Total Loss: 0.432572 ,lr:0.001000 
+epoch:4/30
+Step: 11200/111660, accuracy: 0.876405, cls loss: 0.404773, bbox loss: 0.071234,Landmark loss :0.057008,L2 loss: 0.017313, Total Loss: 0.486207 ,lr:0.001000 
+epoch:4/30
+Step: 11300/111660, accuracy: 0.930657, cls loss: 0.307874, bbox loss: 0.067557,Landmark loss :0.050833,L2 loss: 0.017323, Total Loss: 0.384392 ,lr:0.001000 
+epoch:4/30
+Step: 11400/111660, accuracy: 0.953237, cls loss: 0.236628, bbox loss: 0.080025,Landmark loss :0.049300,L2 loss: 0.017331, Total Loss: 0.318621 ,lr:0.001000 
+epoch:4/30
+Step: 11500/111660, accuracy: 0.923077, cls loss: 0.298366, bbox loss: 0.072695,Landmark loss :0.061584,L2 loss: 0.017338, Total Loss: 0.382843 ,lr:0.001000 
+epoch:4/30
+Step: 11600/111660, accuracy: 0.947761, cls loss: 0.216018, bbox loss: 0.063282,Landmark loss :0.047681,L2 loss: 0.017331, Total Loss: 0.288831 ,lr:0.001000 
+epoch:4/30
+Step: 11700/111660, accuracy: 0.913669, cls loss: 0.279774, bbox loss: 0.068006,Landmark loss :0.062503,L2 loss: 0.017337, Total Loss: 0.362366 ,lr:0.001000 
+epoch:4/30
+Step: 11800/111660, accuracy: 0.919118, cls loss: 0.266270, bbox loss: 0.068134,Landmark loss :0.050805,L2 loss: 0.017335, Total Loss: 0.343074 ,lr:0.001000 
+epoch:4/30
+Step: 11900/111660, accuracy: 0.895349, cls loss: 0.354896, bbox loss: 0.065853,Landmark loss :0.047455,L2 loss: 0.017332, Total Loss: 0.428881 ,lr:0.001000 
+epoch:4/30
+Step: 12000/111660, accuracy: 0.944649, cls loss: 0.235293, bbox loss: 0.069368,Landmark loss :0.047874,L2 loss: 0.017339, Total Loss: 0.311253 ,lr:0.001000 
+epoch:4/30
+Step: 12100/111660, accuracy: 0.939623, cls loss: 0.228139, bbox loss: 0.078932,Landmark loss :0.059852,L2 loss: 0.017341, Total Loss: 0.314873 ,lr:0.001000 
+epoch:4/30
+Step: 12200/111660, accuracy: 0.952555, cls loss: 0.192490, bbox loss: 0.066583,Landmark loss :0.057323,L2 loss: 0.017338, Total Loss: 0.271781 ,lr:0.001000 
+epoch:4/30
+Step: 12300/111660, accuracy: 0.919118, cls loss: 0.295806, bbox loss: 0.066672,Landmark loss :0.048122,L2 loss: 0.017343, Total Loss: 0.370546 ,lr:0.001000 
+epoch:4/30
+Step: 12400/111660, accuracy: 0.927481, cls loss: 0.260539, bbox loss: 0.069749,Landmark loss :0.061958,L2 loss: 0.017341, Total Loss: 0.343734 ,lr:0.001000 
+epoch:4/30
+Step: 12500/111660, accuracy: 0.921348, cls loss: 0.324030, bbox loss: 0.074857,Landmark loss :0.060515,L2 loss: 0.017333, Total Loss: 0.409049 ,lr:0.001000 
+epoch:4/30
+Step: 12600/111660, accuracy: 0.924812, cls loss: 0.290919, bbox loss: 0.071542,Landmark loss :0.053196,L2 loss: 0.017331, Total Loss: 0.370618 ,lr:0.001000 
+epoch:4/30
+Step: 12700/111660, accuracy: 0.925197, cls loss: 0.290831, bbox loss: 0.070276,Landmark loss :0.044977,L2 loss: 0.017337, Total Loss: 0.365794 ,lr:0.001000 
+epoch:4/30
+Step: 12800/111660, accuracy: 0.935252, cls loss: 0.221497, bbox loss: 0.063293,Landmark loss :0.044181,L2 loss: 0.017338, Total Loss: 0.292572 ,lr:0.001000 
+epoch:4/30
+Step: 12900/111660, accuracy: 0.922780, cls loss: 0.300093, bbox loss: 0.069193,Landmark loss :0.050821,L2 loss: 0.017344, Total Loss: 0.377444 ,lr:0.001000 
+epoch:4/30
+Step: 13000/111660, accuracy: 0.907063, cls loss: 0.287322, bbox loss: 0.074508,Landmark loss :0.056670,L2 loss: 0.017341, Total Loss: 0.370252 ,lr:0.001000 
+epoch:4/30
+Step: 13100/111660, accuracy: 0.912088, cls loss: 0.372635, bbox loss: 0.072805,Landmark loss :0.054015,L2 loss: 0.017335, Total Loss: 0.453379 ,lr:0.001000 
+epoch:4/30
+Step: 13200/111660, accuracy: 0.929368, cls loss: 0.252707, bbox loss: 0.080418,Landmark loss :0.041540,L2 loss: 0.017338, Total Loss: 0.331023 ,lr:0.001000 
+epoch:4/30
+Step: 13300/111660, accuracy: 0.909449, cls loss: 0.390239, bbox loss: 0.071048,Landmark loss :0.045749,L2 loss: 0.017338, Total Loss: 0.465975 ,lr:0.001000 
+epoch:4/30
+Step: 13400/111660, accuracy: 0.943061, cls loss: 0.285383, bbox loss: 0.059073,Landmark loss :0.050922,L2 loss: 0.017334, Total Loss: 0.357714 ,lr:0.001000 
+epoch:4/30
+Step: 13500/111660, accuracy: 0.939850, cls loss: 0.229710, bbox loss: 0.056941,Landmark loss :0.056555,L2 loss: 0.017331, Total Loss: 0.303789 ,lr:0.001000 
+epoch:4/30
+Step: 13600/111660, accuracy: 0.915385, cls loss: 0.348107, bbox loss: 0.070375,Landmark loss :0.049710,L2 loss: 0.017333, Total Loss: 0.425483 ,lr:0.001000 
+epoch:4/30
+Step: 13700/111660, accuracy: 0.914729, cls loss: 0.276982, bbox loss: 0.069456,Landmark loss :0.056887,L2 loss: 0.017337, Total Loss: 0.357491 ,lr:0.001000 
+epoch:4/30
+Step: 13800/111660, accuracy: 0.932076, cls loss: 0.250606, bbox loss: 0.074824,Landmark loss :0.052847,L2 loss: 0.017342, Total Loss: 0.331783 ,lr:0.001000 
+epoch:4/30
+Step: 13900/111660, accuracy: 0.931035, cls loss: 0.244445, bbox loss: 0.079382,Landmark loss :0.044255,L2 loss: 0.017344, Total Loss: 0.323608 ,lr:0.001000 
+epoch:4/30
+Step: 14000/111660, accuracy: 0.947955, cls loss: 0.212399, bbox loss: 0.067592,Landmark loss :0.041899,L2 loss: 0.017339, Total Loss: 0.284484 ,lr:0.001000 
+epoch:4/30
+Step: 14100/111660, accuracy: 0.924242, cls loss: 0.335547, bbox loss: 0.085106,Landmark loss :0.046287,L2 loss: 0.017334, Total Loss: 0.418578 ,lr:0.001000 
+epoch:4/30
+Step: 14200/111660, accuracy: 0.923636, cls loss: 0.302109, bbox loss: 0.059459,Landmark loss :0.048805,L2 loss: 0.017323, Total Loss: 0.373565 ,lr:0.001000 
+epoch:4/30
+Step: 14300/111660, accuracy: 0.938849, cls loss: 0.236716, bbox loss: 0.088386,Landmark loss :0.042917,L2 loss: 0.017322, Total Loss: 0.319690 ,lr:0.001000 
+epoch:4/30
+Step: 14400/111660, accuracy: 0.915709, cls loss: 0.306011, bbox loss: 0.074614,Landmark loss :0.056167,L2 loss: 0.017321, Total Loss: 0.388723 ,lr:0.001000 
+epoch:4/30
+Step: 14500/111660, accuracy: 0.928571, cls loss: 0.241955, bbox loss: 0.069741,Landmark loss :0.040020,L2 loss: 0.017323, Total Loss: 0.314159 ,lr:0.001000 
+epoch:4/30
+Step: 14600/111660, accuracy: 0.942652, cls loss: 0.244822, bbox loss: 0.060056,Landmark loss :0.040892,L2 loss: 0.017321, Total Loss: 0.312618 ,lr:0.001000 
+epoch:4/30
+Step: 14700/111660, accuracy: 0.896296, cls loss: 0.330072, bbox loss: 0.061029,Landmark loss :0.060083,L2 loss: 0.017315, Total Loss: 0.407943 ,lr:0.001000 
+epoch:4/30
+Step: 14800/111660, accuracy: 0.939164, cls loss: 0.216256, bbox loss: 0.072263,Landmark loss :0.041010,L2 loss: 0.017309, Total Loss: 0.290202 ,lr:0.001000 
+epoch:5/30
+Step: 14900/111660, accuracy: 0.929889, cls loss: 0.273206, bbox loss: 0.065788,Landmark loss :0.056583,L2 loss: 0.017306, Total Loss: 0.351698 ,lr:0.001000 
+epoch:5/30
+Step: 15000/111660, accuracy: 0.939759, cls loss: 0.254447, bbox loss: 0.065013,Landmark loss :0.053915,L2 loss: 0.017313, Total Loss: 0.331224 ,lr:0.001000 
+epoch:5/30
+Step: 15100/111660, accuracy: 0.949091, cls loss: 0.212249, bbox loss: 0.064142,Landmark loss :0.052099,L2 loss: 0.017313, Total Loss: 0.287682 ,lr:0.001000 
+epoch:5/30
+Step: 15200/111660, accuracy: 0.955017, cls loss: 0.197415, bbox loss: 0.077930,Landmark loss :0.043843,L2 loss: 0.017317, Total Loss: 0.275618 ,lr:0.001000 
+epoch:5/30
+Step: 15300/111660, accuracy: 0.889734, cls loss: 0.360445, bbox loss: 0.067849,Landmark loss :0.040519,L2 loss: 0.017311, Total Loss: 0.431941 ,lr:0.001000 
+epoch:5/30
+Step: 15400/111660, accuracy: 0.943262, cls loss: 0.239387, bbox loss: 0.067270,Landmark loss :0.060327,L2 loss: 0.017318, Total Loss: 0.320504 ,lr:0.001000 
+epoch:5/30
+Step: 15500/111660, accuracy: 0.918819, cls loss: 0.276340, bbox loss: 0.071055,Landmark loss :0.044852,L2 loss: 0.017311, Total Loss: 0.351605 ,lr:0.001000 
+epoch:5/30
+Step: 15600/111660, accuracy: 0.911765, cls loss: 0.299316, bbox loss: 0.067725,Landmark loss :0.047296,L2 loss: 0.017309, Total Loss: 0.374135 ,lr:0.001000 
+epoch:5/30
+Step: 15700/111660, accuracy: 0.943820, cls loss: 0.247731, bbox loss: 0.074648,Landmark loss :0.058651,L2 loss: 0.017313, Total Loss: 0.331694 ,lr:0.001000 
+epoch:5/30
+Step: 15800/111660, accuracy: 0.914591, cls loss: 0.317562, bbox loss: 0.067154,Landmark loss :0.043049,L2 loss: 0.017315, Total Loss: 0.389979 ,lr:0.001000 
+epoch:5/30
+Step: 15900/111660, accuracy: 0.937008, cls loss: 0.293033, bbox loss: 0.082465,Landmark loss :0.044232,L2 loss: 0.017314, Total Loss: 0.373696 ,lr:0.001000 
+epoch:5/30
+Step: 16000/111660, accuracy: 0.927203, cls loss: 0.280775, bbox loss: 0.059517,Landmark loss :0.050590,L2 loss: 0.017316, Total Loss: 0.353145 ,lr:0.001000 
+epoch:5/30
+Step: 16100/111660, accuracy: 0.919118, cls loss: 0.254703, bbox loss: 0.073484,Landmark loss :0.051646,L2 loss: 0.017313, Total Loss: 0.334581 ,lr:0.001000 
+epoch:5/30
+Step: 16200/111660, accuracy: 0.909434, cls loss: 0.290562, bbox loss: 0.080121,Landmark loss :0.036711,L2 loss: 0.017307, Total Loss: 0.366285 ,lr:0.001000 
+epoch:5/30
+Step: 16300/111660, accuracy: 0.940141, cls loss: 0.264374, bbox loss: 0.072791,Landmark loss :0.054153,L2 loss: 0.017295, Total Loss: 0.345141 ,lr:0.001000 
+epoch:5/30
+Step: 16400/111660, accuracy: 0.922764, cls loss: 0.262348, bbox loss: 0.077720,Landmark loss :0.044069,L2 loss: 0.017296, Total Loss: 0.340539 ,lr:0.001000 
+epoch:5/30
+Step: 16500/111660, accuracy: 0.916981, cls loss: 0.277968, bbox loss: 0.076886,Landmark loss :0.044083,L2 loss: 0.017297, Total Loss: 0.355749 ,lr:0.001000 
+epoch:5/30
+Step: 16600/111660, accuracy: 0.941176, cls loss: 0.231606, bbox loss: 0.065984,Landmark loss :0.050830,L2 loss: 0.017302, Total Loss: 0.307315 ,lr:0.001000 
+epoch:5/30
+Step: 16700/111660, accuracy: 0.925532, cls loss: 0.264790, bbox loss: 0.065183,Landmark loss :0.035751,L2 loss: 0.017300, Total Loss: 0.332557 ,lr:0.001000 
+epoch:5/30
+Step: 16800/111660, accuracy: 0.929889, cls loss: 0.242711, bbox loss: 0.078430,Landmark loss :0.064211,L2 loss: 0.017293, Total Loss: 0.331325 ,lr:0.001000 
+epoch:5/30
+Step: 16900/111660, accuracy: 0.937269, cls loss: 0.274108, bbox loss: 0.070517,Landmark loss :0.038287,L2 loss: 0.017291, Total Loss: 0.345801 ,lr:0.001000 
+epoch:5/30
+Step: 17000/111660, accuracy: 0.911111, cls loss: 0.292078, bbox loss: 0.064744,Landmark loss :0.052221,L2 loss: 0.017291, Total Loss: 0.367851 ,lr:0.001000 
+epoch:5/30
+Step: 17100/111660, accuracy: 0.955882, cls loss: 0.199756, bbox loss: 0.072467,Landmark loss :0.049518,L2 loss: 0.017284, Total Loss: 0.278032 ,lr:0.001000 
+epoch:5/30
+Step: 17200/111660, accuracy: 0.936842, cls loss: 0.232024, bbox loss: 0.072671,Landmark loss :0.064536,L2 loss: 0.017280, Total Loss: 0.317908 ,lr:0.001000 
+epoch:5/30
+Step: 17300/111660, accuracy: 0.916968, cls loss: 0.302232, bbox loss: 0.071383,Landmark loss :0.059965,L2 loss: 0.017279, Total Loss: 0.385185 ,lr:0.001000 
+epoch:5/30
+Step: 17400/111660, accuracy: 0.957295, cls loss: 0.211412, bbox loss: 0.083666,Landmark loss :0.064967,L2 loss: 0.017279, Total Loss: 0.303007 ,lr:0.001000 
+epoch:5/30
+Step: 17500/111660, accuracy: 0.935849, cls loss: 0.270242, bbox loss: 0.069402,Landmark loss :0.049279,L2 loss: 0.017285, Total Loss: 0.346868 ,lr:0.001000 
+epoch:5/30
+Step: 17600/111660, accuracy: 0.945098, cls loss: 0.229786, bbox loss: 0.066316,Landmark loss :0.046784,L2 loss: 0.017279, Total Loss: 0.303616 ,lr:0.001000 
+epoch:5/30
+Step: 17700/111660, accuracy: 0.921348, cls loss: 0.286077, bbox loss: 0.069776,Landmark loss :0.043037,L2 loss: 0.017275, Total Loss: 0.359759 ,lr:0.001000 
+epoch:5/30
+Step: 17800/111660, accuracy: 0.930502, cls loss: 0.242360, bbox loss: 0.071723,Landmark loss :0.046492,L2 loss: 0.017268, Total Loss: 0.318735 ,lr:0.001000 
+epoch:5/30
+Step: 17900/111660, accuracy: 0.913979, cls loss: 0.306075, bbox loss: 0.066370,Landmark loss :0.062581,L2 loss: 0.017257, Total Loss: 0.387808 ,lr:0.001000 
+epoch:5/30
+Step: 18000/111660, accuracy: 0.927536, cls loss: 0.315734, bbox loss: 0.066915,Landmark loss :0.050029,L2 loss: 0.017257, Total Loss: 0.391463 ,lr:0.001000 
+epoch:5/30
+Step: 18100/111660, accuracy: 0.933852, cls loss: 0.260745, bbox loss: 0.079361,Landmark loss :0.044479,L2 loss: 0.017252, Total Loss: 0.339917 ,lr:0.001000 
+epoch:5/30
+Step: 18200/111660, accuracy: 0.927757, cls loss: 0.268782, bbox loss: 0.063960,Landmark loss :0.044895,L2 loss: 0.017254, Total Loss: 0.340464 ,lr:0.001000 
+epoch:5/30
+Step: 18300/111660, accuracy: 0.954198, cls loss: 0.187004, bbox loss: 0.069490,Landmark loss :0.046733,L2 loss: 0.017249, Total Loss: 0.262364 ,lr:0.001000 
+epoch:5/30
+Step: 18400/111660, accuracy: 0.944853, cls loss: 0.236885, bbox loss: 0.064315,Landmark loss :0.044727,L2 loss: 0.017244, Total Loss: 0.308651 ,lr:0.001000 
+epoch:5/30
+Step: 18500/111660, accuracy: 0.931655, cls loss: 0.253344, bbox loss: 0.066991,Landmark loss :0.040528,L2 loss: 0.017228, Total Loss: 0.324332 ,lr:0.001000 
+epoch:5/30
+Step: 18600/111660, accuracy: 0.930909, cls loss: 0.231636, bbox loss: 0.061286,Landmark loss :0.049750,L2 loss: 0.017224, Total Loss: 0.304379 ,lr:0.001000 
+epoch:6/30
+Step: 18700/111660, accuracy: 0.935606, cls loss: 0.265089, bbox loss: 0.069483,Landmark loss :0.055181,L2 loss: 0.017223, Total Loss: 0.344644 ,lr:0.001000 
+epoch:6/30
+Step: 18800/111660, accuracy: 0.923611, cls loss: 0.336462, bbox loss: 0.076970,Landmark loss :0.054387,L2 loss: 0.017226, Total Loss: 0.419366 ,lr:0.001000 
+epoch:6/30
+Step: 18900/111660, accuracy: 0.950704, cls loss: 0.182688, bbox loss: 0.056893,Landmark loss :0.057727,L2 loss: 0.017228, Total Loss: 0.257226 ,lr:0.001000 
+epoch:6/30
+Step: 19000/111660, accuracy: 0.896947, cls loss: 0.351328, bbox loss: 0.080456,Landmark loss :0.055220,L2 loss: 0.017227, Total Loss: 0.436393 ,lr:0.001000 
+epoch:6/30
+Step: 19100/111660, accuracy: 0.926070, cls loss: 0.290391, bbox loss: 0.064400,Landmark loss :0.056638,L2 loss: 0.017226, Total Loss: 0.368136 ,lr:0.001000 
+epoch:6/30
+Step: 19200/111660, accuracy: 0.929105, cls loss: 0.233546, bbox loss: 0.063889,Landmark loss :0.057215,L2 loss: 0.017215, Total Loss: 0.311313 ,lr:0.001000 
+epoch:6/30
+Step: 19300/111660, accuracy: 0.914498, cls loss: 0.281221, bbox loss: 0.085787,Landmark loss :0.040307,L2 loss: 0.017216, Total Loss: 0.361484 ,lr:0.001000 
+epoch:6/30
+Step: 19400/111660, accuracy: 0.955882, cls loss: 0.183085, bbox loss: 0.061859,Landmark loss :0.037408,L2 loss: 0.017217, Total Loss: 0.249936 ,lr:0.001000 
+epoch:6/30
+Step: 19500/111660, accuracy: 0.931159, cls loss: 0.255058, bbox loss: 0.065517,Landmark loss :0.061456,L2 loss: 0.017218, Total Loss: 0.335762 ,lr:0.001000 
+epoch:6/30
+Step: 19600/111660, accuracy: 0.887273, cls loss: 0.328964, bbox loss: 0.070435,Landmark loss :0.046841,L2 loss: 0.017216, Total Loss: 0.404818 ,lr:0.001000 
+epoch:6/30
+Step: 19700/111660, accuracy: 0.936090, cls loss: 0.249060, bbox loss: 0.068850,Landmark loss :0.050531,L2 loss: 0.017219, Total Loss: 0.325970 ,lr:0.001000 
+epoch:6/30
+Step: 19800/111660, accuracy: 0.921053, cls loss: 0.283466, bbox loss: 0.060593,Landmark loss :0.039176,L2 loss: 0.017213, Total Loss: 0.350564 ,lr:0.001000 
+epoch:6/30
+Step: 19900/111660, accuracy: 0.893939, cls loss: 0.340202, bbox loss: 0.058845,Landmark loss :0.041348,L2 loss: 0.017210, Total Loss: 0.407508 ,lr:0.001000 
+epoch:6/30
+Step: 20000/111660, accuracy: 0.922222, cls loss: 0.291083, bbox loss: 0.073539,Landmark loss :0.045010,L2 loss: 0.017203, Total Loss: 0.367560 ,lr:0.001000 
+epoch:6/30
+Step: 20100/111660, accuracy: 0.945312, cls loss: 0.242701, bbox loss: 0.060919,Landmark loss :0.053127,L2 loss: 0.017202, Total Loss: 0.316927 ,lr:0.001000 
+epoch:6/30
+Step: 20200/111660, accuracy: 0.902527, cls loss: 0.305772, bbox loss: 0.058891,Landmark loss :0.056514,L2 loss: 0.017201, Total Loss: 0.380676 ,lr:0.001000 
+epoch:6/30
+Step: 20300/111660, accuracy: 0.923372, cls loss: 0.290341, bbox loss: 0.074800,Landmark loss :0.051369,L2 loss: 0.017205, Total Loss: 0.370631 ,lr:0.001000 
+epoch:6/30
+Step: 20400/111660, accuracy: 0.922794, cls loss: 0.264000, bbox loss: 0.065051,Landmark loss :0.043524,L2 loss: 0.017205, Total Loss: 0.335492 ,lr:0.001000 
+epoch:6/30
+Step: 20500/111660, accuracy: 0.934307, cls loss: 0.230537, bbox loss: 0.063168,Landmark loss :0.052634,L2 loss: 0.017189, Total Loss: 0.305627 ,lr:0.001000 
+epoch:6/30
+Step: 20600/111660, accuracy: 0.910072, cls loss: 0.296329, bbox loss: 0.060065,Landmark loss :0.050662,L2 loss: 0.017188, Total Loss: 0.368880 ,lr:0.001000 
+epoch:6/30
+Step: 20700/111660, accuracy: 0.933579, cls loss: 0.239860, bbox loss: 0.067155,Landmark loss :0.039806,L2 loss: 0.017184, Total Loss: 0.310524 ,lr:0.001000 
+epoch:6/30
+Step: 20800/111660, accuracy: 0.884892, cls loss: 0.346501, bbox loss: 0.068790,Landmark loss :0.039769,L2 loss: 0.017180, Total Loss: 0.417961 ,lr:0.001000 
+epoch:6/30
+Step: 20900/111660, accuracy: 0.934783, cls loss: 0.238525, bbox loss: 0.066923,Landmark loss :0.053237,L2 loss: 0.017176, Total Loss: 0.315782 ,lr:0.001000 
+epoch:6/30
+Step: 21000/111660, accuracy: 0.959259, cls loss: 0.220329, bbox loss: 0.068141,Landmark loss :0.046806,L2 loss: 0.017170, Total Loss: 0.294973 ,lr:0.001000 
+epoch:6/30
+Step: 21100/111660, accuracy: 0.958955, cls loss: 0.174713, bbox loss: 0.069092,Landmark loss :0.053022,L2 loss: 0.017167, Total Loss: 0.252937 ,lr:0.001000 
+epoch:6/30
+Step: 21200/111660, accuracy: 0.947170, cls loss: 0.201459, bbox loss: 0.079339,Landmark loss :0.046993,L2 loss: 0.017170, Total Loss: 0.281795 ,lr:0.001000 
+epoch:6/30
+Step: 21300/111660, accuracy: 0.938628, cls loss: 0.243597, bbox loss: 0.062903,Landmark loss :0.037273,L2 loss: 0.017166, Total Loss: 0.310851 ,lr:0.001000 
+epoch:6/30
+Step: 21400/111660, accuracy: 0.951311, cls loss: 0.193363, bbox loss: 0.067325,Landmark loss :0.051204,L2 loss: 0.017163, Total Loss: 0.269791 ,lr:0.001000 
+epoch:6/30
+Step: 21500/111660, accuracy: 0.920949, cls loss: 0.273768, bbox loss: 0.068978,Landmark loss :0.047635,L2 loss: 0.017162, Total Loss: 0.349236 ,lr:0.001000 
+epoch:6/30
+Step: 21600/111660, accuracy: 0.937255, cls loss: 0.278548, bbox loss: 0.072520,Landmark loss :0.041544,L2 loss: 0.017153, Total Loss: 0.352733 ,lr:0.001000 
+epoch:6/30
+Step: 21700/111660, accuracy: 0.910072, cls loss: 0.259543, bbox loss: 0.069173,Landmark loss :0.049986,L2 loss: 0.017149, Total Loss: 0.336272 ,lr:0.001000 
+epoch:6/30
+Step: 21800/111660, accuracy: 0.942238, cls loss: 0.306862, bbox loss: 0.061541,Landmark loss :0.050313,L2 loss: 0.017149, Total Loss: 0.379938 ,lr:0.001000 
+epoch:6/30
+Step: 21900/111660, accuracy: 0.924901, cls loss: 0.202911, bbox loss: 0.072555,Landmark loss :0.054482,L2 loss: 0.017141, Total Loss: 0.283570 ,lr:0.001000 
+epoch:6/30
+Step: 22000/111660, accuracy: 0.936803, cls loss: 0.183459, bbox loss: 0.075490,Landmark loss :0.050481,L2 loss: 0.017143, Total Loss: 0.263587 ,lr:0.001000 
+epoch:6/30
+Step: 22100/111660, accuracy: 0.926070, cls loss: 0.248756, bbox loss: 0.064283,Landmark loss :0.045704,L2 loss: 0.017136, Total Loss: 0.320886 ,lr:0.001000 
+epoch:6/30
+Step: 22200/111660, accuracy: 0.926357, cls loss: 0.308136, bbox loss: 0.063450,Landmark loss :0.059410,L2 loss: 0.017128, Total Loss: 0.386694 ,lr:0.001000 
+epoch:6/30
+Step: 22300/111660, accuracy: 0.935018, cls loss: 0.254203, bbox loss: 0.069599,Landmark loss :0.039431,L2 loss: 0.017121, Total Loss: 0.325839 ,lr:0.001000 
+epoch:7/30
+Step: 22400/111660, accuracy: 0.935606, cls loss: 0.247950, bbox loss: 0.061861,Landmark loss :0.036286,L2 loss: 0.017125, Total Loss: 0.314148 ,lr:0.000100 
+epoch:7/30
+Step: 22500/111660, accuracy: 0.909774, cls loss: 0.286344, bbox loss: 0.067056,Landmark loss :0.055319,L2 loss: 0.017125, Total Loss: 0.364656 ,lr:0.000100 
+epoch:7/30
+Step: 22600/111660, accuracy: 0.937984, cls loss: 0.255461, bbox loss: 0.069602,Landmark loss :0.043733,L2 loss: 0.017126, Total Loss: 0.329254 ,lr:0.000100 
+epoch:7/30
+Step: 22700/111660, accuracy: 0.927273, cls loss: 0.302134, bbox loss: 0.059866,Landmark loss :0.043256,L2 loss: 0.017126, Total Loss: 0.370822 ,lr:0.000100 
+epoch:7/30
+Step: 22800/111660, accuracy: 0.928571, cls loss: 0.236864, bbox loss: 0.055690,Landmark loss :0.050361,L2 loss: 0.017126, Total Loss: 0.307015 ,lr:0.000100 
+epoch:7/30
+Step: 22900/111660, accuracy: 0.882812, cls loss: 0.335346, bbox loss: 0.069378,Landmark loss :0.040454,L2 loss: 0.017126, Total Loss: 0.407388 ,lr:0.000100 
+epoch:7/30
+Step: 23000/111660, accuracy: 0.954887, cls loss: 0.224374, bbox loss: 0.063544,Landmark loss :0.053373,L2 loss: 0.017126, Total Loss: 0.299958 ,lr:0.000100 
+epoch:7/30
+Step: 23100/111660, accuracy: 0.943089, cls loss: 0.257736, bbox loss: 0.075858,Landmark loss :0.059110,L2 loss: 0.017125, Total Loss: 0.342345 ,lr:0.000100 
+epoch:7/30
+Step: 23200/111660, accuracy: 0.936567, cls loss: 0.215198, bbox loss: 0.066500,Landmark loss :0.040497,L2 loss: 0.017126, Total Loss: 0.285823 ,lr:0.000100 
+epoch:7/30
+Step: 23300/111660, accuracy: 0.929825, cls loss: 0.247936, bbox loss: 0.063529,Landmark loss :0.050885,L2 loss: 0.017127, Total Loss: 0.322269 ,lr:0.000100 
+epoch:7/30
+Step: 23400/111660, accuracy: 0.956204, cls loss: 0.181922, bbox loss: 0.067674,Landmark loss :0.055893,L2 loss: 0.017127, Total Loss: 0.260833 ,lr:0.000100 
+epoch:7/30
+Step: 23500/111660, accuracy: 0.920000, cls loss: 0.232934, bbox loss: 0.061406,Landmark loss :0.042731,L2 loss: 0.017127, Total Loss: 0.302130 ,lr:0.000100 
+epoch:7/30
+Step: 23600/111660, accuracy: 0.936330, cls loss: 0.263541, bbox loss: 0.064113,Landmark loss :0.045794,L2 loss: 0.017128, Total Loss: 0.335622 ,lr:0.000100 
+epoch:7/30
+Step: 23700/111660, accuracy: 0.940959, cls loss: 0.284914, bbox loss: 0.060550,Landmark loss :0.049014,L2 loss: 0.017127, Total Loss: 0.356823 ,lr:0.000100 
+epoch:7/30
+Step: 23800/111660, accuracy: 0.927273, cls loss: 0.258806, bbox loss: 0.060693,Landmark loss :0.056578,L2 loss: 0.017127, Total Loss: 0.334568 ,lr:0.000100 
+epoch:7/30
+Step: 23900/111660, accuracy: 0.902174, cls loss: 0.300682, bbox loss: 0.068606,Landmark loss :0.036380,L2 loss: 0.017127, Total Loss: 0.370302 ,lr:0.000100 
+epoch:7/30
+Step: 24000/111660, accuracy: 0.929825, cls loss: 0.250930, bbox loss: 0.055358,Landmark loss :0.051047,L2 loss: 0.017127, Total Loss: 0.321259 ,lr:0.000100 
+epoch:7/30
+Step: 24100/111660, accuracy: 0.950192, cls loss: 0.194917, bbox loss: 0.068721,Landmark loss :0.045410,L2 loss: 0.017128, Total Loss: 0.269110 ,lr:0.000100 
+epoch:7/30
+Step: 24200/111660, accuracy: 0.944649, cls loss: 0.238544, bbox loss: 0.067931,Landmark loss :0.036660,L2 loss: 0.017127, Total Loss: 0.307966 ,lr:0.000100 
+epoch:7/30
+Step: 24300/111660, accuracy: 0.932836, cls loss: 0.270004, bbox loss: 0.077175,Landmark loss :0.036684,L2 loss: 0.017127, Total Loss: 0.344060 ,lr:0.000100 
+epoch:7/30
+Step: 24400/111660, accuracy: 0.928030, cls loss: 0.293950, bbox loss: 0.062242,Landmark loss :0.045539,L2 loss: 0.017126, Total Loss: 0.364967 ,lr:0.000100 
+epoch:7/30
+Step: 24500/111660, accuracy: 0.943262, cls loss: 0.245760, bbox loss: 0.056096,Landmark loss :0.048076,L2 loss: 0.017127, Total Loss: 0.314973 ,lr:0.000100 
+epoch:7/30
+Step: 24600/111660, accuracy: 0.938462, cls loss: 0.239812, bbox loss: 0.070359,Landmark loss :0.044328,L2 loss: 0.017127, Total Loss: 0.314282 ,lr:0.000100 
+epoch:7/30
+Step: 24700/111660, accuracy: 0.922780, cls loss: 0.262483, bbox loss: 0.064411,Landmark loss :0.050816,L2 loss: 0.017126, Total Loss: 0.337222 ,lr:0.000100 
+epoch:7/30
+Step: 24800/111660, accuracy: 0.941176, cls loss: 0.247096, bbox loss: 0.082749,Landmark loss :0.051658,L2 loss: 0.017125, Total Loss: 0.331425 ,lr:0.000100 
+epoch:7/30
+Step: 24900/111660, accuracy: 0.928302, cls loss: 0.249715, bbox loss: 0.060618,Landmark loss :0.034597,L2 loss: 0.017126, Total Loss: 0.314449 ,lr:0.000100 
+epoch:7/30
+Step: 25000/111660, accuracy: 0.930909, cls loss: 0.216557, bbox loss: 0.065650,Landmark loss :0.057379,L2 loss: 0.017126, Total Loss: 0.295197 ,lr:0.000100 
+epoch:7/30
+Step: 25100/111660, accuracy: 0.926641, cls loss: 0.256950, bbox loss: 0.068854,Landmark loss :0.047158,L2 loss: 0.017126, Total Loss: 0.332082 ,lr:0.000100 
+epoch:7/30
+Step: 25200/111660, accuracy: 0.919708, cls loss: 0.295030, bbox loss: 0.065418,Landmark loss :0.051242,L2 loss: 0.017126, Total Loss: 0.370485 ,lr:0.000100 
+epoch:7/30
+Step: 25300/111660, accuracy: 0.938849, cls loss: 0.239745, bbox loss: 0.060590,Landmark loss :0.059588,L2 loss: 0.017124, Total Loss: 0.316958 ,lr:0.000100 
+epoch:7/30
+Step: 25400/111660, accuracy: 0.923954, cls loss: 0.276723, bbox loss: 0.063964,Landmark loss :0.040862,L2 loss: 0.017124, Total Loss: 0.346259 ,lr:0.000100 
+epoch:7/30
+Step: 25500/111660, accuracy: 0.954887, cls loss: 0.193419, bbox loss: 0.060787,Landmark loss :0.044003,L2 loss: 0.017124, Total Loss: 0.262937 ,lr:0.000100 
+epoch:7/30
+Step: 25600/111660, accuracy: 0.934363, cls loss: 0.239211, bbox loss: 0.072502,Landmark loss :0.035347,L2 loss: 0.017123, Total Loss: 0.310258 ,lr:0.000100 
+epoch:7/30
+Step: 25700/111660, accuracy: 0.912879, cls loss: 0.292715, bbox loss: 0.064502,Landmark loss :0.057244,L2 loss: 0.017123, Total Loss: 0.370711 ,lr:0.000100 
+epoch:7/30
+Step: 25800/111660, accuracy: 0.958955, cls loss: 0.183097, bbox loss: 0.059588,Landmark loss :0.043143,L2 loss: 0.017123, Total Loss: 0.251585 ,lr:0.000100 
+epoch:7/30
+Step: 25900/111660, accuracy: 0.928571, cls loss: 0.258802, bbox loss: 0.077492,Landmark loss :0.045905,L2 loss: 0.017122, Total Loss: 0.337623 ,lr:0.000100 
+epoch:7/30
+Step: 26000/111660, accuracy: 0.952555, cls loss: 0.198603, bbox loss: 0.077050,Landmark loss :0.044731,L2 loss: 0.017121, Total Loss: 0.276615 ,lr:0.000100 
+epoch:8/30
+Step: 26100/111660, accuracy: 0.935361, cls loss: 0.230866, bbox loss: 0.071338,Landmark loss :0.040375,L2 loss: 0.017121, Total Loss: 0.303843 ,lr:0.000100 
+epoch:8/30
+Step: 26200/111660, accuracy: 0.934256, cls loss: 0.233641, bbox loss: 0.066055,Landmark loss :0.050101,L2 loss: 0.017121, Total Loss: 0.308839 ,lr:0.000100 
+epoch:8/30
+Step: 26300/111660, accuracy: 0.941818, cls loss: 0.247096, bbox loss: 0.065484,Landmark loss :0.048498,L2 loss: 0.017121, Total Loss: 0.321208 ,lr:0.000100 
+epoch:8/30
+Step: 26400/111660, accuracy: 0.947368, cls loss: 0.221314, bbox loss: 0.065034,Landmark loss :0.052732,L2 loss: 0.017121, Total Loss: 0.297318 ,lr:0.000100 
+epoch:8/30
+Step: 26500/111660, accuracy: 0.934866, cls loss: 0.253655, bbox loss: 0.062522,Landmark loss :0.054984,L2 loss: 0.017120, Total Loss: 0.329529 ,lr:0.000100 
+epoch:8/30
+Step: 26600/111660, accuracy: 0.957447, cls loss: 0.204528, bbox loss: 0.067424,Landmark loss :0.044392,L2 loss: 0.017121, Total Loss: 0.277557 ,lr:0.000100 
+epoch:8/30
+Step: 26700/111660, accuracy: 0.920755, cls loss: 0.274653, bbox loss: 0.070121,Landmark loss :0.046550,L2 loss: 0.017120, Total Loss: 0.350108 ,lr:0.000100 
+epoch:8/30
+Step: 26800/111660, accuracy: 0.913208, cls loss: 0.272792, bbox loss: 0.071188,Landmark loss :0.043836,L2 loss: 0.017120, Total Loss: 0.347424 ,lr:0.000100 
+epoch:8/30
+Step: 26900/111660, accuracy: 0.929630, cls loss: 0.258206, bbox loss: 0.077102,Landmark loss :0.051299,L2 loss: 0.017120, Total Loss: 0.339527 ,lr:0.000100 
+epoch:8/30
+Step: 27000/111660, accuracy: 0.947368, cls loss: 0.218664, bbox loss: 0.072344,Landmark loss :0.045779,L2 loss: 0.017121, Total Loss: 0.294846 ,lr:0.000100 
+epoch:8/30
+Step: 27100/111660, accuracy: 0.940520, cls loss: 0.208287, bbox loss: 0.067820,Landmark loss :0.051867,L2 loss: 0.017121, Total Loss: 0.285251 ,lr:0.000100 
+epoch:8/30
+Step: 27200/111660, accuracy: 0.912879, cls loss: 0.275569, bbox loss: 0.068936,Landmark loss :0.043654,L2 loss: 0.017121, Total Loss: 0.348985 ,lr:0.000100 
+epoch:8/30
+Step: 27300/111660, accuracy: 0.926199, cls loss: 0.247319, bbox loss: 0.073154,Landmark loss :0.036636,L2 loss: 0.017121, Total Loss: 0.319335 ,lr:0.000100 
+epoch:8/30
+Step: 27400/111660, accuracy: 0.933333, cls loss: 0.302677, bbox loss: 0.077617,Landmark loss :0.050312,L2 loss: 0.017121, Total Loss: 0.383763 ,lr:0.000100 
+epoch:8/30
+Step: 27500/111660, accuracy: 0.942029, cls loss: 0.192648, bbox loss: 0.070493,Landmark loss :0.041759,L2 loss: 0.017120, Total Loss: 0.265894 ,lr:0.000100 
+epoch:8/30
+Step: 27600/111660, accuracy: 0.909091, cls loss: 0.314808, bbox loss: 0.073208,Landmark loss :0.044078,L2 loss: 0.017120, Total Loss: 0.390571 ,lr:0.000100 
+epoch:8/30
+Step: 27700/111660, accuracy: 0.936759, cls loss: 0.218038, bbox loss: 0.065300,Landmark loss :0.060727,L2 loss: 0.017120, Total Loss: 0.298172 ,lr:0.000100 
+epoch:8/30
+Step: 27800/111660, accuracy: 0.962264, cls loss: 0.154465, bbox loss: 0.067538,Landmark loss :0.049378,L2 loss: 0.017121, Total Loss: 0.230044 ,lr:0.000100 
+epoch:8/30
+Step: 27900/111660, accuracy: 0.916350, cls loss: 0.351048, bbox loss: 0.054689,Landmark loss :0.057025,L2 loss: 0.017120, Total Loss: 0.424025 ,lr:0.000100 
+epoch:8/30
+Step: 28000/111660, accuracy: 0.950570, cls loss: 0.221304, bbox loss: 0.076698,Landmark loss :0.057627,L2 loss: 0.017120, Total Loss: 0.305587 ,lr:0.000100 
+epoch:8/30
+Step: 28100/111660, accuracy: 0.907749, cls loss: 0.323054, bbox loss: 0.076486,Landmark loss :0.045149,L2 loss: 0.017119, Total Loss: 0.400991 ,lr:0.000100 
+epoch:8/30
+Step: 28200/111660, accuracy: 0.924603, cls loss: 0.296859, bbox loss: 0.068866,Landmark loss :0.039864,L2 loss: 0.017119, Total Loss: 0.368343 ,lr:0.000100 
+epoch:8/30
+Step: 28300/111660, accuracy: 0.932806, cls loss: 0.217767, bbox loss: 0.061667,Landmark loss :0.043450,L2 loss: 0.017119, Total Loss: 0.287444 ,lr:0.000100 
+epoch:8/30
+Step: 28400/111660, accuracy: 0.940741, cls loss: 0.239817, bbox loss: 0.061740,Landmark loss :0.046155,L2 loss: 0.017119, Total Loss: 0.310883 ,lr:0.000100 
+epoch:8/30
+Step: 28500/111660, accuracy: 0.919414, cls loss: 0.249433, bbox loss: 0.072544,Landmark loss :0.039551,L2 loss: 0.017118, Total Loss: 0.322599 ,lr:0.000100 
+epoch:8/30
+Step: 28600/111660, accuracy: 0.909434, cls loss: 0.280576, bbox loss: 0.073527,Landmark loss :0.048246,L2 loss: 0.017118, Total Loss: 0.358581 ,lr:0.000100 
+epoch:8/30
+Step: 28700/111660, accuracy: 0.918216, cls loss: 0.275334, bbox loss: 0.064421,Landmark loss :0.049222,L2 loss: 0.017118, Total Loss: 0.349274 ,lr:0.000100 
+epoch:8/30
+Step: 28800/111660, accuracy: 0.943396, cls loss: 0.201502, bbox loss: 0.063370,Landmark loss :0.057197,L2 loss: 0.017118, Total Loss: 0.278904 ,lr:0.000100 
+epoch:8/30
+Step: 28900/111660, accuracy: 0.924460, cls loss: 0.293960, bbox loss: 0.074182,Landmark loss :0.061402,L2 loss: 0.017118, Total Loss: 0.378869 ,lr:0.000100 
+epoch:8/30
+Step: 29000/111660, accuracy: 0.915709, cls loss: 0.275915, bbox loss: 0.060102,Landmark loss :0.044395,L2 loss: 0.017117, Total Loss: 0.345281 ,lr:0.000100 
+epoch:8/30
+Step: 29100/111660, accuracy: 0.939850, cls loss: 0.228416, bbox loss: 0.062257,Landmark loss :0.044705,L2 loss: 0.017116, Total Loss: 0.299013 ,lr:0.000100 
+epoch:8/30
+Step: 29200/111660, accuracy: 0.911765, cls loss: 0.294497, bbox loss: 0.056872,Landmark loss :0.039867,L2 loss: 0.017116, Total Loss: 0.359982 ,lr:0.000100 
+epoch:8/30
+Step: 29300/111660, accuracy: 0.923695, cls loss: 0.289500, bbox loss: 0.066102,Landmark loss :0.049857,L2 loss: 0.017115, Total Loss: 0.364595 ,lr:0.000100 
+epoch:8/30
+Step: 29400/111660, accuracy: 0.919540, cls loss: 0.269266, bbox loss: 0.065968,Landmark loss :0.049218,L2 loss: 0.017115, Total Loss: 0.343975 ,lr:0.000100 
+epoch:8/30
+Step: 29500/111660, accuracy: 0.941176, cls loss: 0.246746, bbox loss: 0.073086,Landmark loss :0.050257,L2 loss: 0.017115, Total Loss: 0.325532 ,lr:0.000100 
+epoch:8/30
+Step: 29600/111660, accuracy: 0.912409, cls loss: 0.293215, bbox loss: 0.067848,Landmark loss :0.043301,L2 loss: 0.017114, Total Loss: 0.365904 ,lr:0.000100 
+epoch:8/30
+Step: 29700/111660, accuracy: 0.908088, cls loss: 0.323499, bbox loss: 0.058819,Landmark loss :0.047565,L2 loss: 0.017113, Total Loss: 0.393804 ,lr:0.000100 
+epoch:9/30
+Step: 29800/111660, accuracy: 0.940239, cls loss: 0.239260, bbox loss: 0.065367,Landmark loss :0.038717,L2 loss: 0.017113, Total Loss: 0.308414 ,lr:0.000100 
+epoch:9/30
+Step: 29900/111660, accuracy: 0.943609, cls loss: 0.241432, bbox loss: 0.070514,Landmark loss :0.039512,L2 loss: 0.017113, Total Loss: 0.313557 ,lr:0.000100 
+epoch:9/30
+Step: 30000/111660, accuracy: 0.938697, cls loss: 0.251475, bbox loss: 0.072381,Landmark loss :0.040665,L2 loss: 0.017113, Total Loss: 0.325110 ,lr:0.000100 
+epoch:9/30
+Step: 30100/111660, accuracy: 0.929412, cls loss: 0.239085, bbox loss: 0.075515,Landmark loss :0.040682,L2 loss: 0.017113, Total Loss: 0.314296 ,lr:0.000100 
+epoch:9/30
+Step: 30200/111660, accuracy: 0.941860, cls loss: 0.256300, bbox loss: 0.070971,Landmark loss :0.046446,L2 loss: 0.017112, Total Loss: 0.332120 ,lr:0.000100 
+epoch:9/30
+Step: 30300/111660, accuracy: 0.938628, cls loss: 0.261166, bbox loss: 0.066755,Landmark loss :0.043195,L2 loss: 0.017113, Total Loss: 0.333253 ,lr:0.000100 
+epoch:9/30
+Step: 30400/111660, accuracy: 0.965517, cls loss: 0.157316, bbox loss: 0.065878,Landmark loss :0.046776,L2 loss: 0.017112, Total Loss: 0.230755 ,lr:0.000100 
+epoch:9/30
+Step: 30500/111660, accuracy: 0.947566, cls loss: 0.205130, bbox loss: 0.069747,Landmark loss :0.051489,L2 loss: 0.017111, Total Loss: 0.282859 ,lr:0.000100 
+epoch:9/30
+Step: 30600/111660, accuracy: 0.886926, cls loss: 0.354081, bbox loss: 0.059096,Landmark loss :0.053654,L2 loss: 0.017111, Total Loss: 0.427568 ,lr:0.000100 
+epoch:9/30
+Step: 30700/111660, accuracy: 0.929368, cls loss: 0.256445, bbox loss: 0.063744,Landmark loss :0.049515,L2 loss: 0.017112, Total Loss: 0.330186 ,lr:0.000100 
+epoch:9/30
+Step: 30800/111660, accuracy: 0.942857, cls loss: 0.207734, bbox loss: 0.051025,Landmark loss :0.044121,L2 loss: 0.017112, Total Loss: 0.272418 ,lr:0.000100 
+epoch:9/30
+Step: 30900/111660, accuracy: 0.940298, cls loss: 0.249699, bbox loss: 0.076900,Landmark loss :0.072081,L2 loss: 0.017112, Total Loss: 0.341302 ,lr:0.000100 
+epoch:9/30
+Step: 31000/111660, accuracy: 0.923358, cls loss: 0.300681, bbox loss: 0.076226,Landmark loss :0.052117,L2 loss: 0.017112, Total Loss: 0.381965 ,lr:0.000100 
+epoch:9/30
+Step: 31100/111660, accuracy: 0.931655, cls loss: 0.240225, bbox loss: 0.078459,Landmark loss :0.048470,L2 loss: 0.017112, Total Loss: 0.320801 ,lr:0.000100 
+epoch:9/30
+Step: 31200/111660, accuracy: 0.916667, cls loss: 0.331309, bbox loss: 0.076301,Landmark loss :0.042930,L2 loss: 0.017111, Total Loss: 0.408036 ,lr:0.000100 
+epoch:9/30
+Step: 31300/111660, accuracy: 0.923636, cls loss: 0.260512, bbox loss: 0.065670,Landmark loss :0.042126,L2 loss: 0.017110, Total Loss: 0.331521 ,lr:0.000100 
+epoch:9/30
+Step: 31400/111660, accuracy: 0.908745, cls loss: 0.292018, bbox loss: 0.070280,Landmark loss :0.043325,L2 loss: 0.017111, Total Loss: 0.365932 ,lr:0.000100 
+epoch:9/30
+Step: 31500/111660, accuracy: 0.939929, cls loss: 0.205086, bbox loss: 0.064267,Landmark loss :0.041055,L2 loss: 0.017112, Total Loss: 0.274859 ,lr:0.000100 
+epoch:9/30
+Step: 31600/111660, accuracy: 0.938406, cls loss: 0.223592, bbox loss: 0.060722,Landmark loss :0.047151,L2 loss: 0.017112, Total Loss: 0.294641 ,lr:0.000100 
+epoch:9/30
+Step: 31700/111660, accuracy: 0.953125, cls loss: 0.189588, bbox loss: 0.054568,Landmark loss :0.040458,L2 loss: 0.017111, Total Loss: 0.254212 ,lr:0.000100 
+epoch:9/30
+Step: 31800/111660, accuracy: 0.916968, cls loss: 0.241728, bbox loss: 0.070518,Landmark loss :0.045718,L2 loss: 0.017110, Total Loss: 0.316956 ,lr:0.000100 
+epoch:9/30
+Step: 31900/111660, accuracy: 0.928315, cls loss: 0.260856, bbox loss: 0.065558,Landmark loss :0.053995,L2 loss: 0.017110, Total Loss: 0.337743 ,lr:0.000100 
+epoch:9/30
+Step: 32000/111660, accuracy: 0.931298, cls loss: 0.301437, bbox loss: 0.065835,Landmark loss :0.043870,L2 loss: 0.017110, Total Loss: 0.373399 ,lr:0.000100 
+epoch:9/30
+Step: 32100/111660, accuracy: 0.965398, cls loss: 0.193308, bbox loss: 0.062079,Landmark loss :0.040608,L2 loss: 0.017110, Total Loss: 0.261761 ,lr:0.000100 
+epoch:9/30
+Step: 32200/111660, accuracy: 0.933333, cls loss: 0.256561, bbox loss: 0.058936,Landmark loss :0.047750,L2 loss: 0.017109, Total Loss: 0.327013 ,lr:0.000100 
+epoch:9/30
+Step: 32300/111660, accuracy: 0.932384, cls loss: 0.255273, bbox loss: 0.051548,Landmark loss :0.046396,L2 loss: 0.017109, Total Loss: 0.321354 ,lr:0.000100 
+epoch:9/30
+Step: 32400/111660, accuracy: 0.917910, cls loss: 0.294019, bbox loss: 0.071165,Landmark loss :0.052006,L2 loss: 0.017110, Total Loss: 0.372715 ,lr:0.000100 
+epoch:9/30
+Step: 32500/111660, accuracy: 0.942238, cls loss: 0.255687, bbox loss: 0.060850,Landmark loss :0.050454,L2 loss: 0.017109, Total Loss: 0.328448 ,lr:0.000100 
+epoch:9/30
+Step: 32600/111660, accuracy: 0.939394, cls loss: 0.233452, bbox loss: 0.062664,Landmark loss :0.046852,L2 loss: 0.017108, Total Loss: 0.305318 ,lr:0.000100 
+epoch:9/30
+Step: 32700/111660, accuracy: 0.930403, cls loss: 0.241032, bbox loss: 0.055055,Landmark loss :0.043265,L2 loss: 0.017108, Total Loss: 0.307300 ,lr:0.000100 
+epoch:9/30
+Step: 32800/111660, accuracy: 0.935115, cls loss: 0.219244, bbox loss: 0.074813,Landmark loss :0.055784,L2 loss: 0.017107, Total Loss: 0.301649 ,lr:0.000100 
+epoch:9/30
+Step: 32900/111660, accuracy: 0.887218, cls loss: 0.392976, bbox loss: 0.071775,Landmark loss :0.046199,L2 loss: 0.017107, Total Loss: 0.469071 ,lr:0.000100 
+epoch:9/30
+Step: 33000/111660, accuracy: 0.945055, cls loss: 0.251730, bbox loss: 0.069874,Landmark loss :0.053051,L2 loss: 0.017106, Total Loss: 0.330299 ,lr:0.000100 
+epoch:9/30
+Step: 33100/111660, accuracy: 0.925532, cls loss: 0.277773, bbox loss: 0.064940,Landmark loss :0.054863,L2 loss: 0.017106, Total Loss: 0.354781 ,lr:0.000100 
+epoch:9/30
+Step: 33200/111660, accuracy: 0.895349, cls loss: 0.350260, bbox loss: 0.081726,Landmark loss :0.044082,L2 loss: 0.017106, Total Loss: 0.430271 ,lr:0.000100 
+epoch:9/30
+Step: 33300/111660, accuracy: 0.930403, cls loss: 0.291200, bbox loss: 0.060876,Landmark loss :0.034887,L2 loss: 0.017106, Total Loss: 0.356188 ,lr:0.000100 
+epoch:9/30
+Step: 33400/111660, accuracy: 0.937037, cls loss: 0.209578, bbox loss: 0.070559,Landmark loss :0.041976,L2 loss: 0.017104, Total Loss: 0.282950 ,lr:0.000100 
+epoch:10/30
+Step: 33500/111660, accuracy: 0.938849, cls loss: 0.274757, bbox loss: 0.058851,Landmark loss :0.050114,L2 loss: 0.017103, Total Loss: 0.346342 ,lr:0.000100 
+epoch:10/30
+Step: 33600/111660, accuracy: 0.937956, cls loss: 0.234934, bbox loss: 0.060357,Landmark loss :0.039975,L2 loss: 0.017102, Total Loss: 0.302202 ,lr:0.000100 
+epoch:10/30
+Step: 33700/111660, accuracy: 0.936090, cls loss: 0.211623, bbox loss: 0.079608,Landmark loss :0.046894,L2 loss: 0.017103, Total Loss: 0.291976 ,lr:0.000100 
+epoch:10/30
+Step: 33800/111660, accuracy: 0.928302, cls loss: 0.247008, bbox loss: 0.064175,Landmark loss :0.045622,L2 loss: 0.017103, Total Loss: 0.319010 ,lr:0.000100 
+epoch:10/30
+Step: 33900/111660, accuracy: 0.891892, cls loss: 0.316351, bbox loss: 0.058145,Landmark loss :0.055191,L2 loss: 0.017103, Total Loss: 0.390122 ,lr:0.000100 
+epoch:10/30
+Step: 34000/111660, accuracy: 0.934783, cls loss: 0.275224, bbox loss: 0.057577,Landmark loss :0.044298,L2 loss: 0.017103, Total Loss: 0.343265 ,lr:0.000100 
+epoch:10/30
+Step: 34100/111660, accuracy: 0.926357, cls loss: 0.278906, bbox loss: 0.075817,Landmark loss :0.051365,L2 loss: 0.017102, Total Loss: 0.359599 ,lr:0.000100 
+epoch:10/30
+Step: 34200/111660, accuracy: 0.924528, cls loss: 0.280278, bbox loss: 0.066877,Landmark loss :0.053947,L2 loss: 0.017101, Total Loss: 0.357791 ,lr:0.000100 
+epoch:10/30
+Step: 34300/111660, accuracy: 0.950530, cls loss: 0.184372, bbox loss: 0.053070,Landmark loss :0.055941,L2 loss: 0.017101, Total Loss: 0.255979 ,lr:0.000100 
+epoch:10/30
+Step: 34400/111660, accuracy: 0.950758, cls loss: 0.203594, bbox loss: 0.066432,Landmark loss :0.045322,L2 loss: 0.017102, Total Loss: 0.276573 ,lr:0.000100 
+epoch:10/30
+Step: 34500/111660, accuracy: 0.942238, cls loss: 0.243189, bbox loss: 0.068858,Landmark loss :0.040449,L2 loss: 0.017102, Total Loss: 0.314944 ,lr:0.000100 
+epoch:10/30
+Step: 34600/111660, accuracy: 0.910714, cls loss: 0.283401, bbox loss: 0.079857,Landmark loss :0.048250,L2 loss: 0.017102, Total Loss: 0.364556 ,lr:0.000100 
+epoch:10/30
+Step: 34700/111660, accuracy: 0.954386, cls loss: 0.199573, bbox loss: 0.063877,Landmark loss :0.044625,L2 loss: 0.017102, Total Loss: 0.270927 ,lr:0.000100 
+epoch:10/30
+Step: 34800/111660, accuracy: 0.927481, cls loss: 0.325521, bbox loss: 0.070698,Landmark loss :0.064007,L2 loss: 0.017103, Total Loss: 0.409976 ,lr:0.000100 
+epoch:10/30
+Step: 34900/111660, accuracy: 0.925926, cls loss: 0.281193, bbox loss: 0.061601,Landmark loss :0.044050,L2 loss: 0.017101, Total Loss: 0.351120 ,lr:0.000100 
+epoch:10/30
+Step: 35000/111660, accuracy: 0.940520, cls loss: 0.288122, bbox loss: 0.079623,Landmark loss :0.052370,L2 loss: 0.017101, Total Loss: 0.371220 ,lr:0.000100 
+epoch:10/30
+Step: 35100/111660, accuracy: 0.948718, cls loss: 0.203252, bbox loss: 0.061234,Landmark loss :0.053465,L2 loss: 0.017102, Total Loss: 0.277703 ,lr:0.000100 
+epoch:10/30
+Step: 35200/111660, accuracy: 0.943061, cls loss: 0.238939, bbox loss: 0.066170,Landmark loss :0.046547,L2 loss: 0.017102, Total Loss: 0.312400 ,lr:0.000100 
+epoch:10/30
+Step: 35300/111660, accuracy: 0.928826, cls loss: 0.213644, bbox loss: 0.054330,Landmark loss :0.039866,L2 loss: 0.017102, Total Loss: 0.277845 ,lr:0.000100 
+epoch:10/30
+Step: 35400/111660, accuracy: 0.939716, cls loss: 0.251107, bbox loss: 0.059979,Landmark loss :0.046616,L2 loss: 0.017101, Total Loss: 0.321506 ,lr:0.000100 
+epoch:10/30
+Step: 35500/111660, accuracy: 0.941392, cls loss: 0.219143, bbox loss: 0.060207,Landmark loss :0.042172,L2 loss: 0.017101, Total Loss: 0.287433 ,lr:0.000100 
+epoch:10/30
+Step: 35600/111660, accuracy: 0.940075, cls loss: 0.232042, bbox loss: 0.067376,Landmark loss :0.044602,L2 loss: 0.017101, Total Loss: 0.305132 ,lr:0.000100 
+epoch:10/30
+Step: 35700/111660, accuracy: 0.925373, cls loss: 0.264767, bbox loss: 0.069799,Landmark loss :0.047169,L2 loss: 0.017101, Total Loss: 0.340352 ,lr:0.000100 
+epoch:10/30
+Step: 35800/111660, accuracy: 0.945455, cls loss: 0.211873, bbox loss: 0.067296,Landmark loss :0.045559,L2 loss: 0.017100, Total Loss: 0.285400 ,lr:0.000100 
+epoch:10/30
+Step: 35900/111660, accuracy: 0.931818, cls loss: 0.199220, bbox loss: 0.069125,Landmark loss :0.039957,L2 loss: 0.017100, Total Loss: 0.270861 ,lr:0.000100 
+epoch:10/30
+Step: 36000/111660, accuracy: 0.938182, cls loss: 0.236228, bbox loss: 0.060279,Landmark loss :0.042726,L2 loss: 0.017099, Total Loss: 0.304830 ,lr:0.000100 
+epoch:10/30
+Step: 36100/111660, accuracy: 0.932540, cls loss: 0.251540, bbox loss: 0.072411,Landmark loss :0.041668,L2 loss: 0.017100, Total Loss: 0.325679 ,lr:0.000100 
+epoch:10/30
+Step: 36200/111660, accuracy: 0.929630, cls loss: 0.238506, bbox loss: 0.078811,Landmark loss :0.045898,L2 loss: 0.017099, Total Loss: 0.317960 ,lr:0.000100 
+epoch:10/30
+Step: 36300/111660, accuracy: 0.932143, cls loss: 0.250294, bbox loss: 0.063371,Landmark loss :0.058868,L2 loss: 0.017099, Total Loss: 0.328513 ,lr:0.000100 
+epoch:10/30
+Step: 36400/111660, accuracy: 0.934615, cls loss: 0.271806, bbox loss: 0.066265,Landmark loss :0.035625,L2 loss: 0.017099, Total Loss: 0.339850 ,lr:0.000100 
+epoch:10/30
+Step: 36500/111660, accuracy: 0.922222, cls loss: 0.270795, bbox loss: 0.071090,Landmark loss :0.052423,L2 loss: 0.017098, Total Loss: 0.349649 ,lr:0.000100 
+epoch:10/30
+Step: 36600/111660, accuracy: 0.933594, cls loss: 0.254628, bbox loss: 0.060346,Landmark loss :0.057132,L2 loss: 0.017098, Total Loss: 0.330465 ,lr:0.000100 
+epoch:10/30
+Step: 36700/111660, accuracy: 0.938849, cls loss: 0.246256, bbox loss: 0.064702,Landmark loss :0.045993,L2 loss: 0.017097, Total Loss: 0.318701 ,lr:0.000100 
+epoch:10/30
+Step: 36800/111660, accuracy: 0.942652, cls loss: 0.215518, bbox loss: 0.067472,Landmark loss :0.053245,L2 loss: 0.017097, Total Loss: 0.292973 ,lr:0.000100 
+epoch:10/30
+Step: 36900/111660, accuracy: 0.918819, cls loss: 0.319941, bbox loss: 0.053603,Landmark loss :0.047010,L2 loss: 0.017097, Total Loss: 0.387345 ,lr:0.000100 
+epoch:10/30
+Step: 37000/111660, accuracy: 0.933086, cls loss: 0.259183, bbox loss: 0.063142,Landmark loss :0.046761,L2 loss: 0.017097, Total Loss: 0.331232 ,lr:0.000100 
+epoch:10/30
+Step: 37100/111660, accuracy: 0.943463, cls loss: 0.194417, bbox loss: 0.073309,Landmark loss :0.059340,L2 loss: 0.017095, Total Loss: 0.277837 ,lr:0.000100 
+epoch:10/30
+Step: 37200/111660, accuracy: 0.951128, cls loss: 0.204362, bbox loss: 0.063659,Landmark loss :0.046093,L2 loss: 0.017094, Total Loss: 0.276332 ,lr:0.000100 
+epoch:11/30
+Step: 37300/111660, accuracy: 0.931818, cls loss: 0.292374, bbox loss: 0.078006,Landmark loss :0.045170,L2 loss: 0.017093, Total Loss: 0.371056 ,lr:0.000100 
+epoch:11/30
+Step: 37400/111660, accuracy: 0.933333, cls loss: 0.239445, bbox loss: 0.079204,Landmark loss :0.046855,L2 loss: 0.017094, Total Loss: 0.319568 ,lr:0.000100 
+epoch:11/30
+Step: 37500/111660, accuracy: 0.904959, cls loss: 0.340170, bbox loss: 0.077934,Landmark loss :0.036467,L2 loss: 0.017094, Total Loss: 0.414464 ,lr:0.000100 
+epoch:11/30
+Step: 37600/111660, accuracy: 0.943182, cls loss: 0.185802, bbox loss: 0.068084,Landmark loss :0.048734,L2 loss: 0.017094, Total Loss: 0.261305 ,lr:0.000100 
+epoch:11/30
+Step: 37700/111660, accuracy: 0.923954, cls loss: 0.247355, bbox loss: 0.072168,Landmark loss :0.051971,L2 loss: 0.017093, Total Loss: 0.326518 ,lr:0.000100 
+epoch:11/30
+Step: 37800/111660, accuracy: 0.924528, cls loss: 0.253670, bbox loss: 0.068221,Landmark loss :0.041703,L2 loss: 0.017093, Total Loss: 0.325725 ,lr:0.000100 
+epoch:11/30
+Step: 37900/111660, accuracy: 0.881041, cls loss: 0.311317, bbox loss: 0.066594,Landmark loss :0.051467,L2 loss: 0.017092, Total Loss: 0.387440 ,lr:0.000100 
+epoch:11/30
+Step: 38000/111660, accuracy: 0.948339, cls loss: 0.191394, bbox loss: 0.067114,Landmark loss :0.048869,L2 loss: 0.017092, Total Loss: 0.266478 ,lr:0.000100 
+epoch:11/30
+Step: 38100/111660, accuracy: 0.950570, cls loss: 0.199919, bbox loss: 0.065400,Landmark loss :0.045275,L2 loss: 0.017093, Total Loss: 0.272349 ,lr:0.000100 
+epoch:11/30
+Step: 38200/111660, accuracy: 0.928839, cls loss: 0.211203, bbox loss: 0.065237,Landmark loss :0.050024,L2 loss: 0.017093, Total Loss: 0.285927 ,lr:0.000100 
+epoch:11/30
+Step: 38300/111660, accuracy: 0.928058, cls loss: 0.251848, bbox loss: 0.068671,Landmark loss :0.043904,L2 loss: 0.017093, Total Loss: 0.325228 ,lr:0.000100 
+epoch:11/30
+Step: 38400/111660, accuracy: 0.931408, cls loss: 0.260924, bbox loss: 0.063157,Landmark loss :0.042148,L2 loss: 0.017093, Total Loss: 0.330669 ,lr:0.000100 
+epoch:11/30
+Step: 38500/111660, accuracy: 0.944030, cls loss: 0.271697, bbox loss: 0.071055,Landmark loss :0.049504,L2 loss: 0.017093, Total Loss: 0.349070 ,lr:0.000100 
+epoch:11/30
+Step: 38600/111660, accuracy: 0.926357, cls loss: 0.243501, bbox loss: 0.064054,Landmark loss :0.051404,L2 loss: 0.017092, Total Loss: 0.318322 ,lr:0.000100 
+epoch:11/30
+Step: 38700/111660, accuracy: 0.926829, cls loss: 0.274755, bbox loss: 0.066888,Landmark loss :0.043837,L2 loss: 0.017092, Total Loss: 0.347209 ,lr:0.000100 
+epoch:11/30
+Step: 38800/111660, accuracy: 0.925926, cls loss: 0.262552, bbox loss: 0.059424,Landmark loss :0.068537,L2 loss: 0.017092, Total Loss: 0.343624 ,lr:0.000100 
+epoch:11/30
+Step: 38900/111660, accuracy: 0.924812, cls loss: 0.243163, bbox loss: 0.066499,Landmark loss :0.039624,L2 loss: 0.017092, Total Loss: 0.313317 ,lr:0.000100 
+epoch:11/30
+Step: 39000/111660, accuracy: 0.935252, cls loss: 0.230500, bbox loss: 0.065528,Landmark loss :0.055981,L2 loss: 0.017092, Total Loss: 0.308347 ,lr:0.000100 
+epoch:11/30
+Step: 39100/111660, accuracy: 0.937743, cls loss: 0.230955, bbox loss: 0.065830,Landmark loss :0.060206,L2 loss: 0.017091, Total Loss: 0.311064 ,lr:0.000100 
+epoch:11/30
+Step: 39200/111660, accuracy: 0.917857, cls loss: 0.310940, bbox loss: 0.058585,Landmark loss :0.035011,L2 loss: 0.017091, Total Loss: 0.374829 ,lr:0.000100 
+epoch:11/30
+Step: 39300/111660, accuracy: 0.925094, cls loss: 0.263246, bbox loss: 0.066252,Landmark loss :0.038757,L2 loss: 0.017091, Total Loss: 0.332842 ,lr:0.000100 
+epoch:11/30
+Step: 39400/111660, accuracy: 0.952899, cls loss: 0.214223, bbox loss: 0.069633,Landmark loss :0.063834,L2 loss: 0.017091, Total Loss: 0.298048 ,lr:0.000100 
+epoch:11/30
+Step: 39500/111660, accuracy: 0.919118, cls loss: 0.278181, bbox loss: 0.052738,Landmark loss :0.052571,L2 loss: 0.017091, Total Loss: 0.347926 ,lr:0.000100 
+epoch:11/30
+Step: 39600/111660, accuracy: 0.900000, cls loss: 0.340006, bbox loss: 0.072902,Landmark loss :0.045613,L2 loss: 0.017090, Total Loss: 0.416354 ,lr:0.000100 
+epoch:11/30
+Step: 39700/111660, accuracy: 0.911439, cls loss: 0.329264, bbox loss: 0.082159,Landmark loss :0.043377,L2 loss: 0.017090, Total Loss: 0.409122 ,lr:0.000100 
+epoch:11/30
+Step: 39800/111660, accuracy: 0.937269, cls loss: 0.222710, bbox loss: 0.074224,Landmark loss :0.045301,L2 loss: 0.017090, Total Loss: 0.299563 ,lr:0.000100 
+epoch:11/30
+Step: 39900/111660, accuracy: 0.959410, cls loss: 0.195112, bbox loss: 0.064830,Landmark loss :0.056091,L2 loss: 0.017090, Total Loss: 0.272663 ,lr:0.000100 
+epoch:11/30
+Step: 40000/111660, accuracy: 0.924528, cls loss: 0.266098, bbox loss: 0.069478,Landmark loss :0.042364,L2 loss: 0.017090, Total Loss: 0.339110 ,lr:0.000100 
+epoch:11/30
+Step: 40100/111660, accuracy: 0.933579, cls loss: 0.254306, bbox loss: 0.070438,Landmark loss :0.040331,L2 loss: 0.017090, Total Loss: 0.326780 ,lr:0.000100 
+epoch:11/30
+Step: 40200/111660, accuracy: 0.921348, cls loss: 0.293601, bbox loss: 0.061572,Landmark loss :0.062690,L2 loss: 0.017089, Total Loss: 0.372821 ,lr:0.000100 
+epoch:11/30
+Step: 40300/111660, accuracy: 0.923077, cls loss: 0.294265, bbox loss: 0.073827,Landmark loss :0.051723,L2 loss: 0.017088, Total Loss: 0.374128 ,lr:0.000100 
+epoch:11/30
+Step: 40400/111660, accuracy: 0.930147, cls loss: 0.244606, bbox loss: 0.067989,Landmark loss :0.054203,L2 loss: 0.017088, Total Loss: 0.322790 ,lr:0.000100 
+epoch:11/30
+Step: 40500/111660, accuracy: 0.932862, cls loss: 0.272906, bbox loss: 0.071188,Landmark loss :0.042547,L2 loss: 0.017087, Total Loss: 0.346860 ,lr:0.000100 
+epoch:11/30
+Step: 40600/111660, accuracy: 0.952727, cls loss: 0.221360, bbox loss: 0.065619,Landmark loss :0.044721,L2 loss: 0.017088, Total Loss: 0.293617 ,lr:0.000100 
+epoch:11/30
+Step: 40700/111660, accuracy: 0.915129, cls loss: 0.266198, bbox loss: 0.061421,Landmark loss :0.046401,L2 loss: 0.017087, Total Loss: 0.337196 ,lr:0.000100 
+epoch:11/30
+Step: 40800/111660, accuracy: 0.934783, cls loss: 0.269238, bbox loss: 0.061969,Landmark loss :0.059356,L2 loss: 0.017085, Total Loss: 0.346986 ,lr:0.000100 
+epoch:11/30
+Step: 40900/111660, accuracy: 0.915385, cls loss: 0.297355, bbox loss: 0.069094,Landmark loss :0.054636,L2 loss: 0.017084, Total Loss: 0.376303 ,lr:0.000100 
+epoch:12/30
+Step: 41000/111660, accuracy: 0.933333, cls loss: 0.222271, bbox loss: 0.064165,Landmark loss :0.051744,L2 loss: 0.017083, Total Loss: 0.297309 ,lr:0.000100 
+epoch:12/30
+Step: 41100/111660, accuracy: 0.922780, cls loss: 0.275001, bbox loss: 0.077228,Landmark loss :0.055430,L2 loss: 0.017083, Total Loss: 0.358413 ,lr:0.000100 
+epoch:12/30
+Step: 41200/111660, accuracy: 0.956044, cls loss: 0.223990, bbox loss: 0.058970,Landmark loss :0.040501,L2 loss: 0.017084, Total Loss: 0.290809 ,lr:0.000100 
+epoch:12/30
+Step: 41300/111660, accuracy: 0.926199, cls loss: 0.284796, bbox loss: 0.064521,Landmark loss :0.053691,L2 loss: 0.017084, Total Loss: 0.360986 ,lr:0.000100 
+epoch:12/30
+Step: 41400/111660, accuracy: 0.949458, cls loss: 0.163695, bbox loss: 0.060623,Landmark loss :0.038486,L2 loss: 0.017083, Total Loss: 0.230332 ,lr:0.000100 
+epoch:12/30
+Step: 41500/111660, accuracy: 0.917293, cls loss: 0.257080, bbox loss: 0.079972,Landmark loss :0.046877,L2 loss: 0.017083, Total Loss: 0.337588 ,lr:0.000100 
+epoch:12/30
+Step: 41600/111660, accuracy: 0.938931, cls loss: 0.231304, bbox loss: 0.072129,Landmark loss :0.057621,L2 loss: 0.017082, Total Loss: 0.313262 ,lr:0.000100 
+epoch:12/30
+Step: 41700/111660, accuracy: 0.922794, cls loss: 0.251736, bbox loss: 0.077407,Landmark loss :0.045283,L2 loss: 0.017082, Total Loss: 0.330162 ,lr:0.000100 
+epoch:12/30
+Step: 41800/111660, accuracy: 0.931559, cls loss: 0.308512, bbox loss: 0.067076,Landmark loss :0.056065,L2 loss: 0.017083, Total Loss: 0.387165 ,lr:0.000100 
+epoch:12/30
+Step: 41900/111660, accuracy: 0.937956, cls loss: 0.215591, bbox loss: 0.064477,Landmark loss :0.047872,L2 loss: 0.017083, Total Loss: 0.288848 ,lr:0.000100 
+epoch:12/30
+Step: 42000/111660, accuracy: 0.942857, cls loss: 0.191177, bbox loss: 0.064076,Landmark loss :0.051187,L2 loss: 0.017083, Total Loss: 0.265892 ,lr:0.000100 
+epoch:12/30
+Step: 42100/111660, accuracy: 0.920455, cls loss: 0.268641, bbox loss: 0.061581,Landmark loss :0.044048,L2 loss: 0.017083, Total Loss: 0.338539 ,lr:0.000100 
+epoch:12/30
+Step: 42200/111660, accuracy: 0.961832, cls loss: 0.192880, bbox loss: 0.066432,Landmark loss :0.049362,L2 loss: 0.017083, Total Loss: 0.267861 ,lr:0.000100 
+epoch:12/30
+Step: 42300/111660, accuracy: 0.895582, cls loss: 0.303713, bbox loss: 0.070681,Landmark loss :0.045253,L2 loss: 0.017083, Total Loss: 0.378763 ,lr:0.000100 
+epoch:12/30
+Step: 42400/111660, accuracy: 0.917266, cls loss: 0.304421, bbox loss: 0.056043,Landmark loss :0.045274,L2 loss: 0.017082, Total Loss: 0.372161 ,lr:0.000100 
+epoch:12/30
+Step: 42500/111660, accuracy: 0.926471, cls loss: 0.297668, bbox loss: 0.068346,Landmark loss :0.050724,L2 loss: 0.017082, Total Loss: 0.374284 ,lr:0.000100 
+epoch:12/30
+Step: 42600/111660, accuracy: 0.937269, cls loss: 0.227880, bbox loss: 0.069390,Landmark loss :0.050024,L2 loss: 0.017082, Total Loss: 0.304669 ,lr:0.000100 
+epoch:12/30
+Step: 42700/111660, accuracy: 0.957447, cls loss: 0.206430, bbox loss: 0.051463,Landmark loss :0.049455,L2 loss: 0.017082, Total Loss: 0.273971 ,lr:0.000100 
+epoch:12/30
+Step: 42800/111660, accuracy: 0.917910, cls loss: 0.336141, bbox loss: 0.068535,Landmark loss :0.049655,L2 loss: 0.017081, Total Loss: 0.412316 ,lr:0.000100 
+epoch:12/30
+Step: 42900/111660, accuracy: 0.920635, cls loss: 0.261537, bbox loss: 0.071741,Landmark loss :0.050546,L2 loss: 0.017081, Total Loss: 0.339761 ,lr:0.000100 
+epoch:12/30
+Step: 43000/111660, accuracy: 0.906367, cls loss: 0.338280, bbox loss: 0.065544,Landmark loss :0.043875,L2 loss: 0.017080, Total Loss: 0.410070 ,lr:0.000100 
+epoch:12/30
+Step: 43100/111660, accuracy: 0.916058, cls loss: 0.273950, bbox loss: 0.077301,Landmark loss :0.037999,L2 loss: 0.017080, Total Loss: 0.348680 ,lr:0.000100 
+epoch:12/30
+Step: 43200/111660, accuracy: 0.940075, cls loss: 0.231099, bbox loss: 0.068327,Landmark loss :0.041751,L2 loss: 0.017080, Total Loss: 0.303218 ,lr:0.000100 
+epoch:12/30
+Step: 43300/111660, accuracy: 0.926923, cls loss: 0.264042, bbox loss: 0.071021,Landmark loss :0.050103,L2 loss: 0.017079, Total Loss: 0.341683 ,lr:0.000100 
+epoch:12/30
+Step: 43400/111660, accuracy: 0.916350, cls loss: 0.324809, bbox loss: 0.088121,Landmark loss :0.043259,L2 loss: 0.017079, Total Loss: 0.407578 ,lr:0.000100 
+epoch:12/30
+Step: 43500/111660, accuracy: 0.945255, cls loss: 0.230109, bbox loss: 0.057188,Landmark loss :0.038113,L2 loss: 0.017079, Total Loss: 0.294838 ,lr:0.000100 
+epoch:12/30
+Step: 43600/111660, accuracy: 0.936396, cls loss: 0.239264, bbox loss: 0.065980,Landmark loss :0.039965,L2 loss: 0.017079, Total Loss: 0.309315 ,lr:0.000100 
+epoch:12/30
+Step: 43700/111660, accuracy: 0.920152, cls loss: 0.312402, bbox loss: 0.066270,Landmark loss :0.044934,L2 loss: 0.017079, Total Loss: 0.385083 ,lr:0.000100 
+epoch:12/30
+Step: 43800/111660, accuracy: 0.912214, cls loss: 0.284066, bbox loss: 0.070220,Landmark loss :0.036743,L2 loss: 0.017078, Total Loss: 0.354626 ,lr:0.000100 
+epoch:12/30
+Step: 43900/111660, accuracy: 0.918149, cls loss: 0.258976, bbox loss: 0.062933,Landmark loss :0.054731,L2 loss: 0.017077, Total Loss: 0.334885 ,lr:0.000100 
+epoch:12/30
+Step: 44000/111660, accuracy: 0.932624, cls loss: 0.279278, bbox loss: 0.060874,Landmark loss :0.047835,L2 loss: 0.017076, Total Loss: 0.350709 ,lr:0.000100 
+epoch:12/30
+Step: 44100/111660, accuracy: 0.939502, cls loss: 0.246750, bbox loss: 0.066909,Landmark loss :0.052081,L2 loss: 0.017076, Total Loss: 0.323321 ,lr:0.000100 
+epoch:12/30
+Step: 44200/111660, accuracy: 0.923077, cls loss: 0.259586, bbox loss: 0.060063,Landmark loss :0.051287,L2 loss: 0.017075, Total Loss: 0.332336 ,lr:0.000100 
+epoch:12/30
+Step: 44300/111660, accuracy: 0.918819, cls loss: 0.263988, bbox loss: 0.066394,Landmark loss :0.040191,L2 loss: 0.017076, Total Loss: 0.334356 ,lr:0.000100 
+epoch:12/30
+Step: 44400/111660, accuracy: 0.918605, cls loss: 0.273192, bbox loss: 0.069703,Landmark loss :0.040992,L2 loss: 0.017076, Total Loss: 0.345615 ,lr:0.000100 
+epoch:12/30
+Step: 44500/111660, accuracy: 0.906504, cls loss: 0.322764, bbox loss: 0.066440,Landmark loss :0.054483,L2 loss: 0.017075, Total Loss: 0.400300 ,lr:0.000100 
+epoch:12/30
+Step: 44600/111660, accuracy: 0.962825, cls loss: 0.173758, bbox loss: 0.063458,Landmark loss :0.056856,L2 loss: 0.017073, Total Loss: 0.250988 ,lr:0.000100 
+epoch:13/30
+Step: 44700/111660, accuracy: 0.947761, cls loss: 0.191641, bbox loss: 0.061813,Landmark loss :0.044505,L2 loss: 0.017073, Total Loss: 0.261874 ,lr:0.000100 
+epoch:13/30
+Step: 44800/111660, accuracy: 0.928315, cls loss: 0.228826, bbox loss: 0.060485,Landmark loss :0.050426,L2 loss: 0.017073, Total Loss: 0.301354 ,lr:0.000100 
+epoch:13/30
+Step: 44900/111660, accuracy: 0.934545, cls loss: 0.236794, bbox loss: 0.070671,Landmark loss :0.045592,L2 loss: 0.017073, Total Loss: 0.311999 ,lr:0.000100 
+epoch:13/30
+Step: 45000/111660, accuracy: 0.925000, cls loss: 0.221043, bbox loss: 0.072894,Landmark loss :0.052871,L2 loss: 0.017074, Total Loss: 0.301000 ,lr:0.000100 
+epoch:13/30
+Step: 45100/111660, accuracy: 0.937743, cls loss: 0.253215, bbox loss: 0.060830,Landmark loss :0.039338,L2 loss: 0.017072, Total Loss: 0.320371 ,lr:0.000100 
+epoch:13/30
+Step: 45200/111660, accuracy: 0.916031, cls loss: 0.313319, bbox loss: 0.069198,Landmark loss :0.049726,L2 loss: 0.017073, Total Loss: 0.389855 ,lr:0.000100 
+epoch:13/30
+Step: 45300/111660, accuracy: 0.915751, cls loss: 0.329374, bbox loss: 0.073006,Landmark loss :0.046637,L2 loss: 0.017072, Total Loss: 0.406268 ,lr:0.000100 
+epoch:13/30
+Step: 45400/111660, accuracy: 0.915129, cls loss: 0.301833, bbox loss: 0.064875,Landmark loss :0.050667,L2 loss: 0.017071, Total Loss: 0.376675 ,lr:0.000100 
+epoch:13/30
+Step: 45500/111660, accuracy: 0.891129, cls loss: 0.324539, bbox loss: 0.069822,Landmark loss :0.047842,L2 loss: 0.017071, Total Loss: 0.400443 ,lr:0.000100 
+epoch:13/30
+Step: 45600/111660, accuracy: 0.924658, cls loss: 0.287809, bbox loss: 0.059616,Landmark loss :0.050677,L2 loss: 0.017072, Total Loss: 0.360027 ,lr:0.000100 
+epoch:13/30
+Step: 45700/111660, accuracy: 0.898113, cls loss: 0.344864, bbox loss: 0.062786,Landmark loss :0.046104,L2 loss: 0.017072, Total Loss: 0.416380 ,lr:0.000100 
+epoch:13/30
+Step: 45800/111660, accuracy: 0.921933, cls loss: 0.217706, bbox loss: 0.065728,Landmark loss :0.037942,L2 loss: 0.017072, Total Loss: 0.286613 ,lr:0.000100 
+epoch:13/30
+Step: 45900/111660, accuracy: 0.925094, cls loss: 0.290779, bbox loss: 0.061207,Landmark loss :0.051978,L2 loss: 0.017072, Total Loss: 0.364444 ,lr:0.000100 
+epoch:13/30
+Step: 46000/111660, accuracy: 0.947761, cls loss: 0.216552, bbox loss: 0.081130,Landmark loss :0.055629,L2 loss: 0.017072, Total Loss: 0.302003 ,lr:0.000100 
+epoch:13/30
+Step: 46100/111660, accuracy: 0.896679, cls loss: 0.303411, bbox loss: 0.070424,Landmark loss :0.047137,L2 loss: 0.017071, Total Loss: 0.379263 ,lr:0.000100 
+epoch:13/30
+Step: 46200/111660, accuracy: 0.958188, cls loss: 0.217549, bbox loss: 0.058953,Landmark loss :0.039980,L2 loss: 0.017071, Total Loss: 0.284086 ,lr:0.000100 
+epoch:13/30
+Step: 46300/111660, accuracy: 0.936759, cls loss: 0.247774, bbox loss: 0.072015,Landmark loss :0.056773,L2 loss: 0.017071, Total Loss: 0.329240 ,lr:0.000100 
+epoch:13/30
+Step: 46400/111660, accuracy: 0.948905, cls loss: 0.202683, bbox loss: 0.057157,Landmark loss :0.040421,L2 loss: 0.017071, Total Loss: 0.268543 ,lr:0.000100 
+epoch:13/30
+Step: 46500/111660, accuracy: 0.922509, cls loss: 0.255917, bbox loss: 0.068816,Landmark loss :0.053490,L2 loss: 0.017071, Total Loss: 0.334141 ,lr:0.000100 
+epoch:13/30
+Step: 46600/111660, accuracy: 0.961403, cls loss: 0.186651, bbox loss: 0.055208,Landmark loss :0.047135,L2 loss: 0.017070, Total Loss: 0.254893 ,lr:0.000100 
+epoch:13/30
+Step: 46700/111660, accuracy: 0.929825, cls loss: 0.302239, bbox loss: 0.063526,Landmark loss :0.043423,L2 loss: 0.017070, Total Loss: 0.372784 ,lr:0.000100 
+epoch:13/30
+Step: 46800/111660, accuracy: 0.959410, cls loss: 0.179638, bbox loss: 0.064912,Landmark loss :0.053885,L2 loss: 0.017070, Total Loss: 0.256106 ,lr:0.000100 
+epoch:13/30
+Step: 46900/111660, accuracy: 0.942308, cls loss: 0.213749, bbox loss: 0.068134,Landmark loss :0.035678,L2 loss: 0.017069, Total Loss: 0.282724 ,lr:0.000100 
+epoch:13/30
+Step: 47000/111660, accuracy: 0.923077, cls loss: 0.296210, bbox loss: 0.068235,Landmark loss :0.040109,L2 loss: 0.017069, Total Loss: 0.367452 ,lr:0.000100 
+epoch:13/30
+Step: 47100/111660, accuracy: 0.961538, cls loss: 0.165390, bbox loss: 0.072303,Landmark loss :0.047826,L2 loss: 0.017068, Total Loss: 0.242523 ,lr:0.000100 
+epoch:13/30
+Step: 47200/111660, accuracy: 0.910781, cls loss: 0.295146, bbox loss: 0.065517,Landmark loss :0.042183,L2 loss: 0.017068, Total Loss: 0.366065 ,lr:0.000100 
+epoch:13/30
+Step: 47300/111660, accuracy: 0.909091, cls loss: 0.274852, bbox loss: 0.064595,Landmark loss :0.042972,L2 loss: 0.017069, Total Loss: 0.345704 ,lr:0.000100 
+epoch:13/30
+Step: 47400/111660, accuracy: 0.941392, cls loss: 0.257580, bbox loss: 0.058639,Landmark loss :0.037595,L2 loss: 0.017068, Total Loss: 0.322765 ,lr:0.000100 
+epoch:13/30
+Step: 47500/111660, accuracy: 0.924188, cls loss: 0.307719, bbox loss: 0.068442,Landmark loss :0.039462,L2 loss: 0.017068, Total Loss: 0.378739 ,lr:0.000100 
+epoch:13/30
+Step: 47600/111660, accuracy: 0.931035, cls loss: 0.284747, bbox loss: 0.063331,Landmark loss :0.049436,L2 loss: 0.017068, Total Loss: 0.358198 ,lr:0.000100 
+epoch:13/30
+Step: 47700/111660, accuracy: 0.937956, cls loss: 0.202973, bbox loss: 0.066354,Landmark loss :0.046140,L2 loss: 0.017066, Total Loss: 0.276286 ,lr:0.000100 
+epoch:13/30
+Step: 47800/111660, accuracy: 0.916058, cls loss: 0.312665, bbox loss: 0.069445,Landmark loss :0.051051,L2 loss: 0.017066, Total Loss: 0.389980 ,lr:0.000100 
+epoch:13/30
+Step: 47900/111660, accuracy: 0.956044, cls loss: 0.173095, bbox loss: 0.069440,Landmark loss :0.043644,L2 loss: 0.017065, Total Loss: 0.246702 ,lr:0.000100 
+epoch:13/30
+Step: 48000/111660, accuracy: 0.958333, cls loss: 0.191832, bbox loss: 0.059988,Landmark loss :0.039940,L2 loss: 0.017065, Total Loss: 0.258862 ,lr:0.000100 
+epoch:13/30
+Step: 48100/111660, accuracy: 0.908088, cls loss: 0.326009, bbox loss: 0.069201,Landmark loss :0.032576,L2 loss: 0.017066, Total Loss: 0.393963 ,lr:0.000100 
+epoch:13/30
+Step: 48200/111660, accuracy: 0.926740, cls loss: 0.288964, bbox loss: 0.055118,Landmark loss :0.041740,L2 loss: 0.017065, Total Loss: 0.354458 ,lr:0.000100 
+epoch:13/30
+Step: 48300/111660, accuracy: 0.903915, cls loss: 0.388825, bbox loss: 0.064481,Landmark loss :0.047131,L2 loss: 0.017063, Total Loss: 0.461694 ,lr:0.000100 
+epoch:14/30
+Step: 48400/111660, accuracy: 0.936567, cls loss: 0.224666, bbox loss: 0.077255,Landmark loss :0.035458,L2 loss: 0.017063, Total Loss: 0.298085 ,lr:0.000100 
+epoch:14/30
+Step: 48500/111660, accuracy: 0.922794, cls loss: 0.262270, bbox loss: 0.062169,Landmark loss :0.054739,L2 loss: 0.017063, Total Loss: 0.337786 ,lr:0.000100 
+epoch:14/30
+Step: 48600/111660, accuracy: 0.924460, cls loss: 0.260939, bbox loss: 0.060343,Landmark loss :0.042521,L2 loss: 0.017063, Total Loss: 0.329433 ,lr:0.000100 
+epoch:14/30
+Step: 48700/111660, accuracy: 0.903571, cls loss: 0.326058, bbox loss: 0.070057,Landmark loss :0.037365,L2 loss: 0.017063, Total Loss: 0.396832 ,lr:0.000100 
+epoch:14/30
+Step: 48800/111660, accuracy: 0.909091, cls loss: 0.317580, bbox loss: 0.063804,Landmark loss :0.038893,L2 loss: 0.017062, Total Loss: 0.385990 ,lr:0.000100 
+epoch:14/30
+Step: 48900/111660, accuracy: 0.920578, cls loss: 0.256903, bbox loss: 0.057877,Landmark loss :0.044504,L2 loss: 0.017063, Total Loss: 0.325156 ,lr:0.000100 
+epoch:14/30
+Step: 49000/111660, accuracy: 0.932836, cls loss: 0.268906, bbox loss: 0.078833,Landmark loss :0.040701,L2 loss: 0.017061, Total Loss: 0.345735 ,lr:0.000100 
+epoch:14/30
+Step: 49100/111660, accuracy: 0.937008, cls loss: 0.230656, bbox loss: 0.062722,Landmark loss :0.043748,L2 loss: 0.017061, Total Loss: 0.300952 ,lr:0.000100 
+epoch:14/30
+Step: 49200/111660, accuracy: 0.916667, cls loss: 0.250218, bbox loss: 0.071358,Landmark loss :0.042912,L2 loss: 0.017061, Total Loss: 0.324414 ,lr:0.000100 
+epoch:14/30
+Step: 49300/111660, accuracy: 0.932836, cls loss: 0.234559, bbox loss: 0.069710,Landmark loss :0.047891,L2 loss: 0.017061, Total Loss: 0.310421 ,lr:0.000100 
+epoch:14/30
+Step: 49400/111660, accuracy: 0.946970, cls loss: 0.199903, bbox loss: 0.071068,Landmark loss :0.053070,L2 loss: 0.017062, Total Loss: 0.279033 ,lr:0.000100 
+epoch:14/30
+Step: 49500/111660, accuracy: 0.931559, cls loss: 0.237711, bbox loss: 0.062278,Landmark loss :0.042193,L2 loss: 0.017062, Total Loss: 0.307008 ,lr:0.000100 
+epoch:14/30
+Step: 49600/111660, accuracy: 0.937984, cls loss: 0.215358, bbox loss: 0.063801,Landmark loss :0.048431,L2 loss: 0.017062, Total Loss: 0.288536 ,lr:0.000100 
+epoch:14/30
+Step: 49700/111660, accuracy: 0.936090, cls loss: 0.191880, bbox loss: 0.068259,Landmark loss :0.040405,L2 loss: 0.017062, Total Loss: 0.263274 ,lr:0.000100 
+epoch:14/30
+Step: 49800/111660, accuracy: 0.921053, cls loss: 0.273893, bbox loss: 0.067887,Landmark loss :0.045323,L2 loss: 0.017061, Total Loss: 0.347558 ,lr:0.000100 
+epoch:14/30
+Step: 49900/111660, accuracy: 0.951311, cls loss: 0.231327, bbox loss: 0.061505,Landmark loss :0.060139,L2 loss: 0.017061, Total Loss: 0.309210 ,lr:0.000100 
+epoch:14/30
+Step: 50000/111660, accuracy: 0.932584, cls loss: 0.274893, bbox loss: 0.055189,Landmark loss :0.042069,L2 loss: 0.017061, Total Loss: 0.340583 ,lr:0.000100 
+epoch:14/30
+Step: 50100/111660, accuracy: 0.943182, cls loss: 0.222528, bbox loss: 0.073234,Landmark loss :0.052248,L2 loss: 0.017062, Total Loss: 0.302331 ,lr:0.000100 
+epoch:14/30
+Step: 50200/111660, accuracy: 0.915058, cls loss: 0.239922, bbox loss: 0.070182,Landmark loss :0.046759,L2 loss: 0.017062, Total Loss: 0.315455 ,lr:0.000100 
+epoch:14/30
+Step: 50300/111660, accuracy: 0.923372, cls loss: 0.275835, bbox loss: 0.063671,Landmark loss :0.049418,L2 loss: 0.017061, Total Loss: 0.349440 ,lr:0.000100 
+epoch:14/30
+Step: 50400/111660, accuracy: 0.953237, cls loss: 0.178086, bbox loss: 0.075912,Landmark loss :0.043523,L2 loss: 0.017060, Total Loss: 0.254864 ,lr:0.000100 
+epoch:14/30
+Step: 50500/111660, accuracy: 0.932331, cls loss: 0.237988, bbox loss: 0.062328,Landmark loss :0.045027,L2 loss: 0.017060, Total Loss: 0.308726 ,lr:0.000100 
+epoch:14/30
+Step: 50600/111660, accuracy: 0.961390, cls loss: 0.175260, bbox loss: 0.068872,Landmark loss :0.034985,L2 loss: 0.017060, Total Loss: 0.244249 ,lr:0.000100 
+epoch:14/30
+Step: 50700/111660, accuracy: 0.931408, cls loss: 0.322316, bbox loss: 0.064207,Landmark loss :0.058855,L2 loss: 0.017059, Total Loss: 0.400906 ,lr:0.000100 
+epoch:14/30
+Step: 50800/111660, accuracy: 0.945848, cls loss: 0.213987, bbox loss: 0.066133,Landmark loss :0.051036,L2 loss: 0.017059, Total Loss: 0.289630 ,lr:0.000100 
+epoch:14/30
+Step: 50900/111660, accuracy: 0.926531, cls loss: 0.234030, bbox loss: 0.063897,Landmark loss :0.047793,L2 loss: 0.017058, Total Loss: 0.306933 ,lr:0.000100 
+epoch:14/30
+Step: 51000/111660, accuracy: 0.905797, cls loss: 0.321424, bbox loss: 0.080672,Landmark loss :0.054833,L2 loss: 0.017059, Total Loss: 0.406236 ,lr:0.000100 
+epoch:14/30
+Step: 51100/111660, accuracy: 0.963899, cls loss: 0.173567, bbox loss: 0.072824,Landmark loss :0.052068,L2 loss: 0.017059, Total Loss: 0.253072 ,lr:0.000100 
+epoch:14/30
+Step: 51200/111660, accuracy: 0.945946, cls loss: 0.242960, bbox loss: 0.064869,Landmark loss :0.042471,L2 loss: 0.017058, Total Loss: 0.313689 ,lr:0.000100 
+epoch:14/30
+Step: 51300/111660, accuracy: 0.947368, cls loss: 0.273190, bbox loss: 0.071355,Landmark loss :0.064691,L2 loss: 0.017058, Total Loss: 0.358271 ,lr:0.000100 
+epoch:14/30
+Step: 51400/111660, accuracy: 0.928315, cls loss: 0.272992, bbox loss: 0.074116,Landmark loss :0.045502,L2 loss: 0.017057, Total Loss: 0.349858 ,lr:0.000100 
+epoch:14/30
+Step: 51500/111660, accuracy: 0.926471, cls loss: 0.225206, bbox loss: 0.066975,Landmark loss :0.054253,L2 loss: 0.017057, Total Loss: 0.302877 ,lr:0.000100 
+epoch:14/30
+Step: 51600/111660, accuracy: 0.934109, cls loss: 0.244852, bbox loss: 0.079963,Landmark loss :0.050279,L2 loss: 0.017057, Total Loss: 0.327030 ,lr:0.000100 
+epoch:14/30
+Step: 51700/111660, accuracy: 0.929889, cls loss: 0.291542, bbox loss: 0.057285,Landmark loss :0.043488,L2 loss: 0.017057, Total Loss: 0.358985 ,lr:0.000100 
+epoch:14/30
+Step: 51800/111660, accuracy: 0.935018, cls loss: 0.216133, bbox loss: 0.064982,Landmark loss :0.045671,L2 loss: 0.017056, Total Loss: 0.288516 ,lr:0.000100 
+epoch:14/30
+Step: 51900/111660, accuracy: 0.913208, cls loss: 0.345567, bbox loss: 0.063105,Landmark loss :0.041021,L2 loss: 0.017056, Total Loss: 0.414686 ,lr:0.000100 
+epoch:14/30
+Step: 52000/111660, accuracy: 0.906810, cls loss: 0.332247, bbox loss: 0.067735,Landmark loss :0.045000,L2 loss: 0.017054, Total Loss: 0.405669 ,lr:0.000100 
+epoch:14/30
+Step: 52100/111660, accuracy: 0.930147, cls loss: 0.251725, bbox loss: 0.058975,Landmark loss :0.049270,L2 loss: 0.017053, Total Loss: 0.322900 ,lr:0.000010 
+epoch:15/30
+Step: 52200/111660, accuracy: 0.939623, cls loss: 0.221932, bbox loss: 0.074373,Landmark loss :0.037217,L2 loss: 0.017053, Total Loss: 0.294780 ,lr:0.000010 
+epoch:15/30
+Step: 52300/111660, accuracy: 0.952569, cls loss: 0.214696, bbox loss: 0.071186,Landmark loss :0.051232,L2 loss: 0.017053, Total Loss: 0.292958 ,lr:0.000010 
+epoch:15/30
+Step: 52400/111660, accuracy: 0.917910, cls loss: 0.273900, bbox loss: 0.068265,Landmark loss :0.033968,L2 loss: 0.017053, Total Loss: 0.342070 ,lr:0.000010 
+epoch:15/30
+Step: 52500/111660, accuracy: 0.935018, cls loss: 0.257338, bbox loss: 0.061583,Landmark loss :0.043128,L2 loss: 0.017053, Total Loss: 0.326747 ,lr:0.000010 
+epoch:15/30
+Step: 52600/111660, accuracy: 0.925197, cls loss: 0.227772, bbox loss: 0.073533,Landmark loss :0.051000,L2 loss: 0.017053, Total Loss: 0.307091 ,lr:0.000010 
+epoch:15/30
+Step: 52700/111660, accuracy: 0.944030, cls loss: 0.207980, bbox loss: 0.070004,Landmark loss :0.050744,L2 loss: 0.017053, Total Loss: 0.285406 ,lr:0.000010 
+epoch:15/30
+Step: 52800/111660, accuracy: 0.921642, cls loss: 0.299331, bbox loss: 0.067108,Landmark loss :0.047532,L2 loss: 0.017053, Total Loss: 0.373704 ,lr:0.000010 
+epoch:15/30
+Step: 52900/111660, accuracy: 0.930909, cls loss: 0.237966, bbox loss: 0.069373,Landmark loss :0.050730,L2 loss: 0.017053, Total Loss: 0.315071 ,lr:0.000010 
+epoch:15/30
+Step: 53000/111660, accuracy: 0.924731, cls loss: 0.264220, bbox loss: 0.065223,Landmark loss :0.045785,L2 loss: 0.017053, Total Loss: 0.336777 ,lr:0.000010 
+epoch:15/30
+Step: 53100/111660, accuracy: 0.913043, cls loss: 0.335639, bbox loss: 0.072915,Landmark loss :0.048348,L2 loss: 0.017053, Total Loss: 0.413324 ,lr:0.000010 
+epoch:15/30
+Step: 53200/111660, accuracy: 0.943609, cls loss: 0.208033, bbox loss: 0.069695,Landmark loss :0.044237,L2 loss: 0.017053, Total Loss: 0.282053 ,lr:0.000010 
+epoch:15/30
+Step: 53300/111660, accuracy: 0.927203, cls loss: 0.300827, bbox loss: 0.072679,Landmark loss :0.048330,L2 loss: 0.017053, Total Loss: 0.378384 ,lr:0.000010 
+epoch:15/30
+Step: 53400/111660, accuracy: 0.934109, cls loss: 0.236743, bbox loss: 0.067125,Landmark loss :0.054056,L2 loss: 0.017053, Total Loss: 0.314386 ,lr:0.000010 
+epoch:15/30
+Step: 53500/111660, accuracy: 0.929630, cls loss: 0.287158, bbox loss: 0.073921,Landmark loss :0.044611,L2 loss: 0.017053, Total Loss: 0.363477 ,lr:0.000010 
+epoch:15/30
+Step: 53600/111660, accuracy: 0.925094, cls loss: 0.256169, bbox loss: 0.058273,Landmark loss :0.047643,L2 loss: 0.017053, Total Loss: 0.326180 ,lr:0.000010 
+epoch:15/30
+Step: 53700/111660, accuracy: 0.932584, cls loss: 0.216162, bbox loss: 0.072213,Landmark loss :0.058587,L2 loss: 0.017053, Total Loss: 0.298615 ,lr:0.000010 
+epoch:15/30
+Step: 53800/111660, accuracy: 0.941818, cls loss: 0.208360, bbox loss: 0.070540,Landmark loss :0.043452,L2 loss: 0.017053, Total Loss: 0.282410 ,lr:0.000010 
+epoch:15/30
+Step: 53900/111660, accuracy: 0.961538, cls loss: 0.198585, bbox loss: 0.054898,Landmark loss :0.050326,L2 loss: 0.017053, Total Loss: 0.268250 ,lr:0.000010 
+epoch:15/30
+Step: 54000/111660, accuracy: 0.948718, cls loss: 0.206183, bbox loss: 0.062316,Landmark loss :0.041644,L2 loss: 0.017053, Total Loss: 0.275216 ,lr:0.000010 
+epoch:15/30
+Step: 54100/111660, accuracy: 0.952206, cls loss: 0.222808, bbox loss: 0.063429,Landmark loss :0.033524,L2 loss: 0.017053, Total Loss: 0.288338 ,lr:0.000010 
+epoch:15/30
+Step: 54200/111660, accuracy: 0.963100, cls loss: 0.217235, bbox loss: 0.068598,Landmark loss :0.044831,L2 loss: 0.017053, Total Loss: 0.291003 ,lr:0.000010 
+epoch:15/30
+Step: 54300/111660, accuracy: 0.918605, cls loss: 0.317286, bbox loss: 0.069027,Landmark loss :0.035679,L2 loss: 0.017053, Total Loss: 0.386693 ,lr:0.000010 
+epoch:15/30
+Step: 54400/111660, accuracy: 0.945055, cls loss: 0.219083, bbox loss: 0.065722,Landmark loss :0.052380,L2 loss: 0.017053, Total Loss: 0.295187 ,lr:0.000010 
+epoch:15/30
+Step: 54500/111660, accuracy: 0.910853, cls loss: 0.310908, bbox loss: 0.064494,Landmark loss :0.045072,L2 loss: 0.017053, Total Loss: 0.382744 ,lr:0.000010 
+epoch:15/30
+Step: 54600/111660, accuracy: 0.934307, cls loss: 0.231106, bbox loss: 0.068747,Landmark loss :0.041712,L2 loss: 0.017053, Total Loss: 0.303388 ,lr:0.000010 
+epoch:15/30
+Step: 54700/111660, accuracy: 0.904762, cls loss: 0.297865, bbox loss: 0.058300,Landmark loss :0.040637,L2 loss: 0.017053, Total Loss: 0.364387 ,lr:0.000010 
+epoch:15/30
+Step: 54800/111660, accuracy: 0.920578, cls loss: 0.251676, bbox loss: 0.064558,Landmark loss :0.043945,L2 loss: 0.017053, Total Loss: 0.322981 ,lr:0.000010 
+epoch:15/30
+Step: 54900/111660, accuracy: 0.914894, cls loss: 0.315598, bbox loss: 0.063151,Landmark loss :0.042666,L2 loss: 0.017053, Total Loss: 0.385560 ,lr:0.000010 
+epoch:15/30
+Step: 55000/111660, accuracy: 0.932862, cls loss: 0.256580, bbox loss: 0.065955,Landmark loss :0.042120,L2 loss: 0.017053, Total Loss: 0.327671 ,lr:0.000010 
+epoch:15/30
+Step: 55100/111660, accuracy: 0.930556, cls loss: 0.262854, bbox loss: 0.074493,Landmark loss :0.051528,L2 loss: 0.017053, Total Loss: 0.342917 ,lr:0.000010 
+epoch:15/30
+Step: 55200/111660, accuracy: 0.924188, cls loss: 0.249055, bbox loss: 0.062571,Landmark loss :0.048188,L2 loss: 0.017053, Total Loss: 0.321488 ,lr:0.000010 
+epoch:15/30
+Step: 55300/111660, accuracy: 0.931159, cls loss: 0.245855, bbox loss: 0.066438,Landmark loss :0.046990,L2 loss: 0.017053, Total Loss: 0.319622 ,lr:0.000010 
+epoch:15/30
+Step: 55400/111660, accuracy: 0.930233, cls loss: 0.221884, bbox loss: 0.078014,Landmark loss :0.043601,L2 loss: 0.017053, Total Loss: 0.299744 ,lr:0.000010 
+epoch:15/30
+Step: 55500/111660, accuracy: 0.921053, cls loss: 0.250419, bbox loss: 0.067076,Landmark loss :0.040927,L2 loss: 0.017053, Total Loss: 0.321474 ,lr:0.000010 
+epoch:15/30
+Step: 55600/111660, accuracy: 0.920755, cls loss: 0.272429, bbox loss: 0.055012,Landmark loss :0.043445,L2 loss: 0.017053, Total Loss: 0.338710 ,lr:0.000010 
+epoch:15/30
+Step: 55700/111660, accuracy: 0.913858, cls loss: 0.305633, bbox loss: 0.070253,Landmark loss :0.043349,L2 loss: 0.017053, Total Loss: 0.379487 ,lr:0.000010 
+epoch:15/30
+Step: 55800/111660, accuracy: 0.922794, cls loss: 0.297873, bbox loss: 0.066198,Landmark loss :0.033035,L2 loss: 0.017053, Total Loss: 0.364542 ,lr:0.000010 
+epoch:16/30
+Step: 55900/111660, accuracy: 0.951852, cls loss: 0.195234, bbox loss: 0.059891,Landmark loss :0.046026,L2 loss: 0.017053, Total Loss: 0.265245 ,lr:0.000010 
+epoch:16/30
+Step: 56000/111660, accuracy: 0.937500, cls loss: 0.226120, bbox loss: 0.063297,Landmark loss :0.038163,L2 loss: 0.017053, Total Loss: 0.293903 ,lr:0.000010 
+epoch:16/30
+Step: 56100/111660, accuracy: 0.906475, cls loss: 0.295558, bbox loss: 0.060876,Landmark loss :0.040512,L2 loss: 0.017053, Total Loss: 0.363305 ,lr:0.000010 
+epoch:16/30
+Step: 56200/111660, accuracy: 0.944649, cls loss: 0.229719, bbox loss: 0.066359,Landmark loss :0.042015,L2 loss: 0.017053, Total Loss: 0.300959 ,lr:0.000010 
+epoch:16/30
+Step: 56300/111660, accuracy: 0.941860, cls loss: 0.212637, bbox loss: 0.070588,Landmark loss :0.058548,L2 loss: 0.017053, Total Loss: 0.294258 ,lr:0.000010 
+epoch:16/30
+Step: 56400/111660, accuracy: 0.928058, cls loss: 0.256634, bbox loss: 0.060632,Landmark loss :0.050623,L2 loss: 0.017053, Total Loss: 0.329314 ,lr:0.000010 
+epoch:16/30
+Step: 56500/111660, accuracy: 0.955882, cls loss: 0.191379, bbox loss: 0.073763,Landmark loss :0.051119,L2 loss: 0.017053, Total Loss: 0.270873 ,lr:0.000010 
+epoch:16/30
+Step: 56600/111660, accuracy: 0.924603, cls loss: 0.266842, bbox loss: 0.072190,Landmark loss :0.063500,L2 loss: 0.017052, Total Loss: 0.351739 ,lr:0.000010 
+epoch:16/30
+Step: 56700/111660, accuracy: 0.955882, cls loss: 0.202191, bbox loss: 0.060318,Landmark loss :0.042175,L2 loss: 0.017053, Total Loss: 0.270489 ,lr:0.000010 
+epoch:16/30
+Step: 56800/111660, accuracy: 0.941860, cls loss: 0.212808, bbox loss: 0.063497,Landmark loss :0.058008,L2 loss: 0.017053, Total Loss: 0.290612 ,lr:0.000010 
+epoch:16/30
+Step: 56900/111660, accuracy: 0.962547, cls loss: 0.172206, bbox loss: 0.075981,Landmark loss :0.043924,L2 loss: 0.017053, Total Loss: 0.249211 ,lr:0.000010 
+epoch:16/30
+Step: 57000/111660, accuracy: 0.927757, cls loss: 0.323456, bbox loss: 0.073376,Landmark loss :0.034533,L2 loss: 0.017053, Total Loss: 0.394463 ,lr:0.000010 
+epoch:16/30
+Step: 57100/111660, accuracy: 0.940075, cls loss: 0.279764, bbox loss: 0.059260,Landmark loss :0.049845,L2 loss: 0.017053, Total Loss: 0.351369 ,lr:0.000010 
+epoch:16/30
+Step: 57200/111660, accuracy: 0.933579, cls loss: 0.209369, bbox loss: 0.072170,Landmark loss :0.043562,L2 loss: 0.017053, Total Loss: 0.284288 ,lr:0.000010 
+epoch:16/30
+Step: 57300/111660, accuracy: 0.935361, cls loss: 0.259438, bbox loss: 0.055604,Landmark loss :0.038648,L2 loss: 0.017053, Total Loss: 0.323616 ,lr:0.000010 
+epoch:16/30
+Step: 57400/111660, accuracy: 0.929134, cls loss: 0.236960, bbox loss: 0.069729,Landmark loss :0.048362,L2 loss: 0.017053, Total Loss: 0.313058 ,lr:0.000010 
+epoch:16/30
+Step: 57500/111660, accuracy: 0.941634, cls loss: 0.201277, bbox loss: 0.065673,Landmark loss :0.040076,L2 loss: 0.017053, Total Loss: 0.271205 ,lr:0.000010 
+epoch:16/30
+Step: 57600/111660, accuracy: 0.963370, cls loss: 0.159825, bbox loss: 0.070017,Landmark loss :0.045106,L2 loss: 0.017053, Total Loss: 0.234440 ,lr:0.000010 
+epoch:16/30
+Step: 57700/111660, accuracy: 0.941176, cls loss: 0.248710, bbox loss: 0.055908,Landmark loss :0.044956,L2 loss: 0.017053, Total Loss: 0.316194 ,lr:0.000010 
+epoch:16/30
+Step: 57800/111660, accuracy: 0.954198, cls loss: 0.187252, bbox loss: 0.066152,Landmark loss :0.044116,L2 loss: 0.017052, Total Loss: 0.259438 ,lr:0.000010 
+epoch:16/30
+Step: 57900/111660, accuracy: 0.947368, cls loss: 0.238599, bbox loss: 0.067283,Landmark loss :0.032656,L2 loss: 0.017052, Total Loss: 0.305621 ,lr:0.000010 
+epoch:16/30
+Step: 58000/111660, accuracy: 0.910072, cls loss: 0.282624, bbox loss: 0.065546,Landmark loss :0.043553,L2 loss: 0.017052, Total Loss: 0.354226 ,lr:0.000010 
+epoch:16/30
+Step: 58100/111660, accuracy: 0.956522, cls loss: 0.191315, bbox loss: 0.072805,Landmark loss :0.044901,L2 loss: 0.017052, Total Loss: 0.267221 ,lr:0.000010 
+epoch:16/30
+Step: 58200/111660, accuracy: 0.946768, cls loss: 0.198013, bbox loss: 0.066691,Landmark loss :0.054248,L2 loss: 0.017052, Total Loss: 0.275535 ,lr:0.000010 
+epoch:16/30
+Step: 58300/111660, accuracy: 0.943609, cls loss: 0.254462, bbox loss: 0.060543,Landmark loss :0.049927,L2 loss: 0.017052, Total Loss: 0.326749 ,lr:0.000010 
+epoch:16/30
+Step: 58400/111660, accuracy: 0.942966, cls loss: 0.206712, bbox loss: 0.061922,Landmark loss :0.039968,L2 loss: 0.017052, Total Loss: 0.274710 ,lr:0.000010 
+epoch:16/30
+Step: 58500/111660, accuracy: 0.924812, cls loss: 0.246393, bbox loss: 0.061919,Landmark loss :0.042055,L2 loss: 0.017052, Total Loss: 0.315433 ,lr:0.000010 
+epoch:16/30
+Step: 58600/111660, accuracy: 0.913208, cls loss: 0.287904, bbox loss: 0.066674,Landmark loss :0.051976,L2 loss: 0.017052, Total Loss: 0.364281 ,lr:0.000010 
+epoch:16/30
+Step: 58700/111660, accuracy: 0.937269, cls loss: 0.199080, bbox loss: 0.058998,Landmark loss :0.041466,L2 loss: 0.017052, Total Loss: 0.266364 ,lr:0.000010 
+epoch:16/30
+Step: 58800/111660, accuracy: 0.931655, cls loss: 0.245950, bbox loss: 0.059693,Landmark loss :0.042700,L2 loss: 0.017052, Total Loss: 0.314198 ,lr:0.000010 
+epoch:16/30
+Step: 58900/111660, accuracy: 0.934783, cls loss: 0.244520, bbox loss: 0.063780,Landmark loss :0.045211,L2 loss: 0.017052, Total Loss: 0.316067 ,lr:0.000010 
+epoch:16/30
+Step: 59000/111660, accuracy: 0.927798, cls loss: 0.238057, bbox loss: 0.071284,Landmark loss :0.050284,L2 loss: 0.017052, Total Loss: 0.315893 ,lr:0.000010 
+epoch:16/30
+Step: 59100/111660, accuracy: 0.926199, cls loss: 0.246363, bbox loss: 0.064283,Landmark loss :0.039534,L2 loss: 0.017052, Total Loss: 0.315323 ,lr:0.000010 
+epoch:16/30
+Step: 59200/111660, accuracy: 0.913669, cls loss: 0.280879, bbox loss: 0.063786,Landmark loss :0.050916,L2 loss: 0.017052, Total Loss: 0.355283 ,lr:0.000010 
+epoch:16/30
+Step: 59300/111660, accuracy: 0.920863, cls loss: 0.321081, bbox loss: 0.067050,Landmark loss :0.032686,L2 loss: 0.017052, Total Loss: 0.388001 ,lr:0.000010 
+epoch:16/30
+Step: 59400/111660, accuracy: 0.922179, cls loss: 0.248594, bbox loss: 0.058498,Landmark loss :0.041638,L2 loss: 0.017052, Total Loss: 0.315714 ,lr:0.000010 
+epoch:16/30
+Step: 59500/111660, accuracy: 0.938182, cls loss: 0.264660, bbox loss: 0.063923,Landmark loss :0.044314,L2 loss: 0.017052, Total Loss: 0.335831 ,lr:0.000010 
+epoch:17/30
+Step: 59600/111660, accuracy: 0.905923, cls loss: 0.301686, bbox loss: 0.063073,Landmark loss :0.045299,L2 loss: 0.017052, Total Loss: 0.372923 ,lr:0.000010 
+epoch:17/30
+Step: 59700/111660, accuracy: 0.922481, cls loss: 0.254623, bbox loss: 0.066992,Landmark loss :0.054863,L2 loss: 0.017052, Total Loss: 0.332602 ,lr:0.000010 
+epoch:17/30
+Step: 59800/111660, accuracy: 0.912088, cls loss: 0.328464, bbox loss: 0.060966,Landmark loss :0.049993,L2 loss: 0.017052, Total Loss: 0.400996 ,lr:0.000010 
+epoch:17/30
+Step: 59900/111660, accuracy: 0.933824, cls loss: 0.225752, bbox loss: 0.058983,Landmark loss :0.040529,L2 loss: 0.017052, Total Loss: 0.292560 ,lr:0.000010 
+epoch:17/30
+Step: 60000/111660, accuracy: 0.937008, cls loss: 0.215737, bbox loss: 0.082047,Landmark loss :0.042794,L2 loss: 0.017052, Total Loss: 0.295209 ,lr:0.000010 
+epoch:17/30
+Step: 60100/111660, accuracy: 0.919414, cls loss: 0.325667, bbox loss: 0.061622,Landmark loss :0.045818,L2 loss: 0.017052, Total Loss: 0.396439 ,lr:0.000010 
+epoch:17/30
+Step: 60200/111660, accuracy: 0.957692, cls loss: 0.221237, bbox loss: 0.070467,Landmark loss :0.043061,L2 loss: 0.017052, Total Loss: 0.295052 ,lr:0.000010 
+epoch:17/30
+Step: 60300/111660, accuracy: 0.917857, cls loss: 0.341021, bbox loss: 0.064837,Landmark loss :0.046351,L2 loss: 0.017051, Total Loss: 0.413667 ,lr:0.000010 
+epoch:17/30
+Step: 60400/111660, accuracy: 0.887097, cls loss: 0.313333, bbox loss: 0.070140,Landmark loss :0.048520,L2 loss: 0.017051, Total Loss: 0.389714 ,lr:0.000010 
+epoch:17/30
+Step: 60500/111660, accuracy: 0.893993, cls loss: 0.395542, bbox loss: 0.057964,Landmark loss :0.043261,L2 loss: 0.017052, Total Loss: 0.463205 ,lr:0.000010 
+epoch:17/30
+Step: 60600/111660, accuracy: 0.960000, cls loss: 0.221901, bbox loss: 0.074352,Landmark loss :0.058302,L2 loss: 0.017052, Total Loss: 0.305280 ,lr:0.000010 
+epoch:17/30
+Step: 60700/111660, accuracy: 0.951852, cls loss: 0.210383, bbox loss: 0.074685,Landmark loss :0.043193,L2 loss: 0.017052, Total Loss: 0.286373 ,lr:0.000010 
+epoch:17/30
+Step: 60800/111660, accuracy: 0.914286, cls loss: 0.262006, bbox loss: 0.057100,Landmark loss :0.032479,L2 loss: 0.017052, Total Loss: 0.323847 ,lr:0.000010 
+epoch:17/30
+Step: 60900/111660, accuracy: 0.930909, cls loss: 0.244920, bbox loss: 0.060138,Landmark loss :0.042393,L2 loss: 0.017052, Total Loss: 0.313237 ,lr:0.000010 
+epoch:17/30
+Step: 61000/111660, accuracy: 0.969811, cls loss: 0.163572, bbox loss: 0.072727,Landmark loss :0.050346,L2 loss: 0.017052, Total Loss: 0.242160 ,lr:0.000010 
+epoch:17/30
+Step: 61100/111660, accuracy: 0.959108, cls loss: 0.204246, bbox loss: 0.061227,Landmark loss :0.047618,L2 loss: 0.017052, Total Loss: 0.275720 ,lr:0.000010 
+epoch:17/30
+Step: 61200/111660, accuracy: 0.925926, cls loss: 0.277830, bbox loss: 0.070576,Landmark loss :0.038405,L2 loss: 0.017052, Total Loss: 0.349373 ,lr:0.000010 
+epoch:17/30
+Step: 61300/111660, accuracy: 0.922222, cls loss: 0.267742, bbox loss: 0.066336,Landmark loss :0.048965,L2 loss: 0.017052, Total Loss: 0.342444 ,lr:0.000010 
+epoch:17/30
+Step: 61400/111660, accuracy: 0.913534, cls loss: 0.285122, bbox loss: 0.081462,Landmark loss :0.052920,L2 loss: 0.017052, Total Loss: 0.369365 ,lr:0.000010 
+epoch:17/30
+Step: 61500/111660, accuracy: 0.925781, cls loss: 0.226598, bbox loss: 0.073407,Landmark loss :0.040557,L2 loss: 0.017052, Total Loss: 0.300631 ,lr:0.000010 
+epoch:17/30
+Step: 61600/111660, accuracy: 0.932584, cls loss: 0.251772, bbox loss: 0.072166,Landmark loss :0.041911,L2 loss: 0.017052, Total Loss: 0.325861 ,lr:0.000010 
+epoch:17/30
+Step: 61700/111660, accuracy: 0.928571, cls loss: 0.249692, bbox loss: 0.063841,Landmark loss :0.039362,L2 loss: 0.017052, Total Loss: 0.318345 ,lr:0.000010 
+epoch:17/30
+Step: 61800/111660, accuracy: 0.936803, cls loss: 0.207305, bbox loss: 0.073781,Landmark loss :0.039141,L2 loss: 0.017052, Total Loss: 0.280818 ,lr:0.000010 
+epoch:17/30
+Step: 61900/111660, accuracy: 0.941176, cls loss: 0.253702, bbox loss: 0.066399,Landmark loss :0.047269,L2 loss: 0.017051, Total Loss: 0.327587 ,lr:0.000010 
+epoch:17/30
+Step: 62000/111660, accuracy: 0.913534, cls loss: 0.264297, bbox loss: 0.066483,Landmark loss :0.056543,L2 loss: 0.017051, Total Loss: 0.342861 ,lr:0.000010 
+epoch:17/30
+Step: 62100/111660, accuracy: 0.910448, cls loss: 0.264239, bbox loss: 0.075420,Landmark loss :0.041845,L2 loss: 0.017052, Total Loss: 0.339923 ,lr:0.000010 
+epoch:17/30
+Step: 62200/111660, accuracy: 0.935943, cls loss: 0.280076, bbox loss: 0.065046,Landmark loss :0.042367,L2 loss: 0.017052, Total Loss: 0.350835 ,lr:0.000010 
+epoch:17/30
+Step: 62300/111660, accuracy: 0.919014, cls loss: 0.284907, bbox loss: 0.072313,Landmark loss :0.041136,L2 loss: 0.017052, Total Loss: 0.358683 ,lr:0.000010 
+epoch:17/30
+Step: 62400/111660, accuracy: 0.912214, cls loss: 0.282218, bbox loss: 0.072543,Landmark loss :0.044523,L2 loss: 0.017052, Total Loss: 0.357802 ,lr:0.000010 
+epoch:17/30
+Step: 62500/111660, accuracy: 0.936567, cls loss: 0.212032, bbox loss: 0.067936,Landmark loss :0.047658,L2 loss: 0.017052, Total Loss: 0.286880 ,lr:0.000010 
+epoch:17/30
+Step: 62600/111660, accuracy: 0.937743, cls loss: 0.238280, bbox loss: 0.080088,Landmark loss :0.049463,L2 loss: 0.017051, Total Loss: 0.320107 ,lr:0.000010 
+epoch:17/30
+Step: 62700/111660, accuracy: 0.957529, cls loss: 0.200122, bbox loss: 0.071138,Landmark loss :0.056800,L2 loss: 0.017051, Total Loss: 0.281142 ,lr:0.000010 
+epoch:17/30
+Step: 62800/111660, accuracy: 0.945455, cls loss: 0.225579, bbox loss: 0.077024,Landmark loss :0.045040,L2 loss: 0.017051, Total Loss: 0.303662 ,lr:0.000010 
+epoch:17/30
+Step: 62900/111660, accuracy: 0.933086, cls loss: 0.244895, bbox loss: 0.068508,Landmark loss :0.044295,L2 loss: 0.017051, Total Loss: 0.318347 ,lr:0.000010 
+epoch:17/30
+Step: 63000/111660, accuracy: 0.908759, cls loss: 0.271110, bbox loss: 0.061776,Landmark loss :0.039373,L2 loss: 0.017051, Total Loss: 0.338736 ,lr:0.000010 
+epoch:17/30
+Step: 63100/111660, accuracy: 0.942966, cls loss: 0.283788, bbox loss: 0.073914,Landmark loss :0.049683,L2 loss: 0.017051, Total Loss: 0.362638 ,lr:0.000010 
+epoch:17/30
+Step: 63200/111660, accuracy: 0.926471, cls loss: 0.251628, bbox loss: 0.061712,Landmark loss :0.048581,L2 loss: 0.017051, Total Loss: 0.323825 ,lr:0.000010 
+epoch:18/30
+Step: 63300/111660, accuracy: 0.937500, cls loss: 0.227187, bbox loss: 0.063955,Landmark loss :0.067001,L2 loss: 0.017051, Total Loss: 0.309716 ,lr:0.000010 
+epoch:18/30
+Step: 63400/111660, accuracy: 0.948339, cls loss: 0.215530, bbox loss: 0.074679,Landmark loss :0.040599,L2 loss: 0.017051, Total Loss: 0.290220 ,lr:0.000010 
+epoch:18/30
+Step: 63500/111660, accuracy: 0.939850, cls loss: 0.249086, bbox loss: 0.072752,Landmark loss :0.055600,L2 loss: 0.017051, Total Loss: 0.330313 ,lr:0.000010 
+epoch:18/30
+Step: 63600/111660, accuracy: 0.913858, cls loss: 0.307117, bbox loss: 0.074936,Landmark loss :0.042336,L2 loss: 0.017051, Total Loss: 0.382804 ,lr:0.000010 
+epoch:18/30
+Step: 63700/111660, accuracy: 0.958955, cls loss: 0.165172, bbox loss: 0.073442,Landmark loss :0.037289,L2 loss: 0.017051, Total Loss: 0.237589 ,lr:0.000010 
+epoch:18/30
+Step: 63800/111660, accuracy: 0.937729, cls loss: 0.261000, bbox loss: 0.071851,Landmark loss :0.039466,L2 loss: 0.017051, Total Loss: 0.333710 ,lr:0.000010 
+epoch:18/30
+Step: 63900/111660, accuracy: 0.915751, cls loss: 0.309696, bbox loss: 0.060408,Landmark loss :0.041499,L2 loss: 0.017051, Total Loss: 0.377701 ,lr:0.000010 
+epoch:18/30
+Step: 64000/111660, accuracy: 0.912409, cls loss: 0.255236, bbox loss: 0.060543,Landmark loss :0.044405,L2 loss: 0.017051, Total Loss: 0.324761 ,lr:0.000010 
+epoch:18/30
+Step: 64100/111660, accuracy: 0.944238, cls loss: 0.231636, bbox loss: 0.082572,Landmark loss :0.040474,L2 loss: 0.017051, Total Loss: 0.310210 ,lr:0.000010 
+epoch:18/30
+Step: 64200/111660, accuracy: 0.931408, cls loss: 0.243359, bbox loss: 0.069082,Landmark loss :0.040011,L2 loss: 0.017051, Total Loss: 0.314956 ,lr:0.000010 
+epoch:18/30
+Step: 64300/111660, accuracy: 0.971530, cls loss: 0.170766, bbox loss: 0.059281,Landmark loss :0.043110,L2 loss: 0.017051, Total Loss: 0.239012 ,lr:0.000010 
+epoch:18/30
+Step: 64400/111660, accuracy: 0.934066, cls loss: 0.243806, bbox loss: 0.064388,Landmark loss :0.046619,L2 loss: 0.017051, Total Loss: 0.316360 ,lr:0.000010 
+epoch:18/30
+Step: 64500/111660, accuracy: 0.915385, cls loss: 0.300878, bbox loss: 0.063474,Landmark loss :0.041153,L2 loss: 0.017051, Total Loss: 0.370243 ,lr:0.000010 
+epoch:18/30
+Step: 64600/111660, accuracy: 0.915129, cls loss: 0.266020, bbox loss: 0.070454,Landmark loss :0.040023,L2 loss: 0.017051, Total Loss: 0.338310 ,lr:0.000010 
+epoch:18/30
+Step: 64700/111660, accuracy: 0.929368, cls loss: 0.232174, bbox loss: 0.060230,Landmark loss :0.046702,L2 loss: 0.017051, Total Loss: 0.302691 ,lr:0.000010 
+epoch:18/30
+Step: 64800/111660, accuracy: 0.898833, cls loss: 0.327330, bbox loss: 0.077464,Landmark loss :0.051682,L2 loss: 0.017051, Total Loss: 0.408953 ,lr:0.000010 
+epoch:18/30
+Step: 64900/111660, accuracy: 0.908425, cls loss: 0.301919, bbox loss: 0.056305,Landmark loss :0.049563,L2 loss: 0.017051, Total Loss: 0.371903 ,lr:0.000010 
+epoch:18/30
+Step: 65000/111660, accuracy: 0.937956, cls loss: 0.217159, bbox loss: 0.072780,Landmark loss :0.052446,L2 loss: 0.017051, Total Loss: 0.296823 ,lr:0.000010 
+epoch:18/30
+Step: 65100/111660, accuracy: 0.926199, cls loss: 0.239059, bbox loss: 0.060956,Landmark loss :0.040162,L2 loss: 0.017051, Total Loss: 0.306669 ,lr:0.000010 
+epoch:18/30
+Step: 65200/111660, accuracy: 0.937037, cls loss: 0.229742, bbox loss: 0.059989,Landmark loss :0.044624,L2 loss: 0.017051, Total Loss: 0.299099 ,lr:0.000010 
+epoch:18/30
+Step: 65300/111660, accuracy: 0.932271, cls loss: 0.255191, bbox loss: 0.070713,Landmark loss :0.047214,L2 loss: 0.017051, Total Loss: 0.331205 ,lr:0.000010 
+epoch:18/30
+Step: 65400/111660, accuracy: 0.925926, cls loss: 0.229344, bbox loss: 0.057796,Landmark loss :0.061220,L2 loss: 0.017051, Total Loss: 0.305903 ,lr:0.000010 
+epoch:18/30
+Step: 65500/111660, accuracy: 0.941606, cls loss: 0.206875, bbox loss: 0.070975,Landmark loss :0.048924,L2 loss: 0.017051, Total Loss: 0.283875 ,lr:0.000010 
+epoch:18/30
+Step: 65600/111660, accuracy: 0.919231, cls loss: 0.303620, bbox loss: 0.070938,Landmark loss :0.041983,L2 loss: 0.017051, Total Loss: 0.377131 ,lr:0.000010 
+epoch:18/30
+Step: 65700/111660, accuracy: 0.936330, cls loss: 0.265564, bbox loss: 0.069979,Landmark loss :0.045409,L2 loss: 0.017051, Total Loss: 0.340309 ,lr:0.000010 
+epoch:18/30
+Step: 65800/111660, accuracy: 0.946360, cls loss: 0.197470, bbox loss: 0.073845,Landmark loss :0.044710,L2 loss: 0.017051, Total Loss: 0.273798 ,lr:0.000010 
+epoch:18/30
+Step: 65900/111660, accuracy: 0.936567, cls loss: 0.222142, bbox loss: 0.066580,Landmark loss :0.051831,L2 loss: 0.017051, Total Loss: 0.298398 ,lr:0.000010 
+epoch:18/30
+Step: 66000/111660, accuracy: 0.917857, cls loss: 0.287133, bbox loss: 0.067602,Landmark loss :0.056003,L2 loss: 0.017051, Total Loss: 0.365986 ,lr:0.000010 
+epoch:18/30
+Step: 66100/111660, accuracy: 0.954887, cls loss: 0.186226, bbox loss: 0.062355,Landmark loss :0.040758,L2 loss: 0.017051, Total Loss: 0.254834 ,lr:0.000010 
+epoch:18/30
+Step: 66200/111660, accuracy: 0.937956, cls loss: 0.235822, bbox loss: 0.053183,Landmark loss :0.031216,L2 loss: 0.017051, Total Loss: 0.295072 ,lr:0.000010 
+epoch:18/30
+Step: 66300/111660, accuracy: 0.952941, cls loss: 0.246547, bbox loss: 0.064045,Landmark loss :0.040840,L2 loss: 0.017050, Total Loss: 0.316039 ,lr:0.000010 
+epoch:18/30
+Step: 66400/111660, accuracy: 0.908000, cls loss: 0.297158, bbox loss: 0.071346,Landmark loss :0.041929,L2 loss: 0.017051, Total Loss: 0.370846 ,lr:0.000010 
+epoch:18/30
+Step: 66500/111660, accuracy: 0.890196, cls loss: 0.352457, bbox loss: 0.068350,Landmark loss :0.053369,L2 loss: 0.017050, Total Loss: 0.430366 ,lr:0.000010 
+epoch:18/30
+Step: 66600/111660, accuracy: 0.925926, cls loss: 0.295036, bbox loss: 0.069595,Landmark loss :0.044050,L2 loss: 0.017050, Total Loss: 0.368909 ,lr:0.000010 
+epoch:18/30
+Step: 66700/111660, accuracy: 0.925651, cls loss: 0.244576, bbox loss: 0.060462,Landmark loss :0.036098,L2 loss: 0.017050, Total Loss: 0.309906 ,lr:0.000010 
+epoch:18/30
+Step: 66800/111660, accuracy: 0.906810, cls loss: 0.307893, bbox loss: 0.065208,Landmark loss :0.051875,L2 loss: 0.017050, Total Loss: 0.383485 ,lr:0.000010 
+epoch:18/30
+Step: 66900/111660, accuracy: 0.951311, cls loss: 0.225000, bbox loss: 0.059689,Landmark loss :0.056165,L2 loss: 0.017050, Total Loss: 0.299977 ,lr:0.000010 
+epoch:19/30
+Step: 67000/111660, accuracy: 0.901141, cls loss: 0.336967, bbox loss: 0.062058,Landmark loss :0.044092,L2 loss: 0.017050, Total Loss: 0.407092 ,lr:0.000010 
+epoch:19/30
+Step: 67100/111660, accuracy: 0.936090, cls loss: 0.252258, bbox loss: 0.061342,Landmark loss :0.041530,L2 loss: 0.017050, Total Loss: 0.320744 ,lr:0.000010 
+epoch:19/30
+Step: 67200/111660, accuracy: 0.950758, cls loss: 0.194617, bbox loss: 0.065898,Landmark loss :0.051236,L2 loss: 0.017050, Total Loss: 0.270233 ,lr:0.000010 
+epoch:19/30
+Step: 67300/111660, accuracy: 0.930657, cls loss: 0.308068, bbox loss: 0.071121,Landmark loss :0.050707,L2 loss: 0.017050, Total Loss: 0.386032 ,lr:0.000010 
+epoch:19/30
+Step: 67400/111660, accuracy: 0.937500, cls loss: 0.249395, bbox loss: 0.068435,Landmark loss :0.044305,L2 loss: 0.017050, Total Loss: 0.322815 ,lr:0.000010 
+epoch:19/30
+Step: 67500/111660, accuracy: 0.940959, cls loss: 0.257128, bbox loss: 0.064813,Landmark loss :0.052702,L2 loss: 0.017050, Total Loss: 0.332936 ,lr:0.000010 
+epoch:19/30
+Step: 67600/111660, accuracy: 0.918033, cls loss: 0.264801, bbox loss: 0.068988,Landmark loss :0.038703,L2 loss: 0.017050, Total Loss: 0.335696 ,lr:0.000010 
+epoch:19/30
+Step: 67700/111660, accuracy: 0.922222, cls loss: 0.235602, bbox loss: 0.060828,Landmark loss :0.046730,L2 loss: 0.017050, Total Loss: 0.306431 ,lr:0.000010 
+epoch:19/30
+Step: 67800/111660, accuracy: 0.906367, cls loss: 0.290653, bbox loss: 0.066340,Landmark loss :0.062244,L2 loss: 0.017050, Total Loss: 0.371995 ,lr:0.000010 
+epoch:19/30
+Step: 67900/111660, accuracy: 0.922222, cls loss: 0.259325, bbox loss: 0.069949,Landmark loss :0.036734,L2 loss: 0.017050, Total Loss: 0.329717 ,lr:0.000010 
+epoch:19/30
+Step: 68000/111660, accuracy: 0.930070, cls loss: 0.265331, bbox loss: 0.059678,Landmark loss :0.064313,L2 loss: 0.017050, Total Loss: 0.344376 ,lr:0.000010 
+epoch:19/30
+Step: 68100/111660, accuracy: 0.907473, cls loss: 0.276766, bbox loss: 0.078237,Landmark loss :0.039208,L2 loss: 0.017050, Total Loss: 0.352538 ,lr:0.000010 
+epoch:19/30
+Step: 68200/111660, accuracy: 0.931900, cls loss: 0.272154, bbox loss: 0.071079,Landmark loss :0.049587,L2 loss: 0.017050, Total Loss: 0.349536 ,lr:0.000010 
+epoch:19/30
+Step: 68300/111660, accuracy: 0.912548, cls loss: 0.252977, bbox loss: 0.072524,Landmark loss :0.062666,L2 loss: 0.017050, Total Loss: 0.337622 ,lr:0.000010 
+epoch:19/30
+Step: 68400/111660, accuracy: 0.947917, cls loss: 0.201328, bbox loss: 0.055373,Landmark loss :0.038248,L2 loss: 0.017050, Total Loss: 0.265188 ,lr:0.000010 
+epoch:19/30
+Step: 68500/111660, accuracy: 0.943061, cls loss: 0.223033, bbox loss: 0.069200,Landmark loss :0.047407,L2 loss: 0.017050, Total Loss: 0.298386 ,lr:0.000010 
+epoch:19/30
+Step: 68600/111660, accuracy: 0.933086, cls loss: 0.275343, bbox loss: 0.064863,Landmark loss :0.043457,L2 loss: 0.017050, Total Loss: 0.346553 ,lr:0.000010 
+epoch:19/30
+Step: 68700/111660, accuracy: 0.946768, cls loss: 0.214012, bbox loss: 0.072493,Landmark loss :0.046709,L2 loss: 0.017050, Total Loss: 0.290663 ,lr:0.000010 
+epoch:19/30
+Step: 68800/111660, accuracy: 0.946809, cls loss: 0.185583, bbox loss: 0.073640,Landmark loss :0.052075,L2 loss: 0.017050, Total Loss: 0.265491 ,lr:0.000010 
+epoch:19/30
+Step: 68900/111660, accuracy: 0.945652, cls loss: 0.224510, bbox loss: 0.065985,Landmark loss :0.060171,L2 loss: 0.017050, Total Loss: 0.304638 ,lr:0.000010 
+epoch:19/30
+Step: 69000/111660, accuracy: 0.919298, cls loss: 0.331003, bbox loss: 0.064878,Landmark loss :0.039099,L2 loss: 0.017050, Total Loss: 0.400042 ,lr:0.000010 
+epoch:19/30
+Step: 69100/111660, accuracy: 0.953846, cls loss: 0.178416, bbox loss: 0.074688,Landmark loss :0.054634,L2 loss: 0.017050, Total Loss: 0.260127 ,lr:0.000010 
+epoch:19/30
+Step: 69200/111660, accuracy: 0.946565, cls loss: 0.206352, bbox loss: 0.068069,Landmark loss :0.041701,L2 loss: 0.017050, Total Loss: 0.278287 ,lr:0.000010 
+epoch:19/30
+Step: 69300/111660, accuracy: 0.926740, cls loss: 0.250945, bbox loss: 0.065088,Landmark loss :0.037646,L2 loss: 0.017050, Total Loss: 0.319362 ,lr:0.000010 
+epoch:19/30
+Step: 69400/111660, accuracy: 0.930233, cls loss: 0.220398, bbox loss: 0.079128,Landmark loss :0.049531,L2 loss: 0.017050, Total Loss: 0.301778 ,lr:0.000010 
+epoch:19/30
+Step: 69500/111660, accuracy: 0.939502, cls loss: 0.228441, bbox loss: 0.052762,Landmark loss :0.041034,L2 loss: 0.017050, Total Loss: 0.292388 ,lr:0.000010 
+epoch:19/30
+Step: 69600/111660, accuracy: 0.946154, cls loss: 0.193973, bbox loss: 0.067821,Landmark loss :0.053420,L2 loss: 0.017050, Total Loss: 0.271643 ,lr:0.000010 
+epoch:19/30
+Step: 69700/111660, accuracy: 0.936803, cls loss: 0.255671, bbox loss: 0.064470,Landmark loss :0.055546,L2 loss: 0.017050, Total Loss: 0.332729 ,lr:0.000010 
+epoch:19/30
+Step: 69800/111660, accuracy: 0.932836, cls loss: 0.249373, bbox loss: 0.088907,Landmark loss :0.046156,L2 loss: 0.017050, Total Loss: 0.333955 ,lr:0.000010 
+epoch:19/30
+Step: 69900/111660, accuracy: 0.937500, cls loss: 0.236019, bbox loss: 0.061133,Landmark loss :0.041406,L2 loss: 0.017050, Total Loss: 0.304338 ,lr:0.000010 
+epoch:19/30
+Step: 70000/111660, accuracy: 0.927203, cls loss: 0.235145, bbox loss: 0.069562,Landmark loss :0.039942,L2 loss: 0.017050, Total Loss: 0.306947 ,lr:0.000010 
+epoch:19/30
+Step: 70100/111660, accuracy: 0.933333, cls loss: 0.272155, bbox loss: 0.068339,Landmark loss :0.042307,L2 loss: 0.017050, Total Loss: 0.344527 ,lr:0.000010 
+epoch:19/30
+Step: 70200/111660, accuracy: 0.941392, cls loss: 0.250485, bbox loss: 0.074859,Landmark loss :0.045484,L2 loss: 0.017050, Total Loss: 0.327706 ,lr:0.000010 
+epoch:19/30
+Step: 70300/111660, accuracy: 0.937037, cls loss: 0.247526, bbox loss: 0.062512,Landmark loss :0.051144,L2 loss: 0.017050, Total Loss: 0.321403 ,lr:0.000010 
+epoch:19/30
+Step: 70400/111660, accuracy: 0.934783, cls loss: 0.251197, bbox loss: 0.067867,Landmark loss :0.041765,L2 loss: 0.017050, Total Loss: 0.323063 ,lr:0.000010 
+epoch:19/30
+Step: 70500/111660, accuracy: 0.946970, cls loss: 0.252285, bbox loss: 0.073349,Landmark loss :0.056841,L2 loss: 0.017050, Total Loss: 0.334430 ,lr:0.000010 
+epoch:19/30
+Step: 70600/111660, accuracy: 0.948529, cls loss: 0.183393, bbox loss: 0.059402,Landmark loss :0.045504,L2 loss: 0.017049, Total Loss: 0.252895 ,lr:0.000010 
+epoch:19/30
+Step: 70700/111660, accuracy: 0.925373, cls loss: 0.279177, bbox loss: 0.061950,Landmark loss :0.046007,L2 loss: 0.017049, Total Loss: 0.350204 ,lr:0.000010 
+epoch:20/30
+Step: 70800/111660, accuracy: 0.930502, cls loss: 0.264826, bbox loss: 0.065916,Landmark loss :0.043200,L2 loss: 0.017049, Total Loss: 0.336433 ,lr:0.000010 
+epoch:20/30
+Step: 70900/111660, accuracy: 0.936759, cls loss: 0.235334, bbox loss: 0.070238,Landmark loss :0.041925,L2 loss: 0.017049, Total Loss: 0.308465 ,lr:0.000010 
+epoch:20/30
+Step: 71000/111660, accuracy: 0.939068, cls loss: 0.239147, bbox loss: 0.064935,Landmark loss :0.047066,L2 loss: 0.017049, Total Loss: 0.312196 ,lr:0.000010 
+epoch:20/30
+Step: 71100/111660, accuracy: 0.926923, cls loss: 0.281080, bbox loss: 0.071577,Landmark loss :0.046003,L2 loss: 0.017049, Total Loss: 0.356919 ,lr:0.000010 
+epoch:20/30
+Step: 71200/111660, accuracy: 0.934866, cls loss: 0.240576, bbox loss: 0.065801,Landmark loss :0.047240,L2 loss: 0.017049, Total Loss: 0.314145 ,lr:0.000010 
+epoch:20/30
+Step: 71300/111660, accuracy: 0.910714, cls loss: 0.273992, bbox loss: 0.056468,Landmark loss :0.051588,L2 loss: 0.017049, Total Loss: 0.345068 ,lr:0.000010 
+epoch:20/30
+Step: 71400/111660, accuracy: 0.940298, cls loss: 0.235157, bbox loss: 0.064187,Landmark loss :0.046648,L2 loss: 0.017049, Total Loss: 0.307624 ,lr:0.000010 
+epoch:20/30
+Step: 71500/111660, accuracy: 0.949219, cls loss: 0.220668, bbox loss: 0.072577,Landmark loss :0.051328,L2 loss: 0.017049, Total Loss: 0.299669 ,lr:0.000010 
+epoch:20/30
+Step: 71600/111660, accuracy: 0.929105, cls loss: 0.248184, bbox loss: 0.077326,Landmark loss :0.041656,L2 loss: 0.017049, Total Loss: 0.324724 ,lr:0.000010 
+epoch:20/30
+Step: 71700/111660, accuracy: 0.931900, cls loss: 0.263528, bbox loss: 0.057951,Landmark loss :0.045739,L2 loss: 0.017049, Total Loss: 0.332421 ,lr:0.000010 
+epoch:20/30
+Step: 71800/111660, accuracy: 0.940075, cls loss: 0.282945, bbox loss: 0.058443,Landmark loss :0.043027,L2 loss: 0.017049, Total Loss: 0.350729 ,lr:0.000010 
+epoch:20/30
+Step: 71900/111660, accuracy: 0.921642, cls loss: 0.266255, bbox loss: 0.066991,Landmark loss :0.040879,L2 loss: 0.017049, Total Loss: 0.337240 ,lr:0.000010 
+epoch:20/30
+Step: 72000/111660, accuracy: 0.940239, cls loss: 0.220310, bbox loss: 0.066760,Landmark loss :0.045822,L2 loss: 0.017049, Total Loss: 0.293650 ,lr:0.000010 
+epoch:20/30
+Step: 72100/111660, accuracy: 0.948529, cls loss: 0.210123, bbox loss: 0.052861,Landmark loss :0.050586,L2 loss: 0.017049, Total Loss: 0.278895 ,lr:0.000010 
+epoch:20/30
+Step: 72200/111660, accuracy: 0.931035, cls loss: 0.257245, bbox loss: 0.066431,Landmark loss :0.063106,L2 loss: 0.017049, Total Loss: 0.339062 ,lr:0.000010 
+epoch:20/30
+Step: 72300/111660, accuracy: 0.904059, cls loss: 0.301911, bbox loss: 0.063572,Landmark loss :0.053646,L2 loss: 0.017049, Total Loss: 0.377569 ,lr:0.000010 
+epoch:20/30
+Step: 72400/111660, accuracy: 0.887640, cls loss: 0.377973, bbox loss: 0.066149,Landmark loss :0.061111,L2 loss: 0.017049, Total Loss: 0.458652 ,lr:0.000010 
+epoch:20/30
+Step: 72500/111660, accuracy: 0.908046, cls loss: 0.316949, bbox loss: 0.064820,Landmark loss :0.040292,L2 loss: 0.017049, Total Loss: 0.386554 ,lr:0.000010 
+epoch:20/30
+Step: 72600/111660, accuracy: 0.954717, cls loss: 0.198060, bbox loss: 0.069177,Landmark loss :0.054752,L2 loss: 0.017049, Total Loss: 0.277073 ,lr:0.000010 
+epoch:20/30
+Step: 72700/111660, accuracy: 0.949219, cls loss: 0.189739, bbox loss: 0.059329,Landmark loss :0.053840,L2 loss: 0.017049, Total Loss: 0.263372 ,lr:0.000010 
+epoch:20/30
+Step: 72800/111660, accuracy: 0.941818, cls loss: 0.238705, bbox loss: 0.072807,Landmark loss :0.041873,L2 loss: 0.017049, Total Loss: 0.313094 ,lr:0.000010 
+epoch:20/30
+Step: 72900/111660, accuracy: 0.944853, cls loss: 0.234422, bbox loss: 0.065221,Landmark loss :0.041682,L2 loss: 0.017049, Total Loss: 0.304922 ,lr:0.000010 
+epoch:20/30
+Step: 73000/111660, accuracy: 0.914591, cls loss: 0.275987, bbox loss: 0.063838,Landmark loss :0.042109,L2 loss: 0.017049, Total Loss: 0.346009 ,lr:0.000010 
+epoch:20/30
+Step: 73100/111660, accuracy: 0.945312, cls loss: 0.226065, bbox loss: 0.078985,Landmark loss :0.042706,L2 loss: 0.017049, Total Loss: 0.303959 ,lr:0.000010 
+epoch:20/30
+Step: 73200/111660, accuracy: 0.913979, cls loss: 0.273415, bbox loss: 0.067203,Landmark loss :0.044952,L2 loss: 0.017049, Total Loss: 0.346541 ,lr:0.000010 
+epoch:20/30
+Step: 73300/111660, accuracy: 0.914397, cls loss: 0.263836, bbox loss: 0.067914,Landmark loss :0.041922,L2 loss: 0.017049, Total Loss: 0.335803 ,lr:0.000010 
+epoch:20/30
+Step: 73400/111660, accuracy: 0.934615, cls loss: 0.253036, bbox loss: 0.077525,Landmark loss :0.044929,L2 loss: 0.017049, Total Loss: 0.331312 ,lr:0.000010 
+epoch:20/30
+Step: 73500/111660, accuracy: 0.942748, cls loss: 0.221546, bbox loss: 0.064932,Landmark loss :0.060948,L2 loss: 0.017049, Total Loss: 0.301534 ,lr:0.000010 
+epoch:20/30
+Step: 73600/111660, accuracy: 0.950758, cls loss: 0.241528, bbox loss: 0.063477,Landmark loss :0.044812,L2 loss: 0.017049, Total Loss: 0.312722 ,lr:0.000010 
+epoch:20/30
+Step: 73700/111660, accuracy: 0.923913, cls loss: 0.273106, bbox loss: 0.056748,Landmark loss :0.037491,L2 loss: 0.017049, Total Loss: 0.337274 ,lr:0.000010 
+epoch:20/30
+Step: 73800/111660, accuracy: 0.927481, cls loss: 0.288330, bbox loss: 0.059886,Landmark loss :0.043857,L2 loss: 0.017048, Total Loss: 0.357250 ,lr:0.000010 
+epoch:20/30
+Step: 73900/111660, accuracy: 0.935361, cls loss: 0.281305, bbox loss: 0.060131,Landmark loss :0.057986,L2 loss: 0.017048, Total Loss: 0.357413 ,lr:0.000010 
+epoch:20/30
+Step: 74000/111660, accuracy: 0.940075, cls loss: 0.242168, bbox loss: 0.079207,Landmark loss :0.037358,L2 loss: 0.017048, Total Loss: 0.317499 ,lr:0.000010 
+epoch:20/30
+Step: 74100/111660, accuracy: 0.902985, cls loss: 0.325159, bbox loss: 0.068230,Landmark loss :0.042553,L2 loss: 0.017048, Total Loss: 0.397599 ,lr:0.000010 
+epoch:20/30
+Step: 74200/111660, accuracy: 0.926923, cls loss: 0.279990, bbox loss: 0.062576,Landmark loss :0.044802,L2 loss: 0.017048, Total Loss: 0.350727 ,lr:0.000010 
+epoch:20/30
+Step: 74300/111660, accuracy: 0.937984, cls loss: 0.258475, bbox loss: 0.061449,Landmark loss :0.052242,L2 loss: 0.017048, Total Loss: 0.332369 ,lr:0.000010 
+epoch:20/30
+Step: 74400/111660, accuracy: 0.952381, cls loss: 0.177993, bbox loss: 0.060710,Landmark loss :0.037289,L2 loss: 0.017048, Total Loss: 0.244040 ,lr:0.000010 
+epoch:21/30
+Step: 74500/111660, accuracy: 0.943820, cls loss: 0.237293, bbox loss: 0.065680,Landmark loss :0.058194,L2 loss: 0.017048, Total Loss: 0.316278 ,lr:0.000001 
+epoch:21/30
+Step: 74600/111660, accuracy: 0.923372, cls loss: 0.258914, bbox loss: 0.059593,Landmark loss :0.042003,L2 loss: 0.017048, Total Loss: 0.326760 ,lr:0.000001 
+epoch:21/30
+Step: 74700/111660, accuracy: 0.939623, cls loss: 0.234818, bbox loss: 0.060713,Landmark loss :0.044995,L2 loss: 0.017048, Total Loss: 0.304720 ,lr:0.000001 
+epoch:21/30
+Step: 74800/111660, accuracy: 0.925926, cls loss: 0.267528, bbox loss: 0.068378,Landmark loss :0.040512,L2 loss: 0.017048, Total Loss: 0.339021 ,lr:0.000001 
+epoch:21/30
+Step: 74900/111660, accuracy: 0.923077, cls loss: 0.269180, bbox loss: 0.073723,Landmark loss :0.038907,L2 loss: 0.017048, Total Loss: 0.342543 ,lr:0.000001 
+epoch:21/30
+Step: 75000/111660, accuracy: 0.930403, cls loss: 0.313843, bbox loss: 0.064729,Landmark loss :0.053868,L2 loss: 0.017048, Total Loss: 0.390189 ,lr:0.000001 
+epoch:21/30
+Step: 75100/111660, accuracy: 0.925000, cls loss: 0.252626, bbox loss: 0.059725,Landmark loss :0.037787,L2 loss: 0.017048, Total Loss: 0.318430 ,lr:0.000001 
+epoch:21/30
+Step: 75200/111660, accuracy: 0.904412, cls loss: 0.306457, bbox loss: 0.065744,Landmark loss :0.042439,L2 loss: 0.017048, Total Loss: 0.377597 ,lr:0.000001 
+epoch:21/30
+Step: 75300/111660, accuracy: 0.926070, cls loss: 0.262482, bbox loss: 0.075661,Landmark loss :0.050394,L2 loss: 0.017048, Total Loss: 0.342557 ,lr:0.000001 
+epoch:21/30
+Step: 75400/111660, accuracy: 0.931452, cls loss: 0.263964, bbox loss: 0.062157,Landmark loss :0.041977,L2 loss: 0.017048, Total Loss: 0.333079 ,lr:0.000001 
+epoch:21/30
+Step: 75500/111660, accuracy: 0.937984, cls loss: 0.261973, bbox loss: 0.064435,Landmark loss :0.039515,L2 loss: 0.017048, Total Loss: 0.330997 ,lr:0.000001 
+epoch:21/30
+Step: 75600/111660, accuracy: 0.908425, cls loss: 0.286118, bbox loss: 0.075977,Landmark loss :0.045458,L2 loss: 0.017048, Total Loss: 0.363883 ,lr:0.000001 
+epoch:21/30
+Step: 75700/111660, accuracy: 0.916667, cls loss: 0.256489, bbox loss: 0.071280,Landmark loss :0.041229,L2 loss: 0.017048, Total Loss: 0.329792 ,lr:0.000001 
+epoch:21/30
+Step: 75800/111660, accuracy: 0.950000, cls loss: 0.243266, bbox loss: 0.068378,Landmark loss :0.046936,L2 loss: 0.017048, Total Loss: 0.317971 ,lr:0.000001 
+epoch:21/30
+Step: 75900/111660, accuracy: 0.934866, cls loss: 0.256026, bbox loss: 0.069658,Landmark loss :0.047411,L2 loss: 0.017048, Total Loss: 0.331608 ,lr:0.000001 
+epoch:21/30
+Step: 76000/111660, accuracy: 0.949275, cls loss: 0.209363, bbox loss: 0.071838,Landmark loss :0.059583,L2 loss: 0.017048, Total Loss: 0.292121 ,lr:0.000001 
+epoch:21/30
+Step: 76100/111660, accuracy: 0.921147, cls loss: 0.271468, bbox loss: 0.065382,Landmark loss :0.045454,L2 loss: 0.017048, Total Loss: 0.343934 ,lr:0.000001 
+epoch:21/30
+Step: 76200/111660, accuracy: 0.958955, cls loss: 0.178037, bbox loss: 0.067498,Landmark loss :0.040974,L2 loss: 0.017048, Total Loss: 0.249321 ,lr:0.000001 
+epoch:21/30
+Step: 76300/111660, accuracy: 0.915441, cls loss: 0.314814, bbox loss: 0.081379,Landmark loss :0.040749,L2 loss: 0.017048, Total Loss: 0.392925 ,lr:0.000001 
+epoch:21/30
+Step: 76400/111660, accuracy: 0.934066, cls loss: 0.278220, bbox loss: 0.059708,Landmark loss :0.042367,L2 loss: 0.017048, Total Loss: 0.346305 ,lr:0.000001 
+epoch:21/30
+Step: 76500/111660, accuracy: 0.945255, cls loss: 0.282525, bbox loss: 0.059077,Landmark loss :0.051235,L2 loss: 0.017048, Total Loss: 0.354729 ,lr:0.000001 
+epoch:21/30
+Step: 76600/111660, accuracy: 0.954198, cls loss: 0.238825, bbox loss: 0.073429,Landmark loss :0.045985,L2 loss: 0.017048, Total Loss: 0.315580 ,lr:0.000001 
+epoch:21/30
+Step: 76700/111660, accuracy: 0.921429, cls loss: 0.299652, bbox loss: 0.065048,Landmark loss :0.038304,L2 loss: 0.017048, Total Loss: 0.368376 ,lr:0.000001 
+epoch:21/30
+Step: 76800/111660, accuracy: 0.926923, cls loss: 0.339749, bbox loss: 0.067017,Landmark loss :0.047199,L2 loss: 0.017048, Total Loss: 0.413905 ,lr:0.000001 
+epoch:21/30
+Step: 76900/111660, accuracy: 0.951128, cls loss: 0.255449, bbox loss: 0.062028,Landmark loss :0.058168,L2 loss: 0.017048, Total Loss: 0.332595 ,lr:0.000001 
+epoch:21/30
+Step: 77000/111660, accuracy: 0.912698, cls loss: 0.344753, bbox loss: 0.071576,Landmark loss :0.046444,L2 loss: 0.017048, Total Loss: 0.420811 ,lr:0.000001 
+epoch:21/30
+Step: 77100/111660, accuracy: 0.915751, cls loss: 0.291387, bbox loss: 0.074810,Landmark loss :0.057983,L2 loss: 0.017048, Total Loss: 0.374832 ,lr:0.000001 
+epoch:21/30
+Step: 77200/111660, accuracy: 0.909420, cls loss: 0.313480, bbox loss: 0.060653,Landmark loss :0.046624,L2 loss: 0.017048, Total Loss: 0.384167 ,lr:0.000001 
+epoch:21/30
+Step: 77300/111660, accuracy: 0.940741, cls loss: 0.231519, bbox loss: 0.065233,Landmark loss :0.040014,L2 loss: 0.017048, Total Loss: 0.301191 ,lr:0.000001 
+epoch:21/30
+Step: 77400/111660, accuracy: 0.921429, cls loss: 0.243501, bbox loss: 0.067512,Landmark loss :0.046647,L2 loss: 0.017048, Total Loss: 0.317629 ,lr:0.000001 
+epoch:21/30
+Step: 77500/111660, accuracy: 0.937255, cls loss: 0.235178, bbox loss: 0.066966,Landmark loss :0.048161,L2 loss: 0.017048, Total Loss: 0.309790 ,lr:0.000001 
+epoch:21/30
+Step: 77600/111660, accuracy: 0.937956, cls loss: 0.258991, bbox loss: 0.069449,Landmark loss :0.043149,L2 loss: 0.017048, Total Loss: 0.332338 ,lr:0.000001 
+epoch:21/30
+Step: 77700/111660, accuracy: 0.948718, cls loss: 0.189654, bbox loss: 0.079567,Landmark loss :0.038323,L2 loss: 0.017048, Total Loss: 0.265647 ,lr:0.000001 
+epoch:21/30
+Step: 77800/111660, accuracy: 0.944223, cls loss: 0.246121, bbox loss: 0.078177,Landmark loss :0.048079,L2 loss: 0.017048, Total Loss: 0.326297 ,lr:0.000001 
+epoch:21/30
+Step: 77900/111660, accuracy: 0.908451, cls loss: 0.310844, bbox loss: 0.070865,Landmark loss :0.038494,L2 loss: 0.017048, Total Loss: 0.382572 ,lr:0.000001 
+epoch:21/30
+Step: 78000/111660, accuracy: 0.923664, cls loss: 0.293098, bbox loss: 0.066732,Landmark loss :0.044278,L2 loss: 0.017048, Total Loss: 0.365650 ,lr:0.000001 
+epoch:21/30
+Step: 78100/111660, accuracy: 0.930147, cls loss: 0.270148, bbox loss: 0.054258,Landmark loss :0.045996,L2 loss: 0.017048, Total Loss: 0.337323 ,lr:0.000001 
+epoch:22/30
+Step: 78200/111660, accuracy: 0.918819, cls loss: 0.259038, bbox loss: 0.057281,Landmark loss :0.055256,L2 loss: 0.017048, Total Loss: 0.332354 ,lr:0.000001 
+epoch:22/30
+Step: 78300/111660, accuracy: 0.939286, cls loss: 0.236807, bbox loss: 0.061819,Landmark loss :0.051832,L2 loss: 0.017048, Total Loss: 0.310681 ,lr:0.000001 
+epoch:22/30
+Step: 78400/111660, accuracy: 0.929825, cls loss: 0.244775, bbox loss: 0.059967,Landmark loss :0.039287,L2 loss: 0.017048, Total Loss: 0.311450 ,lr:0.000001 
+epoch:22/30
+Step: 78500/111660, accuracy: 0.944444, cls loss: 0.229629, bbox loss: 0.071518,Landmark loss :0.039821,L2 loss: 0.017048, Total Loss: 0.302347 ,lr:0.000001 
+epoch:22/30
+Step: 78600/111660, accuracy: 0.954198, cls loss: 0.177289, bbox loss: 0.066592,Landmark loss :0.039516,L2 loss: 0.017048, Total Loss: 0.247391 ,lr:0.000001 
+epoch:22/30
+Step: 78700/111660, accuracy: 0.923077, cls loss: 0.312695, bbox loss: 0.058988,Landmark loss :0.056352,L2 loss: 0.017048, Total Loss: 0.387413 ,lr:0.000001 
+epoch:22/30
+Step: 78800/111660, accuracy: 0.934783, cls loss: 0.220249, bbox loss: 0.066727,Landmark loss :0.038997,L2 loss: 0.017048, Total Loss: 0.290159 ,lr:0.000001 
+epoch:22/30
+Step: 78900/111660, accuracy: 0.932584, cls loss: 0.241826, bbox loss: 0.070245,Landmark loss :0.055721,L2 loss: 0.017048, Total Loss: 0.321857 ,lr:0.000001 
+epoch:22/30
+Step: 79000/111660, accuracy: 0.944649, cls loss: 0.237603, bbox loss: 0.068910,Landmark loss :0.050029,L2 loss: 0.017048, Total Loss: 0.314120 ,lr:0.000001 
+epoch:22/30
+Step: 79100/111660, accuracy: 0.917293, cls loss: 0.334446, bbox loss: 0.065934,Landmark loss :0.047452,L2 loss: 0.017048, Total Loss: 0.408187 ,lr:0.000001 
+epoch:22/30
+Step: 79200/111660, accuracy: 0.957692, cls loss: 0.176888, bbox loss: 0.070589,Landmark loss :0.045051,L2 loss: 0.017048, Total Loss: 0.251756 ,lr:0.000001 
+epoch:22/30
+Step: 79300/111660, accuracy: 0.929889, cls loss: 0.260297, bbox loss: 0.067140,Landmark loss :0.044358,L2 loss: 0.017048, Total Loss: 0.333094 ,lr:0.000001 
+epoch:22/30
+Step: 79400/111660, accuracy: 0.952381, cls loss: 0.173904, bbox loss: 0.055973,Landmark loss :0.034004,L2 loss: 0.017048, Total Loss: 0.235940 ,lr:0.000001 
+epoch:22/30
+Step: 79500/111660, accuracy: 0.945255, cls loss: 0.216051, bbox loss: 0.069810,Landmark loss :0.045249,L2 loss: 0.017048, Total Loss: 0.290628 ,lr:0.000001 
+epoch:22/30
+Step: 79600/111660, accuracy: 0.915751, cls loss: 0.286939, bbox loss: 0.059324,Landmark loss :0.050458,L2 loss: 0.017048, Total Loss: 0.358878 ,lr:0.000001 
+epoch:22/30
+Step: 79700/111660, accuracy: 0.914634, cls loss: 0.282738, bbox loss: 0.065483,Landmark loss :0.047277,L2 loss: 0.017048, Total Loss: 0.356166 ,lr:0.000001 
+epoch:22/30
+Step: 79800/111660, accuracy: 0.935018, cls loss: 0.254673, bbox loss: 0.077143,Landmark loss :0.059820,L2 loss: 0.017048, Total Loss: 0.340203 ,lr:0.000001 
+epoch:22/30
+Step: 79900/111660, accuracy: 0.929412, cls loss: 0.285797, bbox loss: 0.066953,Landmark loss :0.049648,L2 loss: 0.017048, Total Loss: 0.361146 ,lr:0.000001 
+epoch:22/30
+Step: 80000/111660, accuracy: 0.926199, cls loss: 0.225243, bbox loss: 0.065043,Landmark loss :0.041160,L2 loss: 0.017048, Total Loss: 0.295392 ,lr:0.000001 
+epoch:22/30
+Step: 80100/111660, accuracy: 0.932076, cls loss: 0.265265, bbox loss: 0.080109,Landmark loss :0.046666,L2 loss: 0.017048, Total Loss: 0.345701 ,lr:0.000001 
+epoch:22/30
+Step: 80200/111660, accuracy: 0.945055, cls loss: 0.223525, bbox loss: 0.063767,Landmark loss :0.039715,L2 loss: 0.017048, Total Loss: 0.292314 ,lr:0.000001 
+epoch:22/30
+Step: 80300/111660, accuracy: 0.945455, cls loss: 0.204411, bbox loss: 0.069501,Landmark loss :0.042108,L2 loss: 0.017048, Total Loss: 0.277264 ,lr:0.000001 
+epoch:22/30
+Step: 80400/111660, accuracy: 0.939068, cls loss: 0.237628, bbox loss: 0.055876,Landmark loss :0.046298,L2 loss: 0.017048, Total Loss: 0.305763 ,lr:0.000001 
+epoch:22/30
+Step: 80500/111660, accuracy: 0.926829, cls loss: 0.265202, bbox loss: 0.056766,Landmark loss :0.035168,L2 loss: 0.017048, Total Loss: 0.328217 ,lr:0.000001 
+epoch:22/30
+Step: 80600/111660, accuracy: 0.930769, cls loss: 0.228719, bbox loss: 0.063647,Landmark loss :0.048261,L2 loss: 0.017048, Total Loss: 0.301721 ,lr:0.000001 
+epoch:22/30
+Step: 80700/111660, accuracy: 0.946360, cls loss: 0.209282, bbox loss: 0.065404,Landmark loss :0.044583,L2 loss: 0.017048, Total Loss: 0.281324 ,lr:0.000001 
+epoch:22/30
+Step: 80800/111660, accuracy: 0.940298, cls loss: 0.264522, bbox loss: 0.066805,Landmark loss :0.045804,L2 loss: 0.017048, Total Loss: 0.337875 ,lr:0.000001 
+epoch:22/30
+Step: 80900/111660, accuracy: 0.927481, cls loss: 0.228583, bbox loss: 0.070750,Landmark loss :0.044754,L2 loss: 0.017048, Total Loss: 0.303383 ,lr:0.000001 
+epoch:22/30
+Step: 81000/111660, accuracy: 0.929630, cls loss: 0.251072, bbox loss: 0.073182,Landmark loss :0.035998,L2 loss: 0.017048, Total Loss: 0.322710 ,lr:0.000001 
+epoch:22/30
+Step: 81100/111660, accuracy: 0.934066, cls loss: 0.248145, bbox loss: 0.065352,Landmark loss :0.054349,L2 loss: 0.017048, Total Loss: 0.325044 ,lr:0.000001 
+epoch:22/30
+Step: 81200/111660, accuracy: 0.946565, cls loss: 0.225361, bbox loss: 0.067159,Landmark loss :0.046189,L2 loss: 0.017048, Total Loss: 0.299084 ,lr:0.000001 
+epoch:22/30
+Step: 81300/111660, accuracy: 0.908088, cls loss: 0.364390, bbox loss: 0.061997,Landmark loss :0.046232,L2 loss: 0.017048, Total Loss: 0.435553 ,lr:0.000001 
+epoch:22/30
+Step: 81400/111660, accuracy: 0.913386, cls loss: 0.325673, bbox loss: 0.069784,Landmark loss :0.049602,L2 loss: 0.017048, Total Loss: 0.402414 ,lr:0.000001 
+epoch:22/30
+Step: 81500/111660, accuracy: 0.931818, cls loss: 0.237628, bbox loss: 0.052116,Landmark loss :0.052138,L2 loss: 0.017048, Total Loss: 0.306803 ,lr:0.000001 
+epoch:22/30
+Step: 81600/111660, accuracy: 0.927007, cls loss: 0.225331, bbox loss: 0.063348,Landmark loss :0.048137,L2 loss: 0.017048, Total Loss: 0.298121 ,lr:0.000001 
+epoch:22/30
+Step: 81700/111660, accuracy: 0.943061, cls loss: 0.252869, bbox loss: 0.063782,Landmark loss :0.050049,L2 loss: 0.017048, Total Loss: 0.326832 ,lr:0.000001 
+epoch:22/30
+Step: 81800/111660, accuracy: 0.922794, cls loss: 0.285771, bbox loss: 0.065703,Landmark loss :0.043393,L2 loss: 0.017048, Total Loss: 0.357367 ,lr:0.000001 
+epoch:23/30
+Step: 81900/111660, accuracy: 0.940075, cls loss: 0.247029, bbox loss: 0.059062,Landmark loss :0.046881,L2 loss: 0.017048, Total Loss: 0.317049 ,lr:0.000001 
+epoch:23/30
+Step: 82000/111660, accuracy: 0.952555, cls loss: 0.234565, bbox loss: 0.063021,Landmark loss :0.046422,L2 loss: 0.017048, Total Loss: 0.306334 ,lr:0.000001 
+epoch:23/30
+Step: 82100/111660, accuracy: 0.916667, cls loss: 0.330807, bbox loss: 0.075298,Landmark loss :0.041775,L2 loss: 0.017048, Total Loss: 0.406391 ,lr:0.000001 
+epoch:23/30
+Step: 82200/111660, accuracy: 0.936803, cls loss: 0.235685, bbox loss: 0.059930,Landmark loss :0.053914,L2 loss: 0.017048, Total Loss: 0.309655 ,lr:0.000001 
+epoch:23/30
+Step: 82300/111660, accuracy: 0.900383, cls loss: 0.364096, bbox loss: 0.079313,Landmark loss :0.046241,L2 loss: 0.017048, Total Loss: 0.443921 ,lr:0.000001 
+epoch:23/30
+Step: 82400/111660, accuracy: 0.917603, cls loss: 0.292459, bbox loss: 0.068040,Landmark loss :0.044802,L2 loss: 0.017048, Total Loss: 0.365928 ,lr:0.000001 
+epoch:23/30
+Step: 82500/111660, accuracy: 0.904943, cls loss: 0.308231, bbox loss: 0.064279,Landmark loss :0.053166,L2 loss: 0.017048, Total Loss: 0.384001 ,lr:0.000001 
+epoch:23/30
+Step: 82600/111660, accuracy: 0.916667, cls loss: 0.249744, bbox loss: 0.087267,Landmark loss :0.038458,L2 loss: 0.017048, Total Loss: 0.329655 ,lr:0.000001 
+epoch:23/30
+Step: 82700/111660, accuracy: 0.922222, cls loss: 0.309480, bbox loss: 0.056092,Landmark loss :0.051385,L2 loss: 0.017048, Total Loss: 0.380266 ,lr:0.000001 
+epoch:23/30
+Step: 82800/111660, accuracy: 0.947368, cls loss: 0.194931, bbox loss: 0.060466,Landmark loss :0.041498,L2 loss: 0.017048, Total Loss: 0.262961 ,lr:0.000001 
+epoch:23/30
+Step: 82900/111660, accuracy: 0.912409, cls loss: 0.321644, bbox loss: 0.065190,Landmark loss :0.051755,L2 loss: 0.017048, Total Loss: 0.397164 ,lr:0.000001 
+epoch:23/30
+Step: 83000/111660, accuracy: 0.948339, cls loss: 0.198815, bbox loss: 0.061612,Landmark loss :0.052634,L2 loss: 0.017048, Total Loss: 0.272986 ,lr:0.000001 
+epoch:23/30
+Step: 83100/111660, accuracy: 0.952899, cls loss: 0.192860, bbox loss: 0.060922,Landmark loss :0.041663,L2 loss: 0.017048, Total Loss: 0.261200 ,lr:0.000001 
+epoch:23/30
+Step: 83200/111660, accuracy: 0.912879, cls loss: 0.334297, bbox loss: 0.079509,Landmark loss :0.041799,L2 loss: 0.017048, Total Loss: 0.412000 ,lr:0.000001 
+epoch:23/30
+Step: 83300/111660, accuracy: 0.938462, cls loss: 0.251901, bbox loss: 0.073254,Landmark loss :0.047644,L2 loss: 0.017048, Total Loss: 0.329399 ,lr:0.000001 
+epoch:23/30
+Step: 83400/111660, accuracy: 0.928571, cls loss: 0.288135, bbox loss: 0.061552,Landmark loss :0.036734,L2 loss: 0.017048, Total Loss: 0.354326 ,lr:0.000001 
+epoch:23/30
+Step: 83500/111660, accuracy: 0.919414, cls loss: 0.259905, bbox loss: 0.062424,Landmark loss :0.033101,L2 loss: 0.017048, Total Loss: 0.324716 ,lr:0.000001 
+epoch:23/30
+Step: 83600/111660, accuracy: 0.928839, cls loss: 0.252517, bbox loss: 0.066303,Landmark loss :0.047469,L2 loss: 0.017048, Total Loss: 0.326450 ,lr:0.000001 
+epoch:23/30
+Step: 83700/111660, accuracy: 0.952381, cls loss: 0.215237, bbox loss: 0.071635,Landmark loss :0.038934,L2 loss: 0.017048, Total Loss: 0.287570 ,lr:0.000001 
+epoch:23/30
+Step: 83800/111660, accuracy: 0.930769, cls loss: 0.267369, bbox loss: 0.063373,Landmark loss :0.043775,L2 loss: 0.017048, Total Loss: 0.337991 ,lr:0.000001 
+epoch:23/30
+Step: 83900/111660, accuracy: 0.931818, cls loss: 0.263330, bbox loss: 0.067365,Landmark loss :0.047481,L2 loss: 0.017048, Total Loss: 0.337801 ,lr:0.000001 
+epoch:23/30
+Step: 84000/111660, accuracy: 0.930233, cls loss: 0.268296, bbox loss: 0.068471,Landmark loss :0.048336,L2 loss: 0.017048, Total Loss: 0.343748 ,lr:0.000001 
+epoch:23/30
+Step: 84100/111660, accuracy: 0.927203, cls loss: 0.255583, bbox loss: 0.065157,Landmark loss :0.050698,L2 loss: 0.017048, Total Loss: 0.330559 ,lr:0.000001 
+epoch:23/30
+Step: 84200/111660, accuracy: 0.927757, cls loss: 0.324163, bbox loss: 0.059773,Landmark loss :0.038566,L2 loss: 0.017048, Total Loss: 0.390380 ,lr:0.000001 
+epoch:23/30
+Step: 84300/111660, accuracy: 0.921053, cls loss: 0.298059, bbox loss: 0.066628,Landmark loss :0.039394,L2 loss: 0.017048, Total Loss: 0.368118 ,lr:0.000001 
+epoch:23/30
+Step: 84400/111660, accuracy: 0.955631, cls loss: 0.229034, bbox loss: 0.049709,Landmark loss :0.041015,L2 loss: 0.017048, Total Loss: 0.291444 ,lr:0.000001 
+epoch:23/30
+Step: 84500/111660, accuracy: 0.954386, cls loss: 0.218024, bbox loss: 0.080114,Landmark loss :0.051886,L2 loss: 0.017048, Total Loss: 0.301072 ,lr:0.000001 
+epoch:23/30
+Step: 84600/111660, accuracy: 0.944444, cls loss: 0.206179, bbox loss: 0.066593,Landmark loss :0.043167,L2 loss: 0.017048, Total Loss: 0.278107 ,lr:0.000001 
+epoch:23/30
+Step: 84700/111660, accuracy: 0.926357, cls loss: 0.248496, bbox loss: 0.070332,Landmark loss :0.038459,L2 loss: 0.017048, Total Loss: 0.319940 ,lr:0.000001 
+epoch:23/30
+Step: 84800/111660, accuracy: 0.913043, cls loss: 0.305854, bbox loss: 0.067574,Landmark loss :0.040349,L2 loss: 0.017048, Total Loss: 0.376864 ,lr:0.000001 
+epoch:23/30
+Step: 84900/111660, accuracy: 0.929105, cls loss: 0.256852, bbox loss: 0.063577,Landmark loss :0.040492,L2 loss: 0.017048, Total Loss: 0.325934 ,lr:0.000001 
+epoch:23/30
+Step: 85000/111660, accuracy: 0.913669, cls loss: 0.307009, bbox loss: 0.064582,Landmark loss :0.045514,L2 loss: 0.017048, Total Loss: 0.379106 ,lr:0.000001 
+epoch:23/30
+Step: 85100/111660, accuracy: 0.951311, cls loss: 0.250870, bbox loss: 0.064105,Landmark loss :0.045572,L2 loss: 0.017048, Total Loss: 0.322757 ,lr:0.000001 
+epoch:23/30
+Step: 85200/111660, accuracy: 0.935361, cls loss: 0.236131, bbox loss: 0.067024,Landmark loss :0.044884,L2 loss: 0.017048, Total Loss: 0.309133 ,lr:0.000001 
+epoch:23/30
+Step: 85300/111660, accuracy: 0.920319, cls loss: 0.334623, bbox loss: 0.091775,Landmark loss :0.046863,L2 loss: 0.017048, Total Loss: 0.420990 ,lr:0.000001 
+epoch:23/30
+Step: 85400/111660, accuracy: 0.925532, cls loss: 0.281535, bbox loss: 0.070624,Landmark loss :0.045501,L2 loss: 0.017048, Total Loss: 0.356645 ,lr:0.000001 
+epoch:23/30
+Step: 85500/111660, accuracy: 0.921933, cls loss: 0.282758, bbox loss: 0.072056,Landmark loss :0.037560,L2 loss: 0.017048, Total Loss: 0.354614 ,lr:0.000001 
+epoch:23/30
+Step: 85600/111660, accuracy: 0.928571, cls loss: 0.226397, bbox loss: 0.060617,Landmark loss :0.054589,L2 loss: 0.017048, Total Loss: 0.301048 ,lr:0.000001 
+epoch:24/30
+Step: 85700/111660, accuracy: 0.945255, cls loss: 0.230087, bbox loss: 0.076379,Landmark loss :0.036990,L2 loss: 0.017048, Total Loss: 0.303820 ,lr:0.000001 
+epoch:24/30
+Step: 85800/111660, accuracy: 0.939850, cls loss: 0.226334, bbox loss: 0.082423,Landmark loss :0.036468,L2 loss: 0.017048, Total Loss: 0.302828 ,lr:0.000001 
+epoch:24/30
+Step: 85900/111660, accuracy: 0.963100, cls loss: 0.169006, bbox loss: 0.071444,Landmark loss :0.036668,L2 loss: 0.017048, Total Loss: 0.240110 ,lr:0.000001 
+epoch:24/30
+Step: 86000/111660, accuracy: 0.937269, cls loss: 0.255480, bbox loss: 0.074024,Landmark loss :0.037685,L2 loss: 0.017048, Total Loss: 0.328383 ,lr:0.000001 
+epoch:24/30
+Step: 86100/111660, accuracy: 0.947761, cls loss: 0.208135, bbox loss: 0.069128,Landmark loss :0.050360,L2 loss: 0.017048, Total Loss: 0.284927 ,lr:0.000001 
+epoch:24/30
+Step: 86200/111660, accuracy: 0.922509, cls loss: 0.247756, bbox loss: 0.064923,Landmark loss :0.043454,L2 loss: 0.017048, Total Loss: 0.318993 ,lr:0.000001 
+epoch:24/30
+Step: 86300/111660, accuracy: 0.926740, cls loss: 0.240287, bbox loss: 0.057318,Landmark loss :0.043072,L2 loss: 0.017048, Total Loss: 0.307530 ,lr:0.000001 
+epoch:24/30
+Step: 86400/111660, accuracy: 0.938697, cls loss: 0.212375, bbox loss: 0.078468,Landmark loss :0.044538,L2 loss: 0.017048, Total Loss: 0.290927 ,lr:0.000001 
+epoch:24/30
+Step: 86500/111660, accuracy: 0.928302, cls loss: 0.228026, bbox loss: 0.059381,Landmark loss :0.043887,L2 loss: 0.017048, Total Loss: 0.296708 ,lr:0.000001 
+epoch:24/30
+Step: 86600/111660, accuracy: 0.919708, cls loss: 0.303610, bbox loss: 0.053606,Landmark loss :0.054107,L2 loss: 0.017048, Total Loss: 0.374515 ,lr:0.000001 
+epoch:24/30
+Step: 86700/111660, accuracy: 0.941818, cls loss: 0.236835, bbox loss: 0.071979,Landmark loss :0.052541,L2 loss: 0.017048, Total Loss: 0.316143 ,lr:0.000001 
+epoch:24/30
+Step: 86800/111660, accuracy: 0.926573, cls loss: 0.263629, bbox loss: 0.063902,Landmark loss :0.041817,L2 loss: 0.017048, Total Loss: 0.333537 ,lr:0.000001 
+epoch:24/30
+Step: 86900/111660, accuracy: 0.921933, cls loss: 0.264829, bbox loss: 0.065076,Landmark loss :0.036586,L2 loss: 0.017048, Total Loss: 0.332707 ,lr:0.000001 
+epoch:24/30
+Step: 87000/111660, accuracy: 0.943396, cls loss: 0.228676, bbox loss: 0.066913,Landmark loss :0.043530,L2 loss: 0.017048, Total Loss: 0.300946 ,lr:0.000001 
+epoch:24/30
+Step: 87100/111660, accuracy: 0.929630, cls loss: 0.271002, bbox loss: 0.067090,Landmark loss :0.045407,L2 loss: 0.017048, Total Loss: 0.344299 ,lr:0.000001 
+epoch:24/30
+Step: 87200/111660, accuracy: 0.929688, cls loss: 0.264344, bbox loss: 0.063061,Landmark loss :0.042536,L2 loss: 0.017048, Total Loss: 0.334190 ,lr:0.000001 
+epoch:24/30
+Step: 87300/111660, accuracy: 0.936330, cls loss: 0.239198, bbox loss: 0.075794,Landmark loss :0.052954,L2 loss: 0.017048, Total Loss: 0.320621 ,lr:0.000001 
+epoch:24/30
+Step: 87400/111660, accuracy: 0.953488, cls loss: 0.176109, bbox loss: 0.055872,Landmark loss :0.040477,L2 loss: 0.017048, Total Loss: 0.241331 ,lr:0.000001 
+epoch:24/30
+Step: 87500/111660, accuracy: 0.943820, cls loss: 0.204104, bbox loss: 0.087697,Landmark loss :0.052081,L2 loss: 0.017048, Total Loss: 0.291041 ,lr:0.000001 
+epoch:24/30
+Step: 87600/111660, accuracy: 0.957854, cls loss: 0.179192, bbox loss: 0.072472,Landmark loss :0.034596,L2 loss: 0.017048, Total Loss: 0.249775 ,lr:0.000001 
+epoch:24/30
+Step: 87700/111660, accuracy: 0.942529, cls loss: 0.250331, bbox loss: 0.068707,Landmark loss :0.051677,L2 loss: 0.017048, Total Loss: 0.327571 ,lr:0.000001 
+epoch:24/30
+Step: 87800/111660, accuracy: 0.925094, cls loss: 0.310630, bbox loss: 0.066177,Landmark loss :0.061729,L2 loss: 0.017048, Total Loss: 0.391631 ,lr:0.000001 
+epoch:24/30
+Step: 87900/111660, accuracy: 0.960145, cls loss: 0.184440, bbox loss: 0.058910,Landmark loss :0.054006,L2 loss: 0.017048, Total Loss: 0.257946 ,lr:0.000001 
+epoch:24/30
+Step: 88000/111660, accuracy: 0.929889, cls loss: 0.262810, bbox loss: 0.065187,Landmark loss :0.047454,L2 loss: 0.017048, Total Loss: 0.336179 ,lr:0.000001 
+epoch:24/30
+Step: 88100/111660, accuracy: 0.912409, cls loss: 0.296703, bbox loss: 0.065408,Landmark loss :0.034251,L2 loss: 0.017048, Total Loss: 0.363581 ,lr:0.000001 
+epoch:24/30
+Step: 88200/111660, accuracy: 0.928302, cls loss: 0.316712, bbox loss: 0.069713,Landmark loss :0.041597,L2 loss: 0.017048, Total Loss: 0.389415 ,lr:0.000001 
+epoch:24/30
+Step: 88300/111660, accuracy: 0.943820, cls loss: 0.204428, bbox loss: 0.083108,Landmark loss :0.046626,L2 loss: 0.017048, Total Loss: 0.286344 ,lr:0.000001 
+epoch:24/30
+Step: 88400/111660, accuracy: 0.941176, cls loss: 0.239019, bbox loss: 0.063538,Landmark loss :0.043547,L2 loss: 0.017048, Total Loss: 0.309610 ,lr:0.000001 
+epoch:24/30
+Step: 88500/111660, accuracy: 0.925795, cls loss: 0.279951, bbox loss: 0.059077,Landmark loss :0.040610,L2 loss: 0.017048, Total Loss: 0.346842 ,lr:0.000001 
+epoch:24/30
+Step: 88600/111660, accuracy: 0.916667, cls loss: 0.252049, bbox loss: 0.069478,Landmark loss :0.044367,L2 loss: 0.017048, Total Loss: 0.326020 ,lr:0.000001 
+epoch:24/30
+Step: 88700/111660, accuracy: 0.955390, cls loss: 0.192230, bbox loss: 0.065592,Landmark loss :0.040729,L2 loss: 0.017048, Total Loss: 0.262438 ,lr:0.000001 
+epoch:24/30
+Step: 88800/111660, accuracy: 0.907473, cls loss: 0.346139, bbox loss: 0.060567,Landmark loss :0.031601,L2 loss: 0.017048, Total Loss: 0.409272 ,lr:0.000001 
+epoch:24/30
+Step: 88900/111660, accuracy: 0.968254, cls loss: 0.149604, bbox loss: 0.057612,Landmark loss :0.056658,L2 loss: 0.017048, Total Loss: 0.223788 ,lr:0.000001 
+epoch:24/30
+Step: 89000/111660, accuracy: 0.928571, cls loss: 0.243786, bbox loss: 0.063531,Landmark loss :0.047642,L2 loss: 0.017048, Total Loss: 0.316420 ,lr:0.000001 
+epoch:24/30
+Step: 89100/111660, accuracy: 0.922509, cls loss: 0.250377, bbox loss: 0.062696,Landmark loss :0.052736,L2 loss: 0.017048, Total Loss: 0.325141 ,lr:0.000001 
+epoch:24/30
+Step: 89200/111660, accuracy: 0.931507, cls loss: 0.230244, bbox loss: 0.062952,Landmark loss :0.058212,L2 loss: 0.017048, Total Loss: 0.307874 ,lr:0.000001 
+epoch:24/30
+Step: 89300/111660, accuracy: 0.898785, cls loss: 0.297973, bbox loss: 0.071688,Landmark loss :0.045004,L2 loss: 0.017048, Total Loss: 0.373367 ,lr:0.000001 
+epoch:25/30
+Step: 89400/111660, accuracy: 0.928058, cls loss: 0.206112, bbox loss: 0.061932,Landmark loss :0.040911,L2 loss: 0.017048, Total Loss: 0.274582 ,lr:0.000001 
+epoch:25/30
+Step: 89500/111660, accuracy: 0.942652, cls loss: 0.223946, bbox loss: 0.063069,Landmark loss :0.043201,L2 loss: 0.017048, Total Loss: 0.294130 ,lr:0.000001 
+epoch:25/30
+Step: 89600/111660, accuracy: 0.925094, cls loss: 0.302779, bbox loss: 0.057797,Landmark loss :0.048289,L2 loss: 0.017048, Total Loss: 0.372870 ,lr:0.000001 
+epoch:25/30
+Step: 89700/111660, accuracy: 0.923695, cls loss: 0.305117, bbox loss: 0.071167,Landmark loss :0.059266,L2 loss: 0.017048, Total Loss: 0.387381 ,lr:0.000001 
+epoch:25/30
+Step: 89800/111660, accuracy: 0.926357, cls loss: 0.281306, bbox loss: 0.072054,Landmark loss :0.058819,L2 loss: 0.017048, Total Loss: 0.363791 ,lr:0.000001 
+epoch:25/30
+Step: 89900/111660, accuracy: 0.921642, cls loss: 0.255260, bbox loss: 0.058817,Landmark loss :0.051584,L2 loss: 0.017048, Total Loss: 0.327509 ,lr:0.000001 
+epoch:25/30
+Step: 90000/111660, accuracy: 0.936567, cls loss: 0.248424, bbox loss: 0.070154,Landmark loss :0.042706,L2 loss: 0.017048, Total Loss: 0.321902 ,lr:0.000001 
+epoch:25/30
+Step: 90100/111660, accuracy: 0.946154, cls loss: 0.228729, bbox loss: 0.058812,Landmark loss :0.047998,L2 loss: 0.017048, Total Loss: 0.299182 ,lr:0.000001 
+epoch:25/30
+Step: 90200/111660, accuracy: 0.931818, cls loss: 0.256362, bbox loss: 0.064045,Landmark loss :0.038884,L2 loss: 0.017048, Total Loss: 0.324875 ,lr:0.000001 
+epoch:25/30
+Step: 90300/111660, accuracy: 0.920949, cls loss: 0.300722, bbox loss: 0.057640,Landmark loss :0.040977,L2 loss: 0.017048, Total Loss: 0.367078 ,lr:0.000001 
+epoch:25/30
+Step: 90400/111660, accuracy: 0.942085, cls loss: 0.226401, bbox loss: 0.061404,Landmark loss :0.051536,L2 loss: 0.017048, Total Loss: 0.299920 ,lr:0.000001 
+epoch:25/30
+Step: 90500/111660, accuracy: 0.937743, cls loss: 0.250534, bbox loss: 0.061515,Landmark loss :0.052527,L2 loss: 0.017048, Total Loss: 0.324603 ,lr:0.000001 
+epoch:25/30
+Step: 90600/111660, accuracy: 0.938224, cls loss: 0.254604, bbox loss: 0.071188,Landmark loss :0.043369,L2 loss: 0.017048, Total Loss: 0.328931 ,lr:0.000001 
+epoch:25/30
+Step: 90700/111660, accuracy: 0.903704, cls loss: 0.296730, bbox loss: 0.075776,Landmark loss :0.043260,L2 loss: 0.017048, Total Loss: 0.373296 ,lr:0.000001 
+epoch:25/30
+Step: 90800/111660, accuracy: 0.909091, cls loss: 0.401537, bbox loss: 0.065939,Landmark loss :0.045418,L2 loss: 0.017048, Total Loss: 0.474263 ,lr:0.000001 
+epoch:25/30
+Step: 90900/111660, accuracy: 0.914498, cls loss: 0.277031, bbox loss: 0.062036,Landmark loss :0.038931,L2 loss: 0.017048, Total Loss: 0.344563 ,lr:0.000001 
+epoch:25/30
+Step: 91000/111660, accuracy: 0.901961, cls loss: 0.379488, bbox loss: 0.073680,Landmark loss :0.051643,L2 loss: 0.017048, Total Loss: 0.459198 ,lr:0.000001 
+epoch:25/30
+Step: 91100/111660, accuracy: 0.937500, cls loss: 0.237467, bbox loss: 0.068973,Landmark loss :0.038507,L2 loss: 0.017048, Total Loss: 0.308255 ,lr:0.000001 
+epoch:25/30
+Step: 91200/111660, accuracy: 0.901818, cls loss: 0.332776, bbox loss: 0.071035,Landmark loss :0.038813,L2 loss: 0.017048, Total Loss: 0.404748 ,lr:0.000001 
+epoch:25/30
+Step: 91300/111660, accuracy: 0.923358, cls loss: 0.361450, bbox loss: 0.061992,Landmark loss :0.042588,L2 loss: 0.017048, Total Loss: 0.430788 ,lr:0.000001 
+epoch:25/30
+Step: 91400/111660, accuracy: 0.941818, cls loss: 0.294454, bbox loss: 0.071823,Landmark loss :0.034208,L2 loss: 0.017048, Total Loss: 0.364518 ,lr:0.000001 
+epoch:25/30
+Step: 91500/111660, accuracy: 0.965649, cls loss: 0.209777, bbox loss: 0.056060,Landmark loss :0.049252,L2 loss: 0.017048, Total Loss: 0.279482 ,lr:0.000001 
+epoch:25/30
+Step: 91600/111660, accuracy: 0.956364, cls loss: 0.197046, bbox loss: 0.063076,Landmark loss :0.056537,L2 loss: 0.017048, Total Loss: 0.273901 ,lr:0.000001 
+epoch:25/30
+Step: 91700/111660, accuracy: 0.935018, cls loss: 0.285655, bbox loss: 0.066034,Landmark loss :0.037736,L2 loss: 0.017048, Total Loss: 0.354588 ,lr:0.000001 
+epoch:25/30
+Step: 91800/111660, accuracy: 0.911877, cls loss: 0.278891, bbox loss: 0.073581,Landmark loss :0.056078,L2 loss: 0.017048, Total Loss: 0.360769 ,lr:0.000001 
+epoch:25/30
+Step: 91900/111660, accuracy: 0.936090, cls loss: 0.207560, bbox loss: 0.066385,Landmark loss :0.038832,L2 loss: 0.017048, Total Loss: 0.277216 ,lr:0.000001 
+epoch:25/30
+Step: 92000/111660, accuracy: 0.935943, cls loss: 0.231019, bbox loss: 0.071011,Landmark loss :0.038922,L2 loss: 0.017048, Total Loss: 0.303034 ,lr:0.000001 
+epoch:25/30
+Step: 92100/111660, accuracy: 0.915789, cls loss: 0.297914, bbox loss: 0.066877,Landmark loss :0.045257,L2 loss: 0.017048, Total Loss: 0.371029 ,lr:0.000001 
+epoch:25/30
+Step: 92200/111660, accuracy: 0.905882, cls loss: 0.331970, bbox loss: 0.067150,Landmark loss :0.061383,L2 loss: 0.017048, Total Loss: 0.413285 ,lr:0.000001 
+epoch:25/30
+Step: 92300/111660, accuracy: 0.951852, cls loss: 0.204206, bbox loss: 0.066224,Landmark loss :0.037948,L2 loss: 0.017048, Total Loss: 0.273340 ,lr:0.000001 
+epoch:25/30
+Step: 92400/111660, accuracy: 0.951049, cls loss: 0.198930, bbox loss: 0.063781,Landmark loss :0.053715,L2 loss: 0.017048, Total Loss: 0.274726 ,lr:0.000001 
+epoch:25/30
+Step: 92500/111660, accuracy: 0.950877, cls loss: 0.207803, bbox loss: 0.068244,Landmark loss :0.050353,L2 loss: 0.017048, Total Loss: 0.284150 ,lr:0.000001 
+epoch:25/30
+Step: 92600/111660, accuracy: 0.952381, cls loss: 0.198888, bbox loss: 0.068936,Landmark loss :0.039936,L2 loss: 0.017048, Total Loss: 0.270372 ,lr:0.000001 
+epoch:25/30
+Step: 92700/111660, accuracy: 0.935606, cls loss: 0.249474, bbox loss: 0.065636,Landmark loss :0.049488,L2 loss: 0.017048, Total Loss: 0.324084 ,lr:0.000001 
+epoch:25/30
+Step: 92800/111660, accuracy: 0.921053, cls loss: 0.284406, bbox loss: 0.059462,Landmark loss :0.054441,L2 loss: 0.017048, Total Loss: 0.358407 ,lr:0.000001 
+epoch:25/30
+Step: 92900/111660, accuracy: 0.933086, cls loss: 0.273197, bbox loss: 0.063398,Landmark loss :0.040946,L2 loss: 0.017048, Total Loss: 0.342417 ,lr:0.000001 
+epoch:25/30
+Step: 93000/111660, accuracy: 0.922794, cls loss: 0.257594, bbox loss: 0.072962,Landmark loss :0.053739,L2 loss: 0.017048, Total Loss: 0.337993 ,lr:0.000001 
+epoch:26/30
+Step: 93100/111660, accuracy: 0.948718, cls loss: 0.228691, bbox loss: 0.072743,Landmark loss :0.055701,L2 loss: 0.017048, Total Loss: 0.309961 ,lr:0.000001 
+epoch:26/30
+Step: 93200/111660, accuracy: 0.908397, cls loss: 0.300613, bbox loss: 0.063546,Landmark loss :0.045265,L2 loss: 0.017048, Total Loss: 0.372067 ,lr:0.000001 
+epoch:26/30
+Step: 93300/111660, accuracy: 0.905797, cls loss: 0.313461, bbox loss: 0.063203,Landmark loss :0.044625,L2 loss: 0.017048, Total Loss: 0.384424 ,lr:0.000001 
+epoch:26/30
+Step: 93400/111660, accuracy: 0.906977, cls loss: 0.317610, bbox loss: 0.068205,Landmark loss :0.054691,L2 loss: 0.017048, Total Loss: 0.396106 ,lr:0.000001 
+epoch:26/30
+Step: 93500/111660, accuracy: 0.935606, cls loss: 0.207694, bbox loss: 0.069858,Landmark loss :0.048289,L2 loss: 0.017048, Total Loss: 0.283816 ,lr:0.000001 
+epoch:26/30
+Step: 93600/111660, accuracy: 0.911111, cls loss: 0.308431, bbox loss: 0.069945,Landmark loss :0.042400,L2 loss: 0.017048, Total Loss: 0.381652 ,lr:0.000001 
+epoch:26/30
+Step: 93700/111660, accuracy: 0.937931, cls loss: 0.239880, bbox loss: 0.059480,Landmark loss :0.050529,L2 loss: 0.017048, Total Loss: 0.311933 ,lr:0.000001 
+epoch:26/30
+Step: 93800/111660, accuracy: 0.959839, cls loss: 0.164599, bbox loss: 0.069600,Landmark loss :0.059396,L2 loss: 0.017048, Total Loss: 0.246146 ,lr:0.000001 
+epoch:26/30
+Step: 93900/111660, accuracy: 0.944444, cls loss: 0.247752, bbox loss: 0.066225,Landmark loss :0.052697,L2 loss: 0.017048, Total Loss: 0.324261 ,lr:0.000001 
+epoch:26/30
+Step: 94000/111660, accuracy: 0.950192, cls loss: 0.241231, bbox loss: 0.067599,Landmark loss :0.049485,L2 loss: 0.017048, Total Loss: 0.316822 ,lr:0.000001 
+epoch:26/30
+Step: 94100/111660, accuracy: 0.955720, cls loss: 0.190450, bbox loss: 0.058590,Landmark loss :0.048215,L2 loss: 0.017048, Total Loss: 0.260901 ,lr:0.000001 
+epoch:26/30
+Step: 94200/111660, accuracy: 0.951128, cls loss: 0.210527, bbox loss: 0.060309,Landmark loss :0.047671,L2 loss: 0.017048, Total Loss: 0.281565 ,lr:0.000001 
+epoch:26/30
+Step: 94300/111660, accuracy: 0.945255, cls loss: 0.244718, bbox loss: 0.077322,Landmark loss :0.042501,L2 loss: 0.017048, Total Loss: 0.321677 ,lr:0.000001 
+epoch:26/30
+Step: 94400/111660, accuracy: 0.931559, cls loss: 0.312797, bbox loss: 0.056542,Landmark loss :0.051075,L2 loss: 0.017048, Total Loss: 0.383654 ,lr:0.000001 
+epoch:26/30
+Step: 94500/111660, accuracy: 0.946360, cls loss: 0.223443, bbox loss: 0.068960,Landmark loss :0.044065,L2 loss: 0.017048, Total Loss: 0.297004 ,lr:0.000001 
+epoch:26/30
+Step: 94600/111660, accuracy: 0.932836, cls loss: 0.260148, bbox loss: 0.061784,Landmark loss :0.046060,L2 loss: 0.017048, Total Loss: 0.331119 ,lr:0.000001 
+epoch:26/30
+Step: 94700/111660, accuracy: 0.907407, cls loss: 0.333302, bbox loss: 0.071502,Landmark loss :0.046893,L2 loss: 0.017048, Total Loss: 0.409548 ,lr:0.000001 
+epoch:26/30
+Step: 94800/111660, accuracy: 0.949219, cls loss: 0.240136, bbox loss: 0.075906,Landmark loss :0.047166,L2 loss: 0.017048, Total Loss: 0.318720 ,lr:0.000001 
+epoch:26/30
+Step: 94900/111660, accuracy: 0.932076, cls loss: 0.233650, bbox loss: 0.067843,Landmark loss :0.036612,L2 loss: 0.017048, Total Loss: 0.302926 ,lr:0.000001 
+epoch:26/30
+Step: 95000/111660, accuracy: 0.921260, cls loss: 0.270170, bbox loss: 0.077104,Landmark loss :0.034804,L2 loss: 0.017048, Total Loss: 0.343173 ,lr:0.000001 
+epoch:26/30
+Step: 95100/111660, accuracy: 0.944853, cls loss: 0.215027, bbox loss: 0.063475,Landmark loss :0.041380,L2 loss: 0.017048, Total Loss: 0.284502 ,lr:0.000001 
+epoch:26/30
+Step: 95200/111660, accuracy: 0.902878, cls loss: 0.313350, bbox loss: 0.064290,Landmark loss :0.050630,L2 loss: 0.017048, Total Loss: 0.387859 ,lr:0.000001 
+epoch:26/30
+Step: 95300/111660, accuracy: 0.929961, cls loss: 0.217131, bbox loss: 0.064886,Landmark loss :0.047823,L2 loss: 0.017048, Total Loss: 0.290534 ,lr:0.000001 
+epoch:26/30
+Step: 95400/111660, accuracy: 0.898438, cls loss: 0.287236, bbox loss: 0.068553,Landmark loss :0.045037,L2 loss: 0.017048, Total Loss: 0.361079 ,lr:0.000001 
+epoch:26/30
+Step: 95500/111660, accuracy: 0.938182, cls loss: 0.226384, bbox loss: 0.068984,Landmark loss :0.048075,L2 loss: 0.017048, Total Loss: 0.301962 ,lr:0.000001 
+epoch:26/30
+Step: 95600/111660, accuracy: 0.944238, cls loss: 0.228101, bbox loss: 0.062164,Landmark loss :0.040623,L2 loss: 0.017048, Total Loss: 0.296543 ,lr:0.000001 
+epoch:26/30
+Step: 95700/111660, accuracy: 0.916667, cls loss: 0.321068, bbox loss: 0.061904,Landmark loss :0.047748,L2 loss: 0.017048, Total Loss: 0.392942 ,lr:0.000001 
+epoch:26/30
+Step: 95800/111660, accuracy: 0.923664, cls loss: 0.255553, bbox loss: 0.077679,Landmark loss :0.039808,L2 loss: 0.017048, Total Loss: 0.331345 ,lr:0.000001 
+epoch:26/30
+Step: 95900/111660, accuracy: 0.936330, cls loss: 0.268964, bbox loss: 0.080792,Landmark loss :0.056045,L2 loss: 0.017048, Total Loss: 0.354431 ,lr:0.000001 
+epoch:26/30
+Step: 96000/111660, accuracy: 0.920000, cls loss: 0.322226, bbox loss: 0.069357,Landmark loss :0.039427,L2 loss: 0.017048, Total Loss: 0.393666 ,lr:0.000001 
+epoch:26/30
+Step: 96100/111660, accuracy: 0.893701, cls loss: 0.335384, bbox loss: 0.070376,Landmark loss :0.053880,L2 loss: 0.017048, Total Loss: 0.414561 ,lr:0.000001 
+epoch:26/30
+Step: 96200/111660, accuracy: 0.939850, cls loss: 0.231651, bbox loss: 0.071693,Landmark loss :0.041973,L2 loss: 0.017048, Total Loss: 0.305533 ,lr:0.000001 
+epoch:26/30
+Step: 96300/111660, accuracy: 0.945055, cls loss: 0.218755, bbox loss: 0.065024,Landmark loss :0.042335,L2 loss: 0.017048, Total Loss: 0.289482 ,lr:0.000001 
+epoch:26/30
+Step: 96400/111660, accuracy: 0.956000, cls loss: 0.222783, bbox loss: 0.061772,Landmark loss :0.044124,L2 loss: 0.017048, Total Loss: 0.292780 ,lr:0.000001 
+epoch:26/30
+Step: 96500/111660, accuracy: 0.920635, cls loss: 0.317005, bbox loss: 0.069581,Landmark loss :0.044717,L2 loss: 0.017048, Total Loss: 0.391203 ,lr:0.000001 
+epoch:26/30
+Step: 96600/111660, accuracy: 0.937037, cls loss: 0.232928, bbox loss: 0.070310,Landmark loss :0.053247,L2 loss: 0.017048, Total Loss: 0.311755 ,lr:0.000001 
+epoch:26/30
+Step: 96700/111660, accuracy: 0.899628, cls loss: 0.299283, bbox loss: 0.059886,Landmark loss :0.046032,L2 loss: 0.017048, Total Loss: 0.369290 ,lr:0.000001 
+epoch:27/30
+Step: 96800/111660, accuracy: 0.918367, cls loss: 0.276945, bbox loss: 0.070058,Landmark loss :0.043218,L2 loss: 0.017048, Total Loss: 0.350631 ,lr:0.000001 
+epoch:27/30
+Step: 96900/111660, accuracy: 0.931655, cls loss: 0.259954, bbox loss: 0.063182,Landmark loss :0.045634,L2 loss: 0.017048, Total Loss: 0.331410 ,lr:0.000001 
+epoch:27/30
+Step: 97000/111660, accuracy: 0.949091, cls loss: 0.214091, bbox loss: 0.062189,Landmark loss :0.043648,L2 loss: 0.017048, Total Loss: 0.284057 ,lr:0.000001 
+epoch:27/30
+Step: 97100/111660, accuracy: 0.909747, cls loss: 0.299340, bbox loss: 0.066616,Landmark loss :0.036989,L2 loss: 0.017048, Total Loss: 0.368191 ,lr:0.000001 
+epoch:27/30
+Step: 97200/111660, accuracy: 0.941176, cls loss: 0.210705, bbox loss: 0.065539,Landmark loss :0.051134,L2 loss: 0.017048, Total Loss: 0.286090 ,lr:0.000001 
+epoch:27/30
+Step: 97300/111660, accuracy: 0.923913, cls loss: 0.253065, bbox loss: 0.059469,Landmark loss :0.039272,L2 loss: 0.017048, Total Loss: 0.319484 ,lr:0.000001 
+epoch:27/30
+Step: 97400/111660, accuracy: 0.926199, cls loss: 0.280299, bbox loss: 0.067950,Landmark loss :0.044996,L2 loss: 0.017048, Total Loss: 0.353820 ,lr:0.000001 
+epoch:27/30
+Step: 97500/111660, accuracy: 0.934545, cls loss: 0.260572, bbox loss: 0.069782,Landmark loss :0.049993,L2 loss: 0.017048, Total Loss: 0.337507 ,lr:0.000001 
+epoch:27/30
+Step: 97600/111660, accuracy: 0.943061, cls loss: 0.193283, bbox loss: 0.070413,Landmark loss :0.035825,L2 loss: 0.017048, Total Loss: 0.263450 ,lr:0.000001 
+epoch:27/30
+Step: 97700/111660, accuracy: 0.919540, cls loss: 0.257910, bbox loss: 0.071401,Landmark loss :0.045917,L2 loss: 0.017048, Total Loss: 0.333617 ,lr:0.000001 
+epoch:27/30
+Step: 97800/111660, accuracy: 0.930909, cls loss: 0.219012, bbox loss: 0.057570,Landmark loss :0.040536,L2 loss: 0.017048, Total Loss: 0.285114 ,lr:0.000001 
+epoch:27/30
+Step: 97900/111660, accuracy: 0.950877, cls loss: 0.198357, bbox loss: 0.061511,Landmark loss :0.057774,L2 loss: 0.017048, Total Loss: 0.275048 ,lr:0.000001 
+epoch:27/30
+Step: 98000/111660, accuracy: 0.923954, cls loss: 0.278357, bbox loss: 0.063344,Landmark loss :0.038117,L2 loss: 0.017048, Total Loss: 0.346136 ,lr:0.000001 
+epoch:27/30
+Step: 98100/111660, accuracy: 0.927536, cls loss: 0.242391, bbox loss: 0.064780,Landmark loss :0.057959,L2 loss: 0.017048, Total Loss: 0.320809 ,lr:0.000001 
+epoch:27/30
+Step: 98200/111660, accuracy: 0.896947, cls loss: 0.349134, bbox loss: 0.064642,Landmark loss :0.038191,L2 loss: 0.017048, Total Loss: 0.417599 ,lr:0.000001 
+epoch:27/30
+Step: 98300/111660, accuracy: 0.950000, cls loss: 0.235680, bbox loss: 0.068792,Landmark loss :0.041125,L2 loss: 0.017048, Total Loss: 0.307686 ,lr:0.000001 
+epoch:27/30
+Step: 98400/111660, accuracy: 0.924242, cls loss: 0.276770, bbox loss: 0.073271,Landmark loss :0.050357,L2 loss: 0.017048, Total Loss: 0.355632 ,lr:0.000001 
+epoch:27/30
+Step: 98500/111660, accuracy: 0.913043, cls loss: 0.342394, bbox loss: 0.065946,Landmark loss :0.050964,L2 loss: 0.017048, Total Loss: 0.417897 ,lr:0.000001 
+epoch:27/30
+Step: 98600/111660, accuracy: 0.911032, cls loss: 0.283075, bbox loss: 0.072932,Landmark loss :0.046851,L2 loss: 0.017048, Total Loss: 0.360015 ,lr:0.000001 
+epoch:27/30
+Step: 98700/111660, accuracy: 0.933852, cls loss: 0.267631, bbox loss: 0.070066,Landmark loss :0.037720,L2 loss: 0.017048, Total Loss: 0.338572 ,lr:0.000001 
+epoch:27/30
+Step: 98800/111660, accuracy: 0.897233, cls loss: 0.384987, bbox loss: 0.077120,Landmark loss :0.045253,L2 loss: 0.017048, Total Loss: 0.463222 ,lr:0.000001 
+epoch:27/30
+Step: 98900/111660, accuracy: 0.937500, cls loss: 0.266136, bbox loss: 0.068128,Landmark loss :0.053973,L2 loss: 0.017048, Total Loss: 0.344234 ,lr:0.000001 
+epoch:27/30
+Step: 99000/111660, accuracy: 0.932076, cls loss: 0.266902, bbox loss: 0.065115,Landmark loss :0.043921,L2 loss: 0.017048, Total Loss: 0.338468 ,lr:0.000001 
+epoch:27/30
+Step: 99100/111660, accuracy: 0.938931, cls loss: 0.222407, bbox loss: 0.063893,Landmark loss :0.048506,L2 loss: 0.017048, Total Loss: 0.295655 ,lr:0.000001 
+epoch:27/30
+Step: 99200/111660, accuracy: 0.940298, cls loss: 0.236686, bbox loss: 0.070350,Landmark loss :0.042495,L2 loss: 0.017048, Total Loss: 0.310157 ,lr:0.000001 
+epoch:27/30
+Step: 99300/111660, accuracy: 0.948718, cls loss: 0.214168, bbox loss: 0.062858,Landmark loss :0.047987,L2 loss: 0.017048, Total Loss: 0.286638 ,lr:0.000001 
+epoch:27/30
+Step: 99400/111660, accuracy: 0.930403, cls loss: 0.236742, bbox loss: 0.058004,Landmark loss :0.055750,L2 loss: 0.017048, Total Loss: 0.310668 ,lr:0.000001 
+epoch:27/30
+Step: 99500/111660, accuracy: 0.920863, cls loss: 0.290749, bbox loss: 0.070927,Landmark loss :0.046628,L2 loss: 0.017048, Total Loss: 0.366575 ,lr:0.000001 
+epoch:27/30
+Step: 99600/111660, accuracy: 0.959410, cls loss: 0.181158, bbox loss: 0.070083,Landmark loss :0.041786,L2 loss: 0.017048, Total Loss: 0.254141 ,lr:0.000001 
+epoch:27/30
+Step: 99700/111660, accuracy: 0.920949, cls loss: 0.291606, bbox loss: 0.059518,Landmark loss :0.047100,L2 loss: 0.017048, Total Loss: 0.361964 ,lr:0.000001 
+epoch:27/30
+Step: 99800/111660, accuracy: 0.912214, cls loss: 0.346188, bbox loss: 0.064737,Landmark loss :0.057866,L2 loss: 0.017048, Total Loss: 0.424538 ,lr:0.000001 
+epoch:27/30
+Step: 99900/111660, accuracy: 0.944853, cls loss: 0.204307, bbox loss: 0.065717,Landmark loss :0.043964,L2 loss: 0.017048, Total Loss: 0.276196 ,lr:0.000001 
+epoch:27/30
+Step: 100000/111660, accuracy: 0.918519, cls loss: 0.272514, bbox loss: 0.064868,Landmark loss :0.053793,L2 loss: 0.017048, Total Loss: 0.348893 ,lr:0.000001 
+epoch:27/30
+Step: 100100/111660, accuracy: 0.925781, cls loss: 0.332646, bbox loss: 0.061995,Landmark loss :0.066143,L2 loss: 0.017048, Total Loss: 0.413763 ,lr:0.000001 
+epoch:27/30
+Step: 100200/111660, accuracy: 0.954887, cls loss: 0.215210, bbox loss: 0.070060,Landmark loss :0.049380,L2 loss: 0.017048, Total Loss: 0.291979 ,lr:0.000001 
+epoch:27/30
+Step: 100300/111660, accuracy: 0.945255, cls loss: 0.254772, bbox loss: 0.072792,Landmark loss :0.043223,L2 loss: 0.017048, Total Loss: 0.329828 ,lr:0.000001 
+epoch:27/30
+Step: 100400/111660, accuracy: 0.931507, cls loss: 0.269856, bbox loss: 0.073560,Landmark loss :0.047314,L2 loss: 0.017048, Total Loss: 0.347342 ,lr:0.000001 
+epoch:28/30
+Step: 100500/111660, accuracy: 0.935606, cls loss: 0.254791, bbox loss: 0.056654,Landmark loss :0.040000,L2 loss: 0.017048, Total Loss: 0.320167 ,lr:0.000001 
+epoch:28/30
+Step: 100600/111660, accuracy: 0.932384, cls loss: 0.255316, bbox loss: 0.053690,Landmark loss :0.053875,L2 loss: 0.017048, Total Loss: 0.326147 ,lr:0.000001 
+epoch:28/30
+Step: 100700/111660, accuracy: 0.946043, cls loss: 0.250530, bbox loss: 0.051861,Landmark loss :0.048820,L2 loss: 0.017048, Total Loss: 0.317919 ,lr:0.000001 
+epoch:28/30
+Step: 100800/111660, accuracy: 0.950570, cls loss: 0.201516, bbox loss: 0.063669,Landmark loss :0.053658,L2 loss: 0.017048, Total Loss: 0.277228 ,lr:0.000001 
+epoch:28/30
+Step: 100900/111660, accuracy: 0.956175, cls loss: 0.200954, bbox loss: 0.061479,Landmark loss :0.046915,L2 loss: 0.017048, Total Loss: 0.272199 ,lr:0.000001 
+epoch:28/30
+Step: 101000/111660, accuracy: 0.926740, cls loss: 0.256693, bbox loss: 0.068132,Landmark loss :0.066183,L2 loss: 0.017048, Total Loss: 0.340898 ,lr:0.000001 
+epoch:28/30
+Step: 101100/111660, accuracy: 0.928839, cls loss: 0.230021, bbox loss: 0.072286,Landmark loss :0.051939,L2 loss: 0.017048, Total Loss: 0.309181 ,lr:0.000001 
+epoch:28/30
+Step: 101200/111660, accuracy: 0.948529, cls loss: 0.232018, bbox loss: 0.068937,Landmark loss :0.048813,L2 loss: 0.017048, Total Loss: 0.307941 ,lr:0.000001 
+epoch:28/30
+Step: 101300/111660, accuracy: 0.935714, cls loss: 0.233916, bbox loss: 0.062381,Landmark loss :0.059037,L2 loss: 0.017048, Total Loss: 0.311674 ,lr:0.000001 
+epoch:28/30
+Step: 101400/111660, accuracy: 0.942748, cls loss: 0.231617, bbox loss: 0.066633,Landmark loss :0.046733,L2 loss: 0.017048, Total Loss: 0.305349 ,lr:0.000001 
+epoch:28/30
+Step: 101500/111660, accuracy: 0.927273, cls loss: 0.308278, bbox loss: 0.055551,Landmark loss :0.044094,L2 loss: 0.017048, Total Loss: 0.375149 ,lr:0.000001 
+epoch:28/30
+Step: 101600/111660, accuracy: 0.921147, cls loss: 0.279597, bbox loss: 0.062037,Landmark loss :0.042568,L2 loss: 0.017048, Total Loss: 0.348948 ,lr:0.000001 
+epoch:28/30
+Step: 101700/111660, accuracy: 0.931159, cls loss: 0.252940, bbox loss: 0.055987,Landmark loss :0.040258,L2 loss: 0.017048, Total Loss: 0.318110 ,lr:0.000001 
+epoch:28/30
+Step: 101800/111660, accuracy: 0.897727, cls loss: 0.417610, bbox loss: 0.076820,Landmark loss :0.049903,L2 loss: 0.017048, Total Loss: 0.498020 ,lr:0.000001 
+epoch:28/30
+Step: 101900/111660, accuracy: 0.937255, cls loss: 0.236574, bbox loss: 0.079535,Landmark loss :0.049220,L2 loss: 0.017048, Total Loss: 0.318000 ,lr:0.000001 
+epoch:28/30
+Step: 102000/111660, accuracy: 0.939164, cls loss: 0.205080, bbox loss: 0.070675,Landmark loss :0.034424,L2 loss: 0.017048, Total Loss: 0.274678 ,lr:0.000001 
+epoch:28/30
+Step: 102100/111660, accuracy: 0.925373, cls loss: 0.198342, bbox loss: 0.071095,Landmark loss :0.053581,L2 loss: 0.017048, Total Loss: 0.277729 ,lr:0.000001 
+epoch:28/30
+Step: 102200/111660, accuracy: 0.947566, cls loss: 0.232251, bbox loss: 0.071874,Landmark loss :0.044355,L2 loss: 0.017048, Total Loss: 0.307414 ,lr:0.000001 
+epoch:28/30
+Step: 102300/111660, accuracy: 0.923387, cls loss: 0.231375, bbox loss: 0.061667,Landmark loss :0.045415,L2 loss: 0.017048, Total Loss: 0.301965 ,lr:0.000001 
+epoch:28/30
+Step: 102400/111660, accuracy: 0.937269, cls loss: 0.246459, bbox loss: 0.067716,Landmark loss :0.041140,L2 loss: 0.017048, Total Loss: 0.317935 ,lr:0.000001 
+epoch:28/30
+Step: 102500/111660, accuracy: 0.934545, cls loss: 0.247777, bbox loss: 0.056264,Landmark loss :0.048160,L2 loss: 0.017048, Total Loss: 0.317037 ,lr:0.000001 
+epoch:28/30
+Step: 102600/111660, accuracy: 0.935849, cls loss: 0.246842, bbox loss: 0.061168,Landmark loss :0.054912,L2 loss: 0.017048, Total Loss: 0.321930 ,lr:0.000001 
+epoch:28/30
+Step: 102700/111660, accuracy: 0.900369, cls loss: 0.330963, bbox loss: 0.064161,Landmark loss :0.044113,L2 loss: 0.017048, Total Loss: 0.402149 ,lr:0.000001 
+epoch:28/30
+Step: 102800/111660, accuracy: 0.916058, cls loss: 0.270185, bbox loss: 0.071012,Landmark loss :0.050234,L2 loss: 0.017048, Total Loss: 0.347857 ,lr:0.000001 
+epoch:28/30
+Step: 102900/111660, accuracy: 0.933579, cls loss: 0.241396, bbox loss: 0.074884,Landmark loss :0.051011,L2 loss: 0.017048, Total Loss: 0.321392 ,lr:0.000001 
+epoch:28/30
+Step: 103000/111660, accuracy: 0.926056, cls loss: 0.262584, bbox loss: 0.057756,Landmark loss :0.053144,L2 loss: 0.017048, Total Loss: 0.335083 ,lr:0.000001 
+epoch:28/30
+Step: 103100/111660, accuracy: 0.918728, cls loss: 0.271900, bbox loss: 0.068074,Landmark loss :0.057935,L2 loss: 0.017048, Total Loss: 0.351953 ,lr:0.000001 
+epoch:28/30
+Step: 103200/111660, accuracy: 0.933333, cls loss: 0.244737, bbox loss: 0.067280,Landmark loss :0.055160,L2 loss: 0.017048, Total Loss: 0.323005 ,lr:0.000001 
+epoch:28/30
+Step: 103300/111660, accuracy: 0.919847, cls loss: 0.300580, bbox loss: 0.063588,Landmark loss :0.041387,L2 loss: 0.017048, Total Loss: 0.370116 ,lr:0.000001 
+epoch:28/30
+Step: 103400/111660, accuracy: 0.948905, cls loss: 0.208054, bbox loss: 0.056420,Landmark loss :0.050582,L2 loss: 0.017048, Total Loss: 0.278603 ,lr:0.000001 
+epoch:28/30
+Step: 103500/111660, accuracy: 0.928030, cls loss: 0.240282, bbox loss: 0.069951,Landmark loss :0.048697,L2 loss: 0.017048, Total Loss: 0.316654 ,lr:0.000001 
+epoch:28/30
+Step: 103600/111660, accuracy: 0.942085, cls loss: 0.207742, bbox loss: 0.067833,Landmark loss :0.057554,L2 loss: 0.017048, Total Loss: 0.287484 ,lr:0.000001 
+epoch:28/30
+Step: 103700/111660, accuracy: 0.925373, cls loss: 0.297226, bbox loss: 0.069741,Landmark loss :0.038753,L2 loss: 0.017048, Total Loss: 0.368522 ,lr:0.000001 
+epoch:28/30
+Step: 103800/111660, accuracy: 0.908759, cls loss: 0.308088, bbox loss: 0.055964,Landmark loss :0.052393,L2 loss: 0.017048, Total Loss: 0.379315 ,lr:0.000001 
+epoch:28/30
+Step: 103900/111660, accuracy: 0.946565, cls loss: 0.194664, bbox loss: 0.060524,Landmark loss :0.042345,L2 loss: 0.017048, Total Loss: 0.263146 ,lr:0.000001 
+epoch:28/30
+Step: 104000/111660, accuracy: 0.870849, cls loss: 0.474969, bbox loss: 0.069999,Landmark loss :0.042392,L2 loss: 0.017048, Total Loss: 0.548213 ,lr:0.000001 
+epoch:28/30
+Step: 104100/111660, accuracy: 0.954545, cls loss: 0.225188, bbox loss: 0.062564,Landmark loss :0.047376,L2 loss: 0.017048, Total Loss: 0.297207 ,lr:0.000001 
+epoch:28/30
+Step: 104200/111660, accuracy: 0.938931, cls loss: 0.232054, bbox loss: 0.057995,Landmark loss :0.054098,L2 loss: 0.017048, Total Loss: 0.305149 ,lr:0.000001 
+epoch:29/30
+Step: 104300/111660, accuracy: 0.964413, cls loss: 0.190328, bbox loss: 0.059398,Landmark loss :0.038672,L2 loss: 0.017048, Total Loss: 0.256412 ,lr:0.000001 
+epoch:29/30
+Step: 104400/111660, accuracy: 0.933566, cls loss: 0.275198, bbox loss: 0.068736,Landmark loss :0.048106,L2 loss: 0.017048, Total Loss: 0.350667 ,lr:0.000001 
+epoch:29/30
+Step: 104500/111660, accuracy: 0.933333, cls loss: 0.257059, bbox loss: 0.072176,Landmark loss :0.050436,L2 loss: 0.017048, Total Loss: 0.335413 ,lr:0.000001 
+epoch:29/30
+Step: 104600/111660, accuracy: 0.920455, cls loss: 0.278048, bbox loss: 0.073792,Landmark loss :0.038213,L2 loss: 0.017048, Total Loss: 0.351100 ,lr:0.000001 
+epoch:29/30
+Step: 104700/111660, accuracy: 0.935606, cls loss: 0.256959, bbox loss: 0.067113,Landmark loss :0.050584,L2 loss: 0.017048, Total Loss: 0.332856 ,lr:0.000001 
+epoch:29/30
+Step: 104800/111660, accuracy: 0.921642, cls loss: 0.290106, bbox loss: 0.058777,Landmark loss :0.049177,L2 loss: 0.017048, Total Loss: 0.361131 ,lr:0.000001 
+epoch:29/30
+Step: 104900/111660, accuracy: 0.925926, cls loss: 0.304901, bbox loss: 0.068912,Landmark loss :0.044428,L2 loss: 0.017048, Total Loss: 0.378619 ,lr:0.000001 
+epoch:29/30
+Step: 105000/111660, accuracy: 0.954386, cls loss: 0.205751, bbox loss: 0.063404,Landmark loss :0.054346,L2 loss: 0.017048, Total Loss: 0.281674 ,lr:0.000001 
+epoch:29/30
+Step: 105100/111660, accuracy: 0.937729, cls loss: 0.244800, bbox loss: 0.062320,Landmark loss :0.045262,L2 loss: 0.017048, Total Loss: 0.315639 ,lr:0.000001 
+epoch:29/30
+Step: 105200/111660, accuracy: 0.916667, cls loss: 0.304949, bbox loss: 0.073684,Landmark loss :0.052455,L2 loss: 0.017048, Total Loss: 0.385067 ,lr:0.000001 
+epoch:29/30
+Step: 105300/111660, accuracy: 0.933071, cls loss: 0.269756, bbox loss: 0.056264,Landmark loss :0.040460,L2 loss: 0.017048, Total Loss: 0.335166 ,lr:0.000001 
+epoch:29/30
+Step: 105400/111660, accuracy: 0.947170, cls loss: 0.229617, bbox loss: 0.063744,Landmark loss :0.048046,L2 loss: 0.017048, Total Loss: 0.302560 ,lr:0.000001 
+epoch:29/30
+Step: 105500/111660, accuracy: 0.934109, cls loss: 0.249554, bbox loss: 0.067355,Landmark loss :0.053823,L2 loss: 0.017048, Total Loss: 0.327191 ,lr:0.000001 
+epoch:29/30
+Step: 105600/111660, accuracy: 0.921933, cls loss: 0.252241, bbox loss: 0.062531,Landmark loss :0.058141,L2 loss: 0.017048, Total Loss: 0.329626 ,lr:0.000001 
+epoch:29/30
+Step: 105700/111660, accuracy: 0.930657, cls loss: 0.203538, bbox loss: 0.055887,Landmark loss :0.050253,L2 loss: 0.017048, Total Loss: 0.273656 ,lr:0.000001 
+epoch:29/30
+Step: 105800/111660, accuracy: 0.928826, cls loss: 0.250691, bbox loss: 0.061161,Landmark loss :0.050891,L2 loss: 0.017048, Total Loss: 0.323765 ,lr:0.000001 
+epoch:29/30
+Step: 105900/111660, accuracy: 0.902527, cls loss: 0.270108, bbox loss: 0.051378,Landmark loss :0.053213,L2 loss: 0.017048, Total Loss: 0.339452 ,lr:0.000001 
+epoch:29/30
+Step: 106000/111660, accuracy: 0.930909, cls loss: 0.248054, bbox loss: 0.061062,Landmark loss :0.051635,L2 loss: 0.017048, Total Loss: 0.321451 ,lr:0.000001 
+epoch:29/30
+Step: 106100/111660, accuracy: 0.952555, cls loss: 0.179301, bbox loss: 0.069137,Landmark loss :0.053712,L2 loss: 0.017048, Total Loss: 0.257774 ,lr:0.000001 
+epoch:29/30
+Step: 106200/111660, accuracy: 0.929368, cls loss: 0.235334, bbox loss: 0.067453,Landmark loss :0.041362,L2 loss: 0.017048, Total Loss: 0.306789 ,lr:0.000001 
+epoch:29/30
+Step: 106300/111660, accuracy: 0.959854, cls loss: 0.221581, bbox loss: 0.058334,Landmark loss :0.053147,L2 loss: 0.017048, Total Loss: 0.294370 ,lr:0.000001 
+epoch:29/30
+Step: 106400/111660, accuracy: 0.947566, cls loss: 0.242177, bbox loss: 0.059389,Landmark loss :0.037625,L2 loss: 0.017048, Total Loss: 0.307732 ,lr:0.000001 
+epoch:29/30
+Step: 106500/111660, accuracy: 0.914062, cls loss: 0.277642, bbox loss: 0.071985,Landmark loss :0.038687,L2 loss: 0.017048, Total Loss: 0.350027 ,lr:0.000001 
+epoch:29/30
+Step: 106600/111660, accuracy: 0.929688, cls loss: 0.270536, bbox loss: 0.066931,Landmark loss :0.040665,L2 loss: 0.017048, Total Loss: 0.341382 ,lr:0.000001 
+epoch:29/30
+Step: 106700/111660, accuracy: 0.932143, cls loss: 0.246249, bbox loss: 0.060371,Landmark loss :0.064518,L2 loss: 0.017048, Total Loss: 0.325742 ,lr:0.000001 
+epoch:29/30
+Step: 106800/111660, accuracy: 0.947566, cls loss: 0.190329, bbox loss: 0.063736,Landmark loss :0.048470,L2 loss: 0.017048, Total Loss: 0.263480 ,lr:0.000001 
+epoch:29/30
+Step: 106900/111660, accuracy: 0.928302, cls loss: 0.211279, bbox loss: 0.081415,Landmark loss :0.048142,L2 loss: 0.017048, Total Loss: 0.293106 ,lr:0.000001 
+epoch:29/30
+Step: 107000/111660, accuracy: 0.944444, cls loss: 0.246918, bbox loss: 0.067100,Landmark loss :0.045765,L2 loss: 0.017048, Total Loss: 0.320399 ,lr:0.000001 
+epoch:29/30
+Step: 107100/111660, accuracy: 0.916000, cls loss: 0.290366, bbox loss: 0.077938,Landmark loss :0.039595,L2 loss: 0.017048, Total Loss: 0.366181 ,lr:0.000001 
+epoch:29/30
+Step: 107200/111660, accuracy: 0.954373, cls loss: 0.163643, bbox loss: 0.065474,Landmark loss :0.040592,L2 loss: 0.017048, Total Loss: 0.233725 ,lr:0.000001 
+epoch:29/30
+Step: 107300/111660, accuracy: 0.930403, cls loss: 0.270598, bbox loss: 0.057697,Landmark loss :0.034853,L2 loss: 0.017048, Total Loss: 0.333921 ,lr:0.000001 
+epoch:29/30
+Step: 107400/111660, accuracy: 0.888889, cls loss: 0.337470, bbox loss: 0.072436,Landmark loss :0.037475,L2 loss: 0.017048, Total Loss: 0.409474 ,lr:0.000001 
+epoch:29/30
+Step: 107500/111660, accuracy: 0.934307, cls loss: 0.247310, bbox loss: 0.065196,Landmark loss :0.042063,L2 loss: 0.017048, Total Loss: 0.317987 ,lr:0.000001 
+epoch:29/30
+Step: 107600/111660, accuracy: 0.946970, cls loss: 0.217609, bbox loss: 0.063994,Landmark loss :0.043132,L2 loss: 0.017048, Total Loss: 0.288220 ,lr:0.000001 
+epoch:29/30
+Step: 107700/111660, accuracy: 0.926641, cls loss: 0.262191, bbox loss: 0.058741,Landmark loss :0.046688,L2 loss: 0.017048, Total Loss: 0.331954 ,lr:0.000001 
+epoch:29/30
+Step: 107800/111660, accuracy: 0.931559, cls loss: 0.236403, bbox loss: 0.066636,Landmark loss :0.039494,L2 loss: 0.017048, Total Loss: 0.306517 ,lr:0.000001 
+epoch:29/30
+Step: 107900/111660, accuracy: 0.965385, cls loss: 0.172159, bbox loss: 0.080597,Landmark loss :0.042585,L2 loss: 0.017048, Total Loss: 0.250798 ,lr:0.000001 
+epoch:30/30
+Step: 108000/111660, accuracy: 0.917910, cls loss: 0.265516, bbox loss: 0.070185,Landmark loss :0.054140,L2 loss: 0.017048, Total Loss: 0.344727 ,lr:0.000001 
+epoch:30/30
+Step: 108100/111660, accuracy: 0.915385, cls loss: 0.294992, bbox loss: 0.068452,Landmark loss :0.037285,L2 loss: 0.017048, Total Loss: 0.364909 ,lr:0.000001 
+epoch:30/30
+Step: 108200/111660, accuracy: 0.926923, cls loss: 0.240382, bbox loss: 0.073789,Landmark loss :0.043517,L2 loss: 0.017048, Total Loss: 0.316084 ,lr:0.000001 
+epoch:30/30
+Step: 108300/111660, accuracy: 0.924528, cls loss: 0.261746, bbox loss: 0.062363,Landmark loss :0.044795,L2 loss: 0.017048, Total Loss: 0.332374 ,lr:0.000001 
+epoch:30/30
+Step: 108400/111660, accuracy: 0.945055, cls loss: 0.243060, bbox loss: 0.073784,Landmark loss :0.056595,L2 loss: 0.017048, Total Loss: 0.325298 ,lr:0.000001 
+epoch:30/30
+Step: 108500/111660, accuracy: 0.907063, cls loss: 0.306722, bbox loss: 0.068839,Landmark loss :0.054373,L2 loss: 0.017048, Total Loss: 0.385376 ,lr:0.000001 
+epoch:30/30
+Step: 108600/111660, accuracy: 0.918605, cls loss: 0.243035, bbox loss: 0.058970,Landmark loss :0.046217,L2 loss: 0.017048, Total Loss: 0.312677 ,lr:0.000001 
+epoch:30/30
+Step: 108700/111660, accuracy: 0.912548, cls loss: 0.292835, bbox loss: 0.073462,Landmark loss :0.040195,L2 loss: 0.017048, Total Loss: 0.366712 ,lr:0.000001 
+epoch:30/30
+Step: 108800/111660, accuracy: 0.929134, cls loss: 0.309715, bbox loss: 0.059456,Landmark loss :0.046888,L2 loss: 0.017048, Total Loss: 0.379935 ,lr:0.000001 
+epoch:30/30
+Step: 108900/111660, accuracy: 0.935115, cls loss: 0.267029, bbox loss: 0.068861,Landmark loss :0.036162,L2 loss: 0.017048, Total Loss: 0.336589 ,lr:0.000001 
+epoch:30/30
+Step: 109000/111660, accuracy: 0.947955, cls loss: 0.214285, bbox loss: 0.070130,Landmark loss :0.059224,L2 loss: 0.017048, Total Loss: 0.296011 ,lr:0.000001 
+epoch:30/30
+Step: 109100/111660, accuracy: 0.938628, cls loss: 0.236392, bbox loss: 0.070084,Landmark loss :0.051237,L2 loss: 0.017048, Total Loss: 0.314101 ,lr:0.000001 
+epoch:30/30
+Step: 109200/111660, accuracy: 0.920455, cls loss: 0.324795, bbox loss: 0.070561,Landmark loss :0.038953,L2 loss: 0.017048, Total Loss: 0.396601 ,lr:0.000001 
+epoch:30/30
+Step: 109300/111660, accuracy: 0.937984, cls loss: 0.191485, bbox loss: 0.076569,Landmark loss :0.043356,L2 loss: 0.017048, Total Loss: 0.268495 ,lr:0.000001 
+epoch:30/30
+Step: 109400/111660, accuracy: 0.930909, cls loss: 0.219211, bbox loss: 0.069581,Landmark loss :0.045785,L2 loss: 0.017048, Total Loss: 0.293942 ,lr:0.000001 
+epoch:30/30
+Step: 109500/111660, accuracy: 0.924460, cls loss: 0.283776, bbox loss: 0.058228,Landmark loss :0.042596,L2 loss: 0.017048, Total Loss: 0.351236 ,lr:0.000001 
+epoch:30/30
+Step: 109600/111660, accuracy: 0.928839, cls loss: 0.283375, bbox loss: 0.068801,Landmark loss :0.051816,L2 loss: 0.017048, Total Loss: 0.360732 ,lr:0.000001 
+epoch:30/30
+Step: 109700/111660, accuracy: 0.906977, cls loss: 0.297400, bbox loss: 0.063198,Landmark loss :0.037687,L2 loss: 0.017048, Total Loss: 0.364891 ,lr:0.000001 
+epoch:30/30
+Step: 109800/111660, accuracy: 0.934109, cls loss: 0.284351, bbox loss: 0.057875,Landmark loss :0.048819,L2 loss: 0.017048, Total Loss: 0.354746 ,lr:0.000001 
+epoch:30/30
+Step: 109900/111660, accuracy: 0.948529, cls loss: 0.235322, bbox loss: 0.063334,Landmark loss :0.047751,L2 loss: 0.017048, Total Loss: 0.307913 ,lr:0.000001 
+epoch:30/30
+Step: 110000/111660, accuracy: 0.928302, cls loss: 0.255534, bbox loss: 0.079208,Landmark loss :0.047441,L2 loss: 0.017048, Total Loss: 0.335906 ,lr:0.000001 
+epoch:30/30
+Step: 110100/111660, accuracy: 0.937984, cls loss: 0.230955, bbox loss: 0.070435,Landmark loss :0.052973,L2 loss: 0.017048, Total Loss: 0.309707 ,lr:0.000001 
+epoch:30/30
+Step: 110200/111660, accuracy: 0.925094, cls loss: 0.255215, bbox loss: 0.061980,Landmark loss :0.050432,L2 loss: 0.017048, Total Loss: 0.328469 ,lr:0.000001 
+epoch:30/30
+Step: 110300/111660, accuracy: 0.930502, cls loss: 0.246820, bbox loss: 0.073273,Landmark loss :0.050076,L2 loss: 0.017048, Total Loss: 0.325543 ,lr:0.000001 
+epoch:30/30
+Step: 110400/111660, accuracy: 0.951493, cls loss: 0.232691, bbox loss: 0.062727,Landmark loss :0.033683,L2 loss: 0.017048, Total Loss: 0.297944 ,lr:0.000001 
+epoch:30/30
+Step: 110500/111660, accuracy: 0.916968, cls loss: 0.285707, bbox loss: 0.060316,Landmark loss :0.057853,L2 loss: 0.017048, Total Loss: 0.361840 ,lr:0.000001 
+epoch:30/30
+Step: 110600/111660, accuracy: 0.931035, cls loss: 0.230664, bbox loss: 0.060241,Landmark loss :0.042407,L2 loss: 0.017048, Total Loss: 0.299036 ,lr:0.000001 
+epoch:30/30
+Step: 110700/111660, accuracy: 0.911439, cls loss: 0.283356, bbox loss: 0.068129,Landmark loss :0.048947,L2 loss: 0.017048, Total Loss: 0.358942 ,lr:0.000001 
+epoch:30/30
+Step: 110800/111660, accuracy: 0.949612, cls loss: 0.191215, bbox loss: 0.068854,Landmark loss :0.047693,L2 loss: 0.017048, Total Loss: 0.266537 ,lr:0.000001 
+epoch:30/30
+Step: 110900/111660, accuracy: 0.943061, cls loss: 0.193868, bbox loss: 0.069326,Landmark loss :0.058088,L2 loss: 0.017048, Total Loss: 0.274623 ,lr:0.000001 
+epoch:30/30
+Step: 111000/111660, accuracy: 0.943396, cls loss: 0.222972, bbox loss: 0.066908,Landmark loss :0.048704,L2 loss: 0.017048, Total Loss: 0.297826 ,lr:0.000001 
+epoch:30/30
+Step: 111100/111660, accuracy: 0.911348, cls loss: 0.310890, bbox loss: 0.058900,Landmark loss :0.049958,L2 loss: 0.017048, Total Loss: 0.382367 ,lr:0.000001 
+epoch:30/30
+Step: 111200/111660, accuracy: 0.931655, cls loss: 0.266680, bbox loss: 0.063635,Landmark loss :0.054794,L2 loss: 0.017048, Total Loss: 0.342943 ,lr:0.000001 
+epoch:30/30
+Step: 111300/111660, accuracy: 0.935606, cls loss: 0.229687, bbox loss: 0.075328,Landmark loss :0.049279,L2 loss: 0.017048, Total Loss: 0.309038 ,lr:0.000001 
+epoch:30/30
+Step: 111400/111660, accuracy: 0.918367, cls loss: 0.283280, bbox loss: 0.062678,Landmark loss :0.038245,L2 loss: 0.017048, Total Loss: 0.350790 ,lr:0.000001 
+epoch:30/30
+Step: 111500/111660, accuracy: 0.939623, cls loss: 0.225505, bbox loss: 0.053606,Landmark loss :0.055482,L2 loss: 0.017048, Total Loss: 0.297098 ,lr:0.000001 
+epoch:30/30
+Step: 111600/111660, accuracy: 0.938182, cls loss: 0.272569, bbox loss: 0.064169,Landmark loss :0.038460,L2 loss: 0.017048, Total Loss: 0.340932 ,lr:0.000001 
