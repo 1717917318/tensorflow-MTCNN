@@ -75,14 +75,13 @@ def detectFaceOpenCVDnn(net, img, flag=False): # not sure is ok or not.
     bboxes = []
     for i in range(detections.shape[2]):
         confidence = detections[0, 0, i, 2]
-        if confidence > conf_threshold:
-            x1 = int(detections[0, 0, i, 3] * w)
-            y1 = int(detections[0, 0, i, 4] * h)
-            x2 = int(detections[0, 0, i, 5] * w)
-            y2 = int(detections[0, 0, i, 6] * h)
-            if ok(x1,y1,x2,y2,w,h)== False:
-                continue
-            bboxes.append([x1, y1, x2, y2])
+        x1 = int(detections[0, 0, i, 3] * w)
+        y1 = int(detections[0, 0, i, 4] * h)
+        x2 = int(detections[0, 0, i, 5] * w)
+        y2 = int(detections[0, 0, i, 6] * h)
+        if ok(x1,y1,x2,y2,w,h)== False:
+            continue
+        bboxes.append([x1, y1, x2, y2, confidence])
             #cv2.rectangle(frameOpencvDnn, (x1, y1), (x2, y2), (0, 255, 0), int(round(frameHeight/150)), 8)
     return bboxes
 def detectFaceDlibMMOD(detector, img, inHeight=300, inWidth=0):
@@ -120,13 +119,69 @@ def detectFaceDlibHog(detector, img, inHeight=300, inWidth=0):
         cv2.rectangle(img, (cvRect[0], cvRect[1]), (cvRect[2], cvRect[3]), (0, 255, 0),  2)
     return img, bboxes
 
+def exist_both_box(box,boxes):
+    exist_both = True
+
+    '''裁剪的box和图片所有人脸box的iou值
+    参数：
+      box：裁剪的box,当box维度为4时表示box左上右下坐标，维度为5时，最后一维为box的置信度
+      boxes：图片所有人脸box,[n,4]
+    返回值：
+      iou值，[n,]
+    '''
+    # box面积
+    box_area = (box[2] - box[0] + 1) * (box[3] - box[1] + 1)
+    # boxes面积,[n,]
+    area = (boxes[ 2] - boxes[ 0] + 1) * (boxes[3] - boxes[ 1] + 1)
+    # 重叠部分左上右下坐标
+    xx1 = max(box[0], boxes[0])
+    yy1 = max(box[1], boxes[1])
+    xx2 = min(box[2], boxes[2])
+    yy2 = min(box[3], boxes[3])
+
+    # 重叠部分长宽
+    w =  xx2 - xx1 + 1
+    h =  yy2 - yy1 + 1
+
+    if w<0 or h<0 :
+        return True
+
+    # 重叠部分面积
+    inter = w * h
+    common1 = inter / (box_area+ 1e-10)
+    common2 = inter /( area + 1e-10  )
+    if common1 >0.4 : #or common2 >0.5 :
+        exist_both = False
+    return exist_both
+
+def del_common_box(boxes):
+
+    refined_boxes = np.array( [0,0,0,0,0])
+
+    for i in range( len (boxes ) ):
+        cur_box = boxes[i]
+        can_append = True
+        for j in range( len(boxes) ):
+            if j == i :
+                continue
+            cmp_box = boxes[j]
+            can_append =  exist_both_box(cur_box, cmp_box)
+            if not can_append:
+                break
+        if can_append:
+            refined_boxes = np.vstack( (refined_boxes, cur_box) )
+
+
+    return refined_boxes[1: len(refined_boxes)]
 
 
 if __name__ == '__main__':
 
     data_dir = '../DATA/FDDB/originalPics' #验证集（测试）路径
     anno_file = 'fddb_val_min_r.txt' #验证集标签文件（包含路径）
+    # anno_file = 'wider_val_min_r.txt'  # 验证集标签文件（包含路径）
     name = anno_file.split('.')[0]
+    # if anno_file[0]=='f':
     anno_file = 'test/'+ anno_file
     all_methods = ['hog','mmod','dnn','haar','mtcnn']
     write_img = False
@@ -146,7 +201,7 @@ if __name__ == '__main__':
         out_path = output_file
         # 生成预测框文件，每个框的格式都为x1, y1, x1+w, y1+h, possibility
 
-        if (detect_method != 'mtcnn'):
+        if (detect_method != 'dnn'):
             print("jump this method "+ detect_method)
             continue
         start_time = time.time()
@@ -155,7 +210,8 @@ if __name__ == '__main__':
     
             test_mode = "ONet"
             #thresh = [0.3, 0.1, 0.7]
-            thresh = [0.3, 0.1, 0.1] #网络的置信度阈值
+            # thresh = [0.3, 0.1, 0.7] #网络的置信度阈值
+            thresh = [0.1, 0.2, 0.3]  # 网络的置信度阈值
             min_face_size = 20
             stride = 2
     
@@ -214,7 +270,8 @@ if __name__ == '__main__':
                 # generate detection
                 img = cv2.imread(image_file_name)
                 boxes_c, landmarks= mtcnn_detector.detect(img)
-    
+
+
                 #f_name = item[1].split('.jpg')[0]
     
                 #dets_file_name = os.path.join(save_path, f_name + '.txt')
@@ -228,7 +285,10 @@ if __name__ == '__main__':
     
                 fid.write(short_file_name + ' ')
                 fid.write(str(len(boxes_c)) )
-    
+                # if item[4] == 'img_3508' :
+                #     print("")
+                boxes_c = del_common_box(boxes_c)
+
                 for box in boxes_c:
                     fid.write(' %d %d %d %d %f' % (
                     int(box[0]), int(box[1]), int(box[2]), int(box[3]), box[4])) # x,y,x+w,y+h,possibility
@@ -351,8 +411,7 @@ if __name__ == '__main__':
                     configFile = prefix + "models/opencv_face_detector.pbtxt"
                     net = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
                     net2 = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
-    
-                conf_threshold = 0.7
+
                 #end
     
                 idx += 1
@@ -368,8 +427,9 @@ if __name__ == '__main__':
     
     
                 bboxes = detectFaceOpenCVDnn(net, img)
-    
+                # bboxes = del_common_box(bboxes)
                 bboxes2 = detectFaceOpenCVDnn(net2, img, True)
+                # bboxes2 = del_common_box(bboxes2)
                 if (len(bboxes2) > len(bboxes)):
                     bboxes = bboxes2
                 #cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
@@ -385,11 +445,12 @@ if __name__ == '__main__':
                 fid.write(short_file_name + ' ')
                 fid.write(str(len(bboxes)))
     
-                for (x1, y1, x2, y2) in bboxes:
+                for (x1, y1, x2, y2, conf) in bboxes:
+
                     fid.write(' %d %d %d %d %f' % (
-                        int(x1), int(y1), int(x2), int(y2),conf_threshold) )  # x,y,x+w,y+h,possibility
+                        int(x1), int(y1), int(x2), int(y2),conf) )  # x,y,x+w,y+h,possibility
                     if write_img:
-                        cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
+                        cv2.rectangle(img, (int(x1), int(y1) ), ( int(x2), int(y2) ), (255, 0, 0), 2)
                 fid.write("\n")
     
                 #cv2.imshow('im', img)
