@@ -77,14 +77,14 @@ def detectFaceOpenCVDnn(net, img, flag=False):  # not sure is ok or not.
     bboxes = []
     for i in range(detections.shape[2]):
         confidence = detections[0, 0, i, 2]
-        if confidence > conf_threshold:
-            x1 = int(detections[0, 0, i, 3] * w)
-            y1 = int(detections[0, 0, i, 4] * h)
-            x2 = int(detections[0, 0, i, 5] * w)
-            y2 = int(detections[0, 0, i, 6] * h)
-            if ok(x1, y1, x2, y2, w, h) == False:
-                continue
-            bboxes.append([x1, y1, x2, y2])
+        #if confidence > conf_threshold:
+        x1 = int(detections[0, 0, i, 3] * w)
+        y1 = int(detections[0, 0, i, 4] * h)
+        x2 = int(detections[0, 0, i, 5] * w)
+        y2 = int(detections[0, 0, i, 6] * h)
+        if ok(x1, y1, x2, y2, w, h) == False:
+            continue
+        bboxes.append([x1, y1, x2, y2 ,confidence ])
             # cv2.rectangle(frameOpencvDnn, (x1, y1), (x2, y2), (0, 255, 0), int(round(frameHeight/150)), 8)
     return bboxes
 
@@ -124,7 +124,7 @@ def detectFaceDlibHog(detector, img, inHeight=300, inWidth=0):
     return img, bboxes
 
 
-def exist_both_box(box, boxes):
+def exist_both_box(box,boxes): #是否保留这个框
     exist_both = True
 
     '''裁剪的box和图片所有人脸box的iou值
@@ -137,7 +137,7 @@ def exist_both_box(box, boxes):
     # box面积
     box_area = (box[2] - box[0] + 1) * (box[3] - box[1] + 1)
     # boxes面积,[n,]
-    area = (boxes[2] - boxes[0] + 1) * (boxes[3] - boxes[1] + 1)
+    area = (boxes[ 2] - boxes[ 0] + 1) * (boxes[3] - boxes[ 1] + 1)
     # 重叠部分左上右下坐标
     xx1 = max(box[0], boxes[0])
     yy1 = max(box[1], boxes[1])
@@ -145,47 +145,48 @@ def exist_both_box(box, boxes):
     yy2 = min(box[3], boxes[3])
 
     # 重叠部分长宽
-    w = xx2 - xx1 + 1
-    h = yy2 - yy1 + 1
+    w =  xx2 - xx1 + 1
+    h =  yy2 - yy1 + 1
 
-    if w < 0 or h < 0:
+    if w<0 or h<0 :
         return True
 
     # 重叠部分面积
     inter = w * h
-    common1 = inter / (box_area + 1e-10)
-    common2 = inter / (area + 1e-10)
-    if common1 > 0.4:  # or common2 >0.5 :
+    common1 = inter / (box_area+ 1e-10)
+    common2 = inter /( area + 1e-10  )
+    if common1 >0.4 and box[4]<boxes[4] : #or common2 >0.5 :  当两个框重合部分占第一个框的比例超过40%且时，  且第一个框置信度低于第二个，删除第一个框；
         exist_both = False
     return exist_both
 
-
 def del_common_box(boxes):
-    refined_boxes = np.array([0, 0, 0, 0, 0])
 
-    for i in range(len(boxes)):
+    refined_boxes = np.array( [0,0,0,0,0])
+    flag = False
+    for i in range( len (boxes ) ):
         cur_box = boxes[i]
         can_append = True
-        for j in range(len(boxes)):
-            if j == i:
+        for j in range( len(boxes) ):
+            if j == i :
                 continue
             cmp_box = boxes[j]
-            can_append = exist_both_box(cur_box, cmp_box)
+            can_append =  exist_both_box(cur_box, cmp_box)
             if not can_append:
                 break
         if can_append:
-            refined_boxes = np.vstack((refined_boxes, cur_box))
+            refined_boxes = np.vstack( (refined_boxes, cur_box) )
+            flag = True
 
-    return refined_boxes[1: len(refined_boxes)]
+    return flag,refined_boxes[1: len(refined_boxes)]
 
 
 if __name__ == '__main__':
-
+    
     data_dir = 'data/WIDER_val/images'  # 验证集（测试）路径
-    anno_file = 'wider_face_val_small.txt'  # 验证集标签文件（包含路径）
+    anno_file = 'wider_face_val.txt'  # 验证集标签文件（包含路径）
     name = anno_file.split('.')[0]
     all_methods = ['hog', 'mmod', 'dnn', 'haar', 'mtcnn']
-    write_img = True
+    write_img = False
 
     haar_xml_file_pos = './FaceDetectionComparision/models/haarcascade_frontalface_default.xml'
     print("loading test images ...")
@@ -212,7 +213,7 @@ if __name__ == '__main__':
             test_mode = "ONet"
             # thresh = [0.3, 0.1, 0.7]
             # thresh = [0.3, 0.1, 0.7] #网络的置信度阈值
-            thresh = [0.1, 0.2, 0.3]  # 网络的置信度阈值
+            thresh = [0.05, 0.05, 0.05]  # 网络的置信度阈值
             min_face_size = 20
             stride = 2
 
@@ -247,7 +248,7 @@ if __name__ == '__main__':
             mtcnn_detector = MtcnnDetector(detectors=detectors, min_face_size=min_face_size,
                                            stride=stride, threshold=thresh)
 
-            current_month = ''
+            current_event = ''
             save_path = ''
             idx = 0
 
@@ -260,20 +261,21 @@ if __name__ == '__main__':
             for item in image_info:
                 idx += 1
                 image_file_name = os.path.join(data_dir, item[0], item[1])
-                if current_month != item[1]:
-                    current_month = item[1]
-                    print('current path:', current_month)
+                if current_event != item[1]:
+                    current_event = item[1]
+                    print('current event:', current_event)
 
                 # generate detection
                 img = cv2.imread(image_file_name)
                 boxes_c, landmarks = mtcnn_detector.detect(img)
+                flag, boxes_c = del_common_box(boxes_c)
 
                 # f_name = item[1].split('.jpg')[0]
 
                 # dets_file_name = os.path.join(save_path, f_name + '.txt')
                 # fid =open (dets_file_name,'w')
                 short_file_name = os.path.join(item[0], item[1])
-                if boxes_c.shape[0] == 0:
+                if boxes_c.shape[0] == 0  or flag == False :
                     fid.write(short_file_name + ' ')
                     fid.write(str(0) + '\n')
                     # fid.write('%f %f %f %f %f\n' % (0, 0, 0, 0, 0.99))
@@ -283,7 +285,7 @@ if __name__ == '__main__':
                 fid.write(str(len(boxes_c)))
                 # if item[4] == 'img_3508' :
                 #     print("")
-                boxes_c = del_common_box(boxes_c)
+                # boxes_c = del_common_box(boxes_c)
 
                 for box in boxes_c:
                     fid.write(' %d %d %d %d %f' % (
@@ -320,7 +322,7 @@ if __name__ == '__main__':
             fid.close()
         elif detect_method == 'haar':
 
-            current_month = ''
+            current_event = ''
             save_path = ''
             idx = 0
 
@@ -333,9 +335,9 @@ if __name__ == '__main__':
             for item in image_info:
                 idx += 1
                 image_file_name = os.path.join(data_dir, item[0], item[1])
-                if current_month != item[1]:
-                    current_month = item[1]
-                    print('current path:', current_month)
+                if current_event != item[0]:
+                    current_event = item[0]
+                    print('current event: ', current_event)
 
                 # generate detection
                 img = cv2.imread(image_file_name)
@@ -375,7 +377,7 @@ if __name__ == '__main__':
             # cv2.destroyAllWindows()
         elif detect_method == 'dnn':
 
-            current_month = ''
+            current_event = ''
             save_path = ''
             idx = 0
 
@@ -402,23 +404,24 @@ if __name__ == '__main__':
                     net = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
                     net2 = cv2.dnn.readNetFromTensorflow(modelFile, configFile)
 
-                conf_threshold = 0.7
+                # conf_threshold = 0.7
                 # end
 
                 idx += 1
                 print("idx: " + str(idx))
                 image_file_name = os.path.join(data_dir, item[0], item[1])
-                if current_month != item[1]:
-                    current_month = item[1]
-                    print('current path:', current_month)
+                if current_event != item[0]:
+                    current_event = item[0]
+                    print('current event:', current_event)
 
                 # generate detection
                 img = cv2.imread(image_file_name)
                 # gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
                 bboxes = detectFaceOpenCVDnn(net, img)
-
+                # bboxes2  = del_common_box(bboxes)
                 bboxes2 = detectFaceOpenCVDnn(net2, img, True)
+                # bboxes2 = del_common_box(bboxes2)
                 if (len(bboxes2) > len(bboxes)):
                     bboxes = bboxes2
                 # cv2.putText(outOpencvDnn, label, (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.4, (0, 0, 255), 3, cv2.LINE_AA)
@@ -434,10 +437,10 @@ if __name__ == '__main__':
                 fid.write(short_file_name + ' ')
                 fid.write(str(len(bboxes)))
 
-                for (x1, y1, x2, y2) in bboxes:
+                for (x1, y1, x2, y2, conf) in bboxes:
                     fid.write(' %d %d %d %d %f' % (
-                        int(x1), int(y1), int(x2), int(y2), conf_threshold))  # x,y,x+w,y+h,possibility
-                    if write_img:
+                        int(x1), int(y1), int(x2), int(y2), float(conf) ))  # x,y,x+w,y+h,possibility
+                    if write_img  :
                         cv2.rectangle(img, (x1, y1), (x2, y2), (255, 0, 0), 2)
                 fid.write("\n")
 
@@ -448,7 +451,7 @@ if __name__ == '__main__':
                     output_path = os.path.join(output_file, item[0])
                     if (not os.path.exists(output_path)):
                         os.mkdir(output_path)
-                    cv2.imwrite(output_path + "/" + item[4] + '.jpg', img)
+                    cv2.imwrite(output_path + "/" + item[1] , img)
 
                 if idx % 10 == 0:
                     print(idx)
@@ -457,7 +460,7 @@ if __name__ == '__main__':
             # pass
         elif detect_method == 'hog':
 
-            current_month = ''
+            current_event = ''
             save_path = ''
             idx = 0
 
@@ -481,9 +484,9 @@ if __name__ == '__main__':
                 idx += 1
                 print("idx: " + str(idx))
                 image_file_name = os.path.join(data_dir, item[0], item[1])
-                if current_month != item[1]:
-                    current_month = item[1]
-                    print('current path:', current_month)
+                if current_event != item[1]:
+                    current_event = item[1]
+                    print('current event:', current_event)
 
                 # generate detection
                 img = cv2.imread(image_file_name)
@@ -525,7 +528,7 @@ if __name__ == '__main__':
             fid.close()
         elif detect_method == 'mmod':
 
-            current_month = ''
+            current_event = ''
             save_path = ''
             idx = 0
 
@@ -545,9 +548,9 @@ if __name__ == '__main__':
                 idx += 1
                 print("idx: " + str(idx))
                 image_file_name = os.path.join(data_dir, item[0], item[1])
-                if current_month != item[1]:
-                    current_month = item[1]
-                    print('current path:', current_month)
+                if current_event != item[1]:
+                    current_event = item[1]
+                    print('current event:', current_event)
 
                 # generate detection
                 img = cv2.imread(image_file_name)
